@@ -6,7 +6,7 @@ using UnityEngine;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
-using ip_input_script;
+using static ip_input_script;
 
 /// <summary>
 /// Turbo Satori network interface
