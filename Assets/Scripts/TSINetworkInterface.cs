@@ -6,6 +6,7 @@ using UnityEngine;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
+using ip_input_script;
 
 /// <summary>
 /// Turbo Satori network interface
@@ -16,8 +17,8 @@ namespace TSI2Unity
     {
         #region Public Variables
         [Header("Network")]
-        public string ipAddress = "127.0.0.1";
-        public int port = 54010;
+        public string ipAddress = ip_input_script.global_ip_address.text;
+        public int port = 55555;
         public int waitingMessagesFrequency = 1;
         public TSIMessage tSIMessage;
         #endregion
@@ -54,7 +55,7 @@ namespace TSI2Unity
 
         private void Start()
         {
-            ipAddress = "192.168.0.101";
+            ipAddress = ip_input_script.global_ip_address.text;
             DontDestroyOnLoad(this);
             //SEND Request --- Connect to Request Socket
             OnClientStarted = delegate () { SendMessageToServer("Request Socket"); };

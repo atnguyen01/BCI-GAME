@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets/Scripts/TSINetworkInterface.cs" />
+    <Compile Include="Assets/Scripts/ip_input_script.cs" />
     <Compile Include="Assets/Scripts/VisualizationExample.cs" />
     <Compile Include="Assets/Scripts/TSIMessage.cs" />
   </ItemGroup>

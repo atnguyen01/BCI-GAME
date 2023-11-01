@@ -5239,10 +5239,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1955909498}
-  - component: {fileID: 1955909499}
+  - component: {fileID: 1955909500}
   m_Layer: 0
   m_Name: Script
-  m_TagString: Untagged
+  m_TagString: IP Address
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5262,7 +5262,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1955909499
+--- !u!114 &1955909500
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5271,18 +5271,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1955909497}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3eb0eb441fba0e49a53649d0b5ad96b, type: 3}
+  m_Script: {fileID: 11500000, guid: fac4fd2a5a0ae47a3b3f879e3b9e19a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ipAddress: 192.168.0.105
-  port: 55555
-  waitingMessagesFrequency: 1
-  m_ReceivedMessage: 
-  CurrentTimePoint: 0
-  NrOfChannels: 20
-  NrOfSelectedChannels: 20
-  SelectedChannels: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  values: 
+  local_ip_address: {fileID: 3821008088998267467}
 --- !u!1 &2003826772
 GameObject:
   m_ObjectHideFlags: 0
@@ -6612,9 +6604,9 @@ MonoBehaviour:
   OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 11500000, guid: fac4fd2a5a0ae47a3b3f879e3b9e19a0, type: 3}
         m_TargetAssemblyTypeName: TCPClientHololens, Assembly-CSharp
-        m_MethodName: ConnectByUI
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8142,7 +8134,7 @@ GameObject:
   - component: {fileID: 312627508094658386}
   - component: {fileID: 3821008088998267467}
   m_Layer: 5
-  m_Name: Text
+  m_Name: ip_address
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
