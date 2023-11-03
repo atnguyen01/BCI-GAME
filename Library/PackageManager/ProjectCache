@@ -1,75 +1,75 @@
 m_ProjectFiles:
   m_ManifestFileStatus:
-    m_FilePath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Packages/manifest.json
+    m_FilePath: C:/Users/andre/Desktop/BCI-GAME/Packages/manifest.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638342992030000000
-    m_Hash: 1580967714
+      ticks: 638344578094729959
+    m_Hash: 3348322583
   m_LockFileStatus:
-    m_FilePath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Packages/packages-lock.json
+    m_FilePath: C:/Users/andre/Desktop/BCI-GAME/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638342992030000000
-    m_Hash: 3038602713
+      ticks: 638344578094739955
+    m_Hash: 3565109051
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
   m_LocalFileStatus:
-  - m_FilePath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Packages/MixedReality/com.microsoft.mixedreality.toolkit.foundation-2.8.3.tgz/package.json
+  - m_FilePath: C:\Users\andre\Desktop\BCI-GAME\Packages\MixedReality\com.microsoft.mixedreality.toolkit.foundation-2.8.3.tgz/package.json
     m_PathExists: 0
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
       ticks: 0
     m_Hash: 0
-  - m_FilePath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Packages/MixedReality/com.microsoft.mixedreality.toolkit.foundation-2.8.3.tgz
+  - m_FilePath: C:\Users\andre\Desktop\BCI-GAME\Packages\MixedReality\com.microsoft.mixedreality.toolkit.foundation-2.8.3.tgz
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638342992030000000
+      ticks: 638344578094469944
     m_Hash: 4293736214
-  - m_FilePath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Packages/MixedReality/com.microsoft.mixedreality.toolkit.standardassets-2.8.3.tgz/package.json
+  - m_FilePath: C:\Users\andre\Desktop\BCI-GAME\Packages\MixedReality\com.microsoft.mixedreality.toolkit.standardassets-2.8.3.tgz/package.json
     m_PathExists: 0
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
       ticks: 0
     m_Hash: 0
-  - m_FilePath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Packages/MixedReality/com.microsoft.mixedreality.toolkit.standardassets-2.8.3.tgz
+  - m_FilePath: C:\Users\andre\Desktop\BCI-GAME\Packages\MixedReality\com.microsoft.mixedreality.toolkit.standardassets-2.8.3.tgz
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638342992030000000
+      ticks: 638344578094659952
     m_Hash: 4011041438
-  - m_FilePath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Packages/MixedReality/com.microsoft.mixedreality.toolkit.tools-2.8.3.tgz/package.json
+  - m_FilePath: C:\Users\andre\Desktop\BCI-GAME\Packages\MixedReality\com.microsoft.mixedreality.toolkit.tools-2.8.3.tgz/package.json
     m_PathExists: 0
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
       ticks: 0
     m_Hash: 0
-  - m_FilePath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Packages/MixedReality/com.microsoft.mixedreality.toolkit.tools-2.8.3.tgz
+  - m_FilePath: C:\Users\andre\Desktop\BCI-GAME\Packages\MixedReality\com.microsoft.mixedreality.toolkit.tools-2.8.3.tgz
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638342992030000000
+      ticks: 638344578094729959
     m_Hash: 1297217339
-m_ProjectPath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Packages
+m_ProjectPath: C:/Users/andre/Desktop/BCI-GAME/Packages
 m_EditorVersion: 2022.3.8f1 (b5eafc012955)
 m_ResolvedPackages:
-- packageId: com.microsoft.mixedreality.toolkit.foundation@file:/Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Packages/MixedReality/com.microsoft.mixedreality.toolkit.foundation-2.8.3.tgz
+- packageId: com.microsoft.mixedreality.toolkit.foundation@file:C:\Users\andre\Desktop\BCI-GAME\Packages\MixedReality\com.microsoft.mixedreality.toolkit.foundation-2.8.3.tgz
   testable: 0
   isDirectDependency: 1
   version: 2.8.3
   source: 6
-  resolvedPath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Library/PackageCache/com.microsoft.mixedreality.toolkit.foundation@f2323a9b7aec
+  resolvedPath: C:\Users\andre\Desktop\BCI-GAME\Library\PackageCache\com.microsoft.mixedreality.toolkit.foundation@f2323a9b7aec
   assetPath: Packages/com.microsoft.mixedreality.toolkit.foundation
   name: com.microsoft.mixedreality.toolkit.foundation
   displayName: Mixed Reality Toolkit Foundation
@@ -137,12 +137,12 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-- packageId: com.microsoft.mixedreality.toolkit.standardassets@file:/Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Packages/MixedReality/com.microsoft.mixedreality.toolkit.standardassets-2.8.3.tgz
+- packageId: com.microsoft.mixedreality.toolkit.standardassets@file:C:\Users\andre\Desktop\BCI-GAME\Packages\MixedReality\com.microsoft.mixedreality.toolkit.standardassets-2.8.3.tgz
   testable: 0
   isDirectDependency: 1
   version: 2.8.3
   source: 6
-  resolvedPath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Library/PackageCache/com.microsoft.mixedreality.toolkit.standardassets@aab256284dc6
+  resolvedPath: C:\Users\andre\Desktop\BCI-GAME\Library\PackageCache\com.microsoft.mixedreality.toolkit.standardassets@aab256284dc6
   assetPath: Packages/com.microsoft.mixedreality.toolkit.standardassets
   name: com.microsoft.mixedreality.toolkit.standardassets
   displayName: Mixed Reality Toolkit Standard Assets
@@ -211,12 +211,12 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-- packageId: com.microsoft.mixedreality.toolkit.tools@file:/Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Packages/MixedReality/com.microsoft.mixedreality.toolkit.tools-2.8.3.tgz
+- packageId: com.microsoft.mixedreality.toolkit.tools@file:C:\Users\andre\Desktop\BCI-GAME\Packages\MixedReality\com.microsoft.mixedreality.toolkit.tools-2.8.3.tgz
   testable: 0
   isDirectDependency: 1
   version: 2.8.3
   source: 6
-  resolvedPath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Library/PackageCache/com.microsoft.mixedreality.toolkit.tools@650cce437d92
+  resolvedPath: C:\Users\andre\Desktop\BCI-GAME\Library\PackageCache\com.microsoft.mixedreality.toolkit.tools@650cce437d92
   assetPath: Packages/com.microsoft.mixedreality.toolkit.tools
   name: com.microsoft.mixedreality.toolkit.tools
   displayName: Mixed Reality Toolkit Tools
@@ -291,7 +291,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.1.4
   source: 1
-  resolvedPath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Library/PackageCache/com.unity.ai.navigation@1.1.4
+  resolvedPath: C:\Users\andre\Desktop\BCI-GAME\Library\PackageCache\com.unity.ai.navigation@1.1.4
   assetPath: Packages/com.unity.ai.navigation
   name: com.unity.ai.navigation
   displayName: AI Navigation
@@ -363,7 +363,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.0.7
   source: 1
-  resolvedPath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Library/PackageCache/com.unity.collab-proxy@2.0.7
+  resolvedPath: C:\Users\andre\Desktop\BCI-GAME\Library\PackageCache\com.unity.collab-proxy@2.0.7
   assetPath: Packages/com.unity.collab-proxy
   name: com.unity.collab-proxy
   displayName: Version Control
@@ -507,7 +507,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 3.0.24
   source: 1
-  resolvedPath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Library/PackageCache/com.unity.ide.rider@3.0.24
+  resolvedPath: C:\Users\andre\Desktop\BCI-GAME\Library\PackageCache\com.unity.ide.rider@3.0.24
   assetPath: Packages/com.unity.ide.rider
   name: com.unity.ide.rider
   displayName: JetBrains Rider Editor
@@ -608,7 +608,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.0.18
   source: 1
-  resolvedPath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Library/PackageCache/com.unity.ide.visualstudio@2.0.18
+  resolvedPath: C:\Users\andre\Desktop\BCI-GAME\Library\PackageCache\com.unity.ide.visualstudio@2.0.18
   assetPath: Packages/com.unity.ide.visualstudio
   name: com.unity.ide.visualstudio
   displayName: Visual Studio Editor
@@ -700,7 +700,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.2.5
   source: 1
-  resolvedPath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Library/PackageCache/com.unity.ide.vscode@1.2.5
+  resolvedPath: C:\Users\andre\Desktop\BCI-GAME\Library\PackageCache\com.unity.ide.vscode@1.2.5
   assetPath: Packages/com.unity.ide.vscode
   name: com.unity.ide.vscode
   displayName: Visual Studio Code Editor
@@ -768,7 +768,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.1.33
   source: 1
-  resolvedPath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Library/PackageCache/com.unity.test-framework@1.1.33
+  resolvedPath: C:\Users\andre\Desktop\BCI-GAME\Library\PackageCache\com.unity.test-framework@1.1.33
   assetPath: Packages/com.unity.test-framework
   name: com.unity.test-framework
   displayName: Test Framework
@@ -895,7 +895,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 3.0.6
   source: 1
-  resolvedPath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Library/PackageCache/com.unity.textmeshpro@3.0.6
+  resolvedPath: C:\Users\andre\Desktop\BCI-GAME\Library\PackageCache\com.unity.textmeshpro@3.0.6
   assetPath: Packages/com.unity.textmeshpro
   name: com.unity.textmeshpro
   displayName: TextMeshPro
@@ -1076,7 +1076,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.7.5
   source: 1
-  resolvedPath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Library/PackageCache/com.unity.timeline@1.7.5
+  resolvedPath: C:\Users\andre\Desktop\BCI-GAME\Library\PackageCache\com.unity.timeline@1.7.5
   assetPath: Packages/com.unity.timeline
   name: com.unity.timeline
   displayName: Timeline
@@ -1244,7 +1244,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Library/PackageCache/com.unity.ugui@1.0.0
+  resolvedPath: C:\Users\andre\Desktop\BCI-GAME\Library\PackageCache\com.unity.ugui@1.0.0
   assetPath: Packages/com.unity.ugui
   name: com.unity.ugui
   displayName: Unity UI
@@ -1315,7 +1315,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.9.1
   source: 1
-  resolvedPath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Library/PackageCache/com.unity.xr.openxr@1.9.1
+  resolvedPath: C:\Users\andre\Desktop\BCI-GAME\Library\PackageCache\com.unity.xr.openxr@1.9.1
   assetPath: Packages/com.unity.xr.openxr
   name: com.unity.xr.openxr
   displayName: OpenXR Plugin
@@ -1432,7 +1432,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Library/PackageCache/com.unity.modules.ai@1.0.0
+  resolvedPath: C:\Users\andre\Desktop\BCI-GAME\Library\PackageCache\com.unity.modules.ai@1.0.0
   assetPath: Packages/com.unity.modules.ai
   name: com.unity.modules.ai
   displayName: AI
@@ -1487,7 +1487,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Library/PackageCache/com.unity.modules.androidjni@1.0.0
+  resolvedPath: C:\Users\andre\Desktop\BCI-GAME\Library\PackageCache\com.unity.modules.androidjni@1.0.0
   assetPath: Packages/com.unity.modules.androidjni
   name: com.unity.modules.androidjni
   displayName: Android JNI
@@ -1541,7 +1541,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Library/PackageCache/com.unity.modules.animation@1.0.0
+  resolvedPath: C:\Users\andre\Desktop\BCI-GAME\Library\PackageCache\com.unity.modules.animation@1.0.0
   assetPath: Packages/com.unity.modules.animation
   name: com.unity.modules.animation
   displayName: Animation
@@ -1596,7 +1596,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Library/PackageCache/com.unity.modules.assetbundle@1.0.0
+  resolvedPath: C:\Users\andre\Desktop\BCI-GAME\Library\PackageCache\com.unity.modules.assetbundle@1.0.0
   assetPath: Packages/com.unity.modules.assetbundle
   name: com.unity.modules.assetbundle
   displayName: Asset Bundle
@@ -1651,7 +1651,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Library/PackageCache/com.unity.modules.audio@1.0.0
+  resolvedPath: C:\Users\andre\Desktop\BCI-GAME\Library\PackageCache\com.unity.modules.audio@1.0.0
   assetPath: Packages/com.unity.modules.audio
   name: com.unity.modules.audio
   displayName: Audio
@@ -1706,7 +1706,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Library/PackageCache/com.unity.modules.cloth@1.0.0
+  resolvedPath: C:\Users\andre\Desktop\BCI-GAME\Library\PackageCache\com.unity.modules.cloth@1.0.0
   assetPath: Packages/com.unity.modules.cloth
   name: com.unity.modules.cloth
   displayName: Cloth
@@ -1765,7 +1765,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Library/PackageCache/com.unity.modules.director@1.0.0
+  resolvedPath: C:\Users\andre\Desktop\BCI-GAME\Library\PackageCache\com.unity.modules.director@1.0.0
   assetPath: Packages/com.unity.modules.director
   name: com.unity.modules.director
   displayName: Director
@@ -1828,7 +1828,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Library/PackageCache/com.unity.modules.imageconversion@1.0.0
+  resolvedPath: C:\Users\andre\Desktop\BCI-GAME\Library\PackageCache\com.unity.modules.imageconversion@1.0.0
   assetPath: Packages/com.unity.modules.imageconversion
   name: com.unity.modules.imageconversion
   displayName: Image Conversion
@@ -1884,7 +1884,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Library/PackageCache/com.unity.modules.imgui@1.0.0
+  resolvedPath: C:\Users\andre\Desktop\BCI-GAME\Library\PackageCache\com.unity.modules.imgui@1.0.0
   assetPath: Packages/com.unity.modules.imgui
   name: com.unity.modules.imgui
   displayName: IMGUI
@@ -1939,7 +1939,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Library/PackageCache/com.unity.modules.jsonserialize@1.0.0
+  resolvedPath: C:\Users\andre\Desktop\BCI-GAME\Library\PackageCache\com.unity.modules.jsonserialize@1.0.0
   assetPath: Packages/com.unity.modules.jsonserialize
   name: com.unity.modules.jsonserialize
   displayName: JSONSerialize
@@ -1994,7 +1994,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Library/PackageCache/com.unity.modules.particlesystem@1.0.0
+  resolvedPath: C:\Users\andre\Desktop\BCI-GAME\Library\PackageCache\com.unity.modules.particlesystem@1.0.0
   assetPath: Packages/com.unity.modules.particlesystem
   name: com.unity.modules.particlesystem
   displayName: Particle System
@@ -2049,7 +2049,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Library/PackageCache/com.unity.modules.physics@1.0.0
+  resolvedPath: C:\Users\andre\Desktop\BCI-GAME\Library\PackageCache\com.unity.modules.physics@1.0.0
   assetPath: Packages/com.unity.modules.physics
   name: com.unity.modules.physics
   displayName: Physics
@@ -2104,7 +2104,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Library/PackageCache/com.unity.modules.physics2d@1.0.0
+  resolvedPath: C:\Users\andre\Desktop\BCI-GAME\Library\PackageCache\com.unity.modules.physics2d@1.0.0
   assetPath: Packages/com.unity.modules.physics2d
   name: com.unity.modules.physics2d
   displayName: Physics 2D
@@ -2159,7 +2159,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Library/PackageCache/com.unity.modules.screencapture@1.0.0
+  resolvedPath: C:\Users\andre\Desktop\BCI-GAME\Library\PackageCache\com.unity.modules.screencapture@1.0.0
   assetPath: Packages/com.unity.modules.screencapture
   name: com.unity.modules.screencapture
   displayName: Screen Capture
@@ -2218,7 +2218,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Library/PackageCache/com.unity.modules.terrain@1.0.0
+  resolvedPath: C:\Users\andre\Desktop\BCI-GAME\Library\PackageCache\com.unity.modules.terrain@1.0.0
   assetPath: Packages/com.unity.modules.terrain
   name: com.unity.modules.terrain
   displayName: Terrain
@@ -2273,7 +2273,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Library/PackageCache/com.unity.modules.terrainphysics@1.0.0
+  resolvedPath: C:\Users\andre\Desktop\BCI-GAME\Library\PackageCache\com.unity.modules.terrainphysics@1.0.0
   assetPath: Packages/com.unity.modules.terrainphysics
   name: com.unity.modules.terrainphysics
   displayName: Terrain Physics
@@ -2336,7 +2336,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Library/PackageCache/com.unity.modules.tilemap@1.0.0
+  resolvedPath: C:\Users\andre\Desktop\BCI-GAME\Library\PackageCache\com.unity.modules.tilemap@1.0.0
   assetPath: Packages/com.unity.modules.tilemap
   name: com.unity.modules.tilemap
   displayName: Tilemap
@@ -2394,7 +2394,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Library/PackageCache/com.unity.modules.ui@1.0.0
+  resolvedPath: C:\Users\andre\Desktop\BCI-GAME\Library\PackageCache\com.unity.modules.ui@1.0.0
   assetPath: Packages/com.unity.modules.ui
   name: com.unity.modules.ui
   displayName: UI
@@ -2449,7 +2449,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Library/PackageCache/com.unity.modules.uielements@1.0.0
+  resolvedPath: C:\Users\andre\Desktop\BCI-GAME\Library\PackageCache\com.unity.modules.uielements@1.0.0
   assetPath: Packages/com.unity.modules.uielements
   name: com.unity.modules.uielements
   displayName: UIElements
@@ -2516,7 +2516,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Library/PackageCache/com.unity.modules.umbra@1.0.0
+  resolvedPath: C:\Users\andre\Desktop\BCI-GAME\Library\PackageCache\com.unity.modules.umbra@1.0.0
   assetPath: Packages/com.unity.modules.umbra
   name: com.unity.modules.umbra
   displayName: Umbra
@@ -2571,7 +2571,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Library/PackageCache/com.unity.modules.unityanalytics@1.0.0
+  resolvedPath: C:\Users\andre\Desktop\BCI-GAME\Library\PackageCache\com.unity.modules.unityanalytics@1.0.0
   assetPath: Packages/com.unity.modules.unityanalytics
   name: com.unity.modules.unityanalytics
   displayName: Unity Analytics
@@ -2634,7 +2634,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Library/PackageCache/com.unity.modules.unitywebrequest@1.0.0
+  resolvedPath: C:\Users\andre\Desktop\BCI-GAME\Library\PackageCache\com.unity.modules.unitywebrequest@1.0.0
   assetPath: Packages/com.unity.modules.unitywebrequest
   name: com.unity.modules.unitywebrequest
   displayName: Unity Web Request
@@ -2689,7 +2689,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Library/PackageCache/com.unity.modules.unitywebrequestassetbundle@1.0.0
+  resolvedPath: C:\Users\andre\Desktop\BCI-GAME\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle@1.0.0
   assetPath: Packages/com.unity.modules.unitywebrequestassetbundle
   name: com.unity.modules.unitywebrequestassetbundle
   displayName: Unity Web Request Asset Bundle
@@ -2752,7 +2752,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Library/PackageCache/com.unity.modules.unitywebrequestaudio@1.0.0
+  resolvedPath: C:\Users\andre\Desktop\BCI-GAME\Library\PackageCache\com.unity.modules.unitywebrequestaudio@1.0.0
   assetPath: Packages/com.unity.modules.unitywebrequestaudio
   name: com.unity.modules.unitywebrequestaudio
   displayName: Unity Web Request Audio
@@ -2815,7 +2815,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Library/PackageCache/com.unity.modules.unitywebrequesttexture@1.0.0
+  resolvedPath: C:\Users\andre\Desktop\BCI-GAME\Library\PackageCache\com.unity.modules.unitywebrequesttexture@1.0.0
   assetPath: Packages/com.unity.modules.unitywebrequesttexture
   name: com.unity.modules.unitywebrequesttexture
   displayName: Unity Web Request Texture
@@ -2878,7 +2878,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Library/PackageCache/com.unity.modules.unitywebrequestwww@1.0.0
+  resolvedPath: C:\Users\andre\Desktop\BCI-GAME\Library\PackageCache\com.unity.modules.unitywebrequestwww@1.0.0
   assetPath: Packages/com.unity.modules.unitywebrequestwww
   name: com.unity.modules.unitywebrequestwww
   displayName: Unity Web Request WWW
@@ -2957,7 +2957,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Library/PackageCache/com.unity.modules.vehicles@1.0.0
+  resolvedPath: C:\Users\andre\Desktop\BCI-GAME\Library\PackageCache\com.unity.modules.vehicles@1.0.0
   assetPath: Packages/com.unity.modules.vehicles
   name: com.unity.modules.vehicles
   displayName: Vehicles
@@ -3016,7 +3016,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Library/PackageCache/com.unity.modules.video@1.0.0
+  resolvedPath: C:\Users\andre\Desktop\BCI-GAME\Library\PackageCache\com.unity.modules.video@1.0.0
   assetPath: Packages/com.unity.modules.video
   name: com.unity.modules.video
   displayName: Video
@@ -3083,7 +3083,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Library/PackageCache/com.unity.modules.vr@1.0.0
+  resolvedPath: C:\Users\andre\Desktop\BCI-GAME\Library\PackageCache\com.unity.modules.vr@1.0.0
   assetPath: Packages/com.unity.modules.vr
   name: com.unity.modules.vr
   displayName: VR
@@ -3152,7 +3152,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Library/PackageCache/com.unity.modules.wind@1.0.0
+  resolvedPath: C:\Users\andre\Desktop\BCI-GAME\Library\PackageCache\com.unity.modules.wind@1.0.0
   assetPath: Packages/com.unity.modules.wind
   name: com.unity.modules.wind
   displayName: Wind
@@ -3207,7 +3207,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Library/PackageCache/com.unity.modules.xr@1.0.0
+  resolvedPath: C:\Users\andre\Desktop\BCI-GAME\Library\PackageCache\com.unity.modules.xr@1.0.0
   assetPath: Packages/com.unity.modules.xr
   name: com.unity.modules.xr
   displayName: XR
@@ -3274,7 +3274,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Library/PackageCache/com.unity.modules.subsystems@1.0.0
+  resolvedPath: C:\Users\andre\Desktop\BCI-GAME\Library\PackageCache\com.unity.modules.subsystems@1.0.0
   assetPath: Packages/com.unity.modules.subsystems
   name: com.unity.modules.subsystems
   displayName: Subsystems
@@ -3333,7 +3333,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 4.4.0
   source: 1
-  resolvedPath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Library/PackageCache/com.unity.xr.management@4.4.0
+  resolvedPath: C:\Users\andre\Desktop\BCI-GAME\Library\PackageCache\com.unity.xr.management@4.4.0
   assetPath: Packages/com.unity.xr.management
   name: com.unity.xr.management
   displayName: XR Plugin Management
@@ -3468,7 +3468,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 2.1.10
   source: 1
-  resolvedPath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Library/PackageCache/com.unity.xr.legacyinputhelpers@2.1.10
+  resolvedPath: C:\Users\andre\Desktop\BCI-GAME\Library\PackageCache\com.unity.xr.legacyinputhelpers@2.1.10
   assetPath: Packages/com.unity.xr.legacyinputhelpers
   name: com.unity.xr.legacyinputhelpers
   displayName: XR Legacy Input Helpers
@@ -3570,7 +3570,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.6.3
   source: 1
-  resolvedPath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Library/PackageCache/com.unity.inputsystem@1.6.3
+  resolvedPath: C:\Users\andre\Desktop\BCI-GAME\Library\PackageCache\com.unity.inputsystem@1.6.3
   assetPath: Packages/com.unity.inputsystem
   name: com.unity.inputsystem
   displayName: Input System
@@ -3686,7 +3686,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 2.2.3
   source: 1
-  resolvedPath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Library/PackageCache/com.unity.xr.core-utils@2.2.3
+  resolvedPath: C:\Users\andre\Desktop\BCI-GAME\Library\PackageCache\com.unity.xr.core-utils@2.2.3
   assetPath: Packages/com.unity.xr.core-utils
   name: com.unity.xr.core-utils
   displayName: XR Core Utilities
@@ -3785,7 +3785,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.0.6
   source: 1
-  resolvedPath: /Users/jamescao/Unity_Projects/BCI-GAME-ip_config/Library/PackageCache/com.unity.ext.nunit@1.0.6
+  resolvedPath: C:\Users\andre\Desktop\BCI-GAME\Library\PackageCache\com.unity.ext.nunit@1.0.6
   assetPath: Packages/com.unity.ext.nunit
   name: com.unity.ext.nunit
   displayName: Custom NUnit

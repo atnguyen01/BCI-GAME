@@ -1,11 +1,16 @@
 using System;
 using System.Collections;
 using System.Net.Sockets;
-using System.Text;
+using System.Text; 
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Events;
+using UnityEngine.SceneManagement;
+using Microsoft.MixedReality.Toolkit.Experimental.UI;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
+using TMPro;
 using static ip_input_script;
 
 /// <summary>
@@ -17,7 +22,7 @@ namespace TSI2Unity
     {
         #region Public Variables
         [Header("Network")]
-        public string ipAddress = ip_input_script.global_ip_address.text;
+        public string ipAddress;
         public int port = 55555;
         public int waitingMessagesFrequency = 1;
         public TSIMessage tSIMessage;
@@ -55,7 +60,23 @@ namespace TSI2Unity
 
         private void Start()
         {
-            ipAddress = ip_input_script.global_ip_address.text;
+           // yield return new WaitForSeconds(5);
+           
+            int loop = 10;
+
+        /*   while(ip_input_script.global_ip_address is null || ip_input_script.global_ip_address == "") {
+                Debug.Log("waiting for IP, current IP:" + ip_input_script.global_ip_address);
+                // Debug.Log("Loop: " + loop);
+                // loop--;
+                StartCoroutine(customWait(1));
+           }
+         */  
+
+            Debug.Log("global IP address val: " + ip_input_script.global_ip_address);
+            // ipAddress = ip_input_script.global_ip_address;
+            ipAddress = "192.168.0.101";
+            Debug.Log("IP address val: " + ipAddress);
+            
             DontDestroyOnLoad(this);
             //SEND Request --- Connect to Request Socket
             OnClientStarted = delegate () { SendMessageToServer("Request Socket"); };
@@ -64,6 +85,10 @@ namespace TSI2Unity
             InvokeRepeating("FetchTSI", 1,1f);
         }
         //Start client and stablish connection with server
+
+        private IEnumerator customWait(int sec) {
+                yield return new WaitForSecondsRealtime(sec);
+        }
 
         private void Update()
         {
@@ -466,5 +491,3 @@ namespace TSI2Unity
     }
 
 }
-
-
