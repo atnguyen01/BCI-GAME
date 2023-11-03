@@ -5659,7 +5659,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3eb0eb441fba0e49a53649d0b5ad96b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ipAddress: 192.168.0.105
+  ipAddress: 
   port: 55555
   waitingMessagesFrequency: 1
   m_ReceivedMessage: 
