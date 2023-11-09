@@ -950,17 +950,18 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 174798904}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1973185513}
+  - {fileID: 1108454853}
   - {fileID: 1717431531}
   - {fileID: 2013399523}
   - {fileID: 926088526}
   - {fileID: 268799341}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1398496440}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &181848175
 GameObject:
@@ -4750,7 +4751,7 @@ GameObject:
   - component: {fileID: 635258425}
   - component: {fileID: 635258424}
   m_Layer: 0
-  m_Name: Pressable Button (2)
+  m_Name: Close
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7556,7 +7557,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ec72a3a105768f746b556a8dfdae61a8, type: 2}
+  - {fileID: 2100000, guid: 416caa6b57bb22c40ab9f1a4c12b304e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8311,13 +8312,13 @@ Transform:
   m_GameObject: {fileID: 1108454852}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.4154, y: -0.104, z: -3.08}
-  m_LocalScale: {x: 2.4030604, y: 23.668638, z: 284.0909}
+  m_LocalPosition: {x: 0.2774258, y: 0.104376554, z: 0.038812876}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1419003164}
   - {fileID: 635258423}
-  m_Father: {fileID: 1973185513}
+  m_Father: {fileID: 174798913}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1108454854
 MonoBehaviour:
@@ -10605,6 +10606,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1747991762}
+  - {fileID: 174798913}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1408924077
@@ -15030,7 +15032,6 @@ Transform:
   m_Children:
   - {fileID: 1098433765}
   - {fileID: 1434898034}
-  - {fileID: 1108454853}
   - {fileID: 1664266014}
   m_Father: {fileID: 174798913}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15953,4 +15954,3 @@ SceneRoots:
   - {fileID: 2003826774}
   - {fileID: 2113891782}
   - {fileID: 1398496440}
-  - {fileID: 174798913}
