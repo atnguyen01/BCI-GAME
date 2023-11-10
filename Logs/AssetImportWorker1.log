@@ -4,7 +4,7 @@ OS: 'Windows 11  (10.0.22621) 64bit Core' Language: 'en' Physical Memory: 32547 
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
-C:\Program Files\Unity\Hub\Editor\2022.3.8f1\Editor\Unity.exe
+C:\Program Files\Unity\Hub\Editor\2022.3.8f1-x86_64\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
@@ -15,7 +15,7 @@ C:/Users/andre/Desktop/BCI-GAME
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-57674
+58948
 Successfully changed project path to: C:/Users/andre/Desktop/BCI-GAME
 C:/Users/andre/Desktop/BCI-GAME
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,15 +49,15 @@ C:/Users/andre/Desktop/BCI-GAME
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [15372] Host "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 3232301237 [EditorId] 3232301237 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-PDQA0KIV) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [84900] Host "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 4167664684 [EditorId] 4167664684 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-PDQA0KIV) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [15372] Host "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 3232301237 [EditorId] 3232301237 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-PDQA0KIV) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [84900] Host "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 4167664684 [EditorId] 4167664684 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-PDQA0KIV) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 15 workers.
-Refreshing native plugins compatible for Editor in 16.69 ms, found 8 plugins.
+Refreshing native plugins compatible for Editor in 15.75 ms, found 8 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.8f1 (b5eafc012955)
-[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.8f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.8f1-x86_64/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path C:/Users/andre/Desktop/BCI-GAME/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
@@ -67,54 +67,49 @@ Direct3D:
     VRAM:     3976 MB
     Driver:   31.0.15.3742
 Initialize mono
-Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.8f1/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.8f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
-Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.8f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56044
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.8f1-x86_64/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.8f1-x86_64/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.8f1-x86_64/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56120
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.8f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.8f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.8f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.8f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
-Registered in 0.013122 seconds.
-- Loaded All Assemblies, in  0.335 seconds
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.8f1-x86_64/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.8f1-x86_64/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
+Registered in 0.009610 seconds.
+- Loaded All Assemblies, in  0.460 seconds
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
-Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 276 ms
-Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.545 seconds
-Domain Reload Profiling: 877ms
-	BeginReloadAssembly (93ms)
+- Finished resetting the current domain, in  0.205 seconds
+Domain Reload Profiling: 662ms
+	BeginReloadAssembly (169ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (31ms)
-	RebuildNativeTypeToScriptingClass (9ms)
-	initialDomainReloadingComplete (67ms)
-	LoadAllAssembliesAndSetupDomain (133ms)
-		LoadAssemblies (92ms)
+	RebuildCommonClasses (38ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (65ms)
+	LoadAllAssembliesAndSetupDomain (174ms)
+		LoadAssemblies (169ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (130ms)
-			TypeCache.Refresh (128ms)
-				TypeCache.ScanAssembly (116ms)
+		AnalyzeDomain (170ms)
+			TypeCache.Refresh (168ms)
+				TypeCache.ScanAssembly (153ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (0ms)
-	FinalizeReload (545ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (205ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (499ms)
+		SetupLoadedEditorAssemblies (160ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (378ms)
-			SetLoadedEditorAssemblies (3ms)
+			InitializePlatformSupportModulesInManaged (9ms)
+			SetLoadedEditorAssemblies (4ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (2ms)
-			ProcessInitializeOnLoadAttributes (73ms)
-			ProcessInitializeOnLoadMethodAttributes (43ms)
+			ProcessInitializeOnLoadAttributes (107ms)
+			ProcessInitializeOnLoadMethodAttributes (38ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -122,12 +117,10 @@ Domain Reload Profiling: 877ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.522 seconds
-Refreshing native plugins compatible for Editor in 11.32 ms, found 8 plugins.
+- Loaded All Assemblies, in  0.651 seconds
+Refreshing native plugins compatible for Editor in 11.17 ms, found 8 plugins.
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
-Native extension for Android target not found
-Native extension for WebGL target not found
 Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
@@ -142,196 +135,547 @@ Mono: successfully reloaded assembly
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
-- Finished resetting the current domain, in  0.761 seconds
-Domain Reload Profiling: 1279ms
-	BeginReloadAssembly (124ms)
+- Finished resetting the current domain, in  0.763 seconds
+Domain Reload Profiling: 1409ms
+	BeginReloadAssembly (148ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (4ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (24ms)
-	RebuildCommonClasses (35ms)
-	RebuildNativeTypeToScriptingClass (15ms)
-	initialDomainReloadingComplete (37ms)
-	LoadAllAssembliesAndSetupDomain (307ms)
-		LoadAssemblies (240ms)
+		CreateAndSetChildDomain (25ms)
+	RebuildCommonClasses (29ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (35ms)
+	LoadAllAssembliesAndSetupDomain (423ms)
+		LoadAssemblies (338ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (135ms)
-			TypeCache.Refresh (110ms)
-				TypeCache.ScanAssembly (93ms)
-			ScanForSourceGeneratedMonoScriptInfo (18ms)
-			ResolveRequiredComponents (6ms)
-	FinalizeReload (761ms)
+		AnalyzeDomain (167ms)
+			TypeCache.Refresh (134ms)
+				TypeCache.ScanAssembly (111ms)
+			ScanForSourceGeneratedMonoScriptInfo (25ms)
+			ResolveRequiredComponents (7ms)
+	FinalizeReload (764ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (615ms)
+		SetupLoadedEditorAssemblies (617ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (24ms)
+			InitializePlatformSupportModulesInManaged (7ms)
 			SetLoadedEditorAssemblies (3ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (65ms)
-			ProcessInitializeOnLoadAttributes (471ms)
-			ProcessInitializeOnLoadMethodAttributes (45ms)
-			AfterProcessingInitializeOnLoad (7ms)
+			BeforeProcessingInitializeOnLoad (67ms)
+			ProcessInitializeOnLoadAttributes (487ms)
+			ProcessInitializeOnLoadMethodAttributes (46ms)
+			AfterProcessingInitializeOnLoad (8ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (5ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Refreshing native plugins compatible for Editor in 11.75 ms, found 8 plugins.
+		AwakeInstancesAfterBackupRestoration (6ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 11.02 ms, found 8 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3415 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 64 unused Assets / (72.3 KB). Loaded Objects now: 3905.
-Memory consumption went from 141.0 MB to 141.0 MB.
-Total: 3.208700 ms (FindLiveObjects: 0.254000 ms CreateObjectMapping: 0.082300 ms MarkObjects: 2.694300 ms  DeleteObjects: 0.177100 ms)
+Unloading 3414 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 64 unused Assets / (72.3 KB). Loaded Objects now: 3901.
+Memory consumption went from 135.8 MB to 135.7 MB.
+Total: 3.394100 ms (FindLiveObjects: 0.276300 ms CreateObjectMapping: 0.110300 ms MarkObjects: 2.822800 ms  DeleteObjects: 0.183700 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
   custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 1392077.096495 seconds.
-  path: Packages/com.microsoft.mixedreality.toolkit.foundation/SDK/Features/UX/Interactable/Materials/HolographicButtonIconRadioOn.mat
-  artifactKey: Guid(c6de6d90801c3304682978f7090f886e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.microsoft.mixedreality.toolkit.foundation/SDK/Features/UX/Interactable/Materials/HolographicButtonIconRadioOn.mat using Guid(c6de6d90801c3304682978f7090f886e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'daaaddfcb99fc320b03d474b96688904') in 0.142516 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Packages/com.microsoft.mixedreality.toolkit.foundation/SDK/Features/UX/Interactable/Materials/MRTK_GrabbableDots2RowsH_NoFade.mat
-  artifactKey: Guid(762ee309ef36e42418a2f1eb12102129) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.microsoft.mixedreality.toolkit.foundation/SDK/Features/UX/Interactable/Materials/MRTK_GrabbableDots2RowsH_NoFade.mat using Guid(762ee309ef36e42418a2f1eb12102129) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f50f70208e5cf6457c75258facccf01') in 0.039960 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Packages/com.microsoft.mixedreality.toolkit.foundation/SDK/Features/UX/Interactable/Materials/HolographicBackPlateCircular.mat
-  artifactKey: Guid(68f0ad9fadae8b3438ebd66cdba2b20f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.microsoft.mixedreality.toolkit.foundation/SDK/Features/UX/Interactable/Materials/HolographicBackPlateCircular.mat using Guid(68f0ad9fadae8b3438ebd66cdba2b20f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '699ae79deb34a71a979417ff2764ea1c') in 0.067452 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Packages/com.microsoft.mixedreality.toolkit.foundation/SDK/Features/UX/Interactable/Materials/HolographicButtonIconStar.mat
-  artifactKey: Guid(6f0c1af0718ce6d4abe8b90d6e2c283f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.microsoft.mixedreality.toolkit.foundation/SDK/Features/UX/Interactable/Materials/HolographicButtonIconStar.mat using Guid(6f0c1af0718ce6d4abe8b90d6e2c283f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51805edc3003523cdac0a3beabb30bb1') in 0.037646 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Packages/com.microsoft.mixedreality.toolkit.foundation/SDK/Features/UX/Interactable/Materials/HolographicButtonIconAdd.mat
-  artifactKey: Guid(ccf34f78a6419584fa9cea97b5e46131) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.microsoft.mixedreality.toolkit.foundation/SDK/Features/UX/Interactable/Materials/HolographicButtonIconAdd.mat using Guid(ccf34f78a6419584fa9cea97b5e46131) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '435d6b741fca28c462dbf5079ed3ae2f') in 0.010152 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000040 seconds.
-  path: Packages/com.microsoft.mixedreality.toolkit.foundation/SDK/Features/UX/Interactable/Materials/HolographicButtonIconHome.mat
-  artifactKey: Guid(d3ec6f10c2cd7564693e6e59ca3239be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.microsoft.mixedreality.toolkit.foundation/SDK/Features/UX/Interactable/Materials/HolographicButtonIconHome.mat using Guid(d3ec6f10c2cd7564693e6e59ca3239be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46e2760df07a014377c1739f306f25dc') in 0.011507 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Packages/com.microsoft.mixedreality.toolkit.foundation/SDK/Features/UX/Interactable/Materials/HolographicButtonIconRefresh.mat
-  artifactKey: Guid(467ed030160339e4b8ec795630ed12aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.microsoft.mixedreality.toolkit.foundation/SDK/Features/UX/Interactable/Materials/HolographicButtonIconRefresh.mat using Guid(467ed030160339e4b8ec795630ed12aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b41af0840ca9dad05ad72a67670125d1') in 0.011033 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Packages/com.microsoft.mixedreality.toolkit.foundation/SDK/Features/UX/Interactable/Materials/HolographicButtonPlate.mat
-  artifactKey: Guid(19bfc37fa7629b842a220853f7f60782) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.microsoft.mixedreality.toolkit.foundation/SDK/Features/UX/Interactable/Materials/HolographicButtonPlate.mat using Guid(19bfc37fa7629b842a220853f7f60782) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2bf739e25fbd2e3ce7e0ab882b25413') in 0.078803 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Packages/com.microsoft.mixedreality.toolkit.foundation/SDK/Features/UX/Interactable/Materials/HolographicBackPlateGrabbableProximity.mat
-  artifactKey: Guid(7bb46fe0291383e41b1cd86f2a9b2479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.microsoft.mixedreality.toolkit.foundation/SDK/Features/UX/Interactable/Materials/HolographicBackPlateGrabbableProximity.mat using Guid(7bb46fe0291383e41b1cd86f2a9b2479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2f7ab9be828cf78038dd38fb5981575') in 0.105263 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Packages/com.microsoft.mixedreality.toolkit.foundation/SDK/Features/UX/Interactable/Materials/HolographicBackPlateGrabbed.mat
-  artifactKey: Guid(16526572b35ecaa4ba781a0bff18ab12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.microsoft.mixedreality.toolkit.foundation/SDK/Features/UX/Interactable/Materials/HolographicBackPlateGrabbed.mat using Guid(16526572b35ecaa4ba781a0bff18ab12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b59296f3be765f13f3e18cc37b22d08') in 0.011307 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Packages/com.microsoft.mixedreality.toolkit.foundation/SDK/Features/UX/Interactable/Materials/HolographicButtonContentCageProximityCircularUnityUI.mat
-  artifactKey: Guid(9c3c9d308f2be564192c53122c77079b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.microsoft.mixedreality.toolkit.foundation/SDK/Features/UX/Interactable/Materials/HolographicButtonContentCageProximityCircularUnityUI.mat using Guid(9c3c9d308f2be564192c53122c77079b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a70b9fa1b873cc091a0c2641f9d6d51') in 0.094195 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 0.000035 seconds.
-  path: Packages/com.microsoft.mixedreality.toolkit.foundation/SDK/Features/UX/Interactable/Materials/HolographicButtonIconSearch.mat
-  artifactKey: Guid(57717538759a71948975aa7be8c2a3cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.microsoft.mixedreality.toolkit.foundation/SDK/Features/UX/Interactable/Materials/HolographicButtonIconSearch.mat using Guid(57717538759a71948975aa7be8c2a3cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c1bb2e48636b64be8b97187ccab3c7a') in 0.010774 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Packages/com.microsoft.mixedreality.toolkit.foundation/SDK/Features/UX/Interactable/Materials/HolographicButtonIconSettings.mat
-  artifactKey: Guid(5a9ff3bf27bd2f14eb87222e2d2761b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.microsoft.mixedreality.toolkit.foundation/SDK/Features/UX/Interactable/Materials/HolographicButtonIconSettings.mat using Guid(5a9ff3bf27bd2f14eb87222e2d2761b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47d70f7fe6ce6a466d7228898a8eaa95') in 0.011302 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Packages/com.microsoft.mixedreality.toolkit.foundation/SDK/Features/UX/Interactable/Materials/HolographicButtonContentCage.mat
-  artifactKey: Guid(7a340917eaca38f43a0deae0b3175ae2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.microsoft.mixedreality.toolkit.foundation/SDK/Features/UX/Interactable/Materials/HolographicButtonContentCage.mat using Guid(7a340917eaca38f43a0deae0b3175ae2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'abf958b8f6ab31d9284bb762473a5259') in 0.058349 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Packages/com.microsoft.mixedreality.toolkit.foundation/SDK/Features/UX/Interactable/Materials/HolographicButtonThinContent.mat
-  artifactKey: Guid(2908087d837e7ab4f8bc0c2b3de90823) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.microsoft.mixedreality.toolkit.foundation/SDK/Features/UX/Interactable/Materials/HolographicButtonThinContent.mat using Guid(2908087d837e7ab4f8bc0c2b3de90823) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66414bf15d0d4dcd5926c075324e0e04') in 0.088937 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Packages/com.microsoft.mixedreality.toolkit.foundation/SDK/Features/UX/Interactable/Materials/Ground.mat
-  artifactKey: Guid(1fac60a6b183d204dbe2c379128ad367) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.microsoft.mixedreality.toolkit.foundation/SDK/Features/UX/Interactable/Materials/Ground.mat using Guid(1fac60a6b183d204dbe2c379128ad367) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48bab23e1bf9c67de684518a0470ad3c') in 0.054610 seconds
+  Time since last request: 1454425.105602 seconds.
+  path: Packages/com.microsoft.mixedreality.toolkit.foundation/Providers/Oculus/XRSDK/Profiles/DefaultOculusXRSDKDeviceManagerProfile.asset
+  artifactKey: Guid(8f48cb9c26fb518499c65c9f9e8bb4ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.microsoft.mixedreality.toolkit.foundation/Providers/Oculus/XRSDK/Profiles/DefaultOculusXRSDKDeviceManagerProfile.asset using Guid(8f48cb9c26fb518499c65c9f9e8bb4ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '398e915cce16d1e28c26bf86ec975cc0') in 0.011224 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 1
 ========================================================================
 Received Prepare
+Refreshing native plugins compatible for Editor in 10.79 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 569 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 1 unused Assets / (22.8 KB). Loaded Objects now: 4470.
+Memory consumption went from 85.4 MB to 85.4 MB.
+Total: 4.474100 ms (FindLiveObjects: 0.261900 ms CreateObjectMapping: 0.091300 ms MarkObjects: 4.086400 ms  DeleteObjects: 0.033500 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:scripting/monoscript/fileName/SimulationUIAnalyticsArgs.cs: 85986d2ad850e558cfe395c243eb0e35 -> 
+  custom:scripting/monoscript/fileName/XRTextureDescriptor.cs: f18a04143a2737ff9511cf1d2fd76919 -> 
+  custom:scripting/monoscript/fileName/XREnvironmentViewManager.cs: ff11af8d0dc19d306237f28cbfd4e401 -> 
+  custom:scripting/monoscript/fileName/uint3x3.gen.cs: b354ea0e62ee3ca695eba400f73bf8a2 -> 
+  custom:scripting/monoscript/fileName/PlaneVoxel.cs: fbe003685add71cac6507a11584dfd4e -> 
+  custom:scripting/monoscript/fileName/PlaneSubsystem.cs: f8177623d422d6c2285fe33d306bac68 -> 
+  custom:scripting/monoscript/fileName/HumanSegmentationStencilMode.cs: 1c8a8a9ac9313e7c383a157ac3ec7d2e -> 
+  custom:scripting/monoscript/fileName/SimulationEnvironmentAssetsManager.cs: ded36a633eb35e65c92e51f2b937e496 -> 
+  custom:scripting/monoscript/fileName/double4.gen.cs: c861322ff5ab8c01e3e4b508791cf124 -> 
+  custom:scripting/monoscript/fileName/ARMeshesChangedEventArgs.cs: 3ebd3df8b5f53d98b895a1b3f7edd8b8 -> 
+  custom:scripting/monoscript/fileName/rigid_transform.cs: 36bbdd985ffacdf5ee0745cfd3a1f08d -> 
+  custom:scripting/monoscript/fileName/SimulationPointCloudSubsystem.cs: 9a08c842d2fc5f7801b4513db59a80b7 -> 
+  custom:scripting/precompiled-assembly-types:Unity.XR.ARAnalytics.Editor: 22574fdc8ab630dfafdf183188a9d00d -> 
+  custom:scripting/monoscript/fileName/ARRaycastUpdatedEventArgs.cs: b2116c990c25dc27d20afd00f0ea2c4b -> 
+  custom:scripting/monoscript/fileName/PropertyAttributes.cs: f9be6ff8022c2b7e9364b782f234d192 -> 
+  custom:scripting/monoscript/fileName/XRSessionSubsystemDescriptor.cs: 64d5d1b7f3c53187fd79be1ff9568619 -> 
+  custom:scripting/monoscript/fileName/ARSceneValidator.cs: 3263c615fa43dc39430e4d427def5b62 -> 
+  custom:scripting/precompiled-assembly-types:Unity.XR.ARSubsystems: 73e89fb51ba12a9c67669292168cb708 -> 
+  custom:scripting/monoscript/fileName/uint4x4.gen.cs: 7732c53bd697b7eb03dd735297da0fc1 -> 
+  custom:scripting/monoscript/fileName/ARAnalyticsEvent.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/ARPlaneMeshGenerators.cs: 027d8f0a576dfae34c9d8f1e0e18f101 -> 
+  custom:scripting/monoscript/fileName/SimulationPackageMetadata.cs: c13e5d9c99c2aecb32496c211273e15e -> 
+  custom:scripting/monoscript/fileName/XRAnchorSubsystem.cs: e6d580c6cc9c96bd08decf6eaad6249c -> 
+  custom:scripting/monoscript/fileName/AppRemoting.cs: 2a4ee5a45b437cdb47af64cc7aef2e6b -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:scripting/monoscript/fileName/int2.gen.cs: ba08380188673eb89fbe6c63125635e5 -> 
+  custom:scripting/monoscript/fileName/ARTrackableManager.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/XRCameraParams.cs: 81c188019f11a35d11f1a5fcb4721a41 -> 
+  custom:scripting/monoscript/fileName/MeshQueue.cs: dffa3bd43d6b4fd1fc4555e7afa42276 -> 
+  custom:scripting/monoscript/fileName/ARTrackedObject.cs: d9cb557a4402187a1d1b4d4b5cdaa2ba -> 
+  custom:scripting/monoscript/fileName/AppRemotingSubsystem.cs: 4ef86ac4861da255c704b0cfd0252a80 -> 
+  custom:scripting/monoscript/fileName/int4.gen.cs: 6202c51352f8408238811f81cf17884b -> 
+  custom:scripting/monoscript/fileName/SimulationPlaneVisualizer.cs: 586046fadd2891c819b6e9250be8229e -> 
+  custom:scripting/monoscript/fileName/ARPointCloudUpdatedEventArgs.cs: 7e118a31014b4d766fad33e7843c7aaa -> 
+  custom:scripting/monoscript/fileName/noise3D.cs: 2eb29bf877494e27d7b8d68303a33727 -> 
+  custom:scripting/monoscript/fileName/XRPointCloud.cs: 4ded1d79b257c065b8e6a180eb2a2252 -> 
+  custom:scripting/monoscript/fileName/TrackedImageDiscoveryStrategy.cs: 0e74e3668c695fb34c6d8a3d340872cc -> 
+  custom:scripting/monoscript/fileName/XRRaycastSubsystemDescriptor.cs: 86f1fe88d8e1a41a19ba55c872bdcd4c -> 
+  custom:scripting/monoscript/fileName/ARMarkerScale.cs: 74da281a278136702d32a51a292d9d05 -> 
+  custom:scripting/monoscript/fileName/ARAnalyticsConstants.cs: a7a3a88cbedc1b6aef7b147a87b7bdd0 -> 
+  custom:scripting/monoscript/fileName/float4x2.gen.cs: a70cf4e9d29e9357ba0e68d3ee43ce34 -> 
+  custom:scripting/monoscript/fileName/Disposable.cs: 6a2e4f256626a66a05e2f491836f9325 -> 
+  custom:scripting/monoscript/fileName/PlatformValidation.cs: 079a6c5506a70bf380dfbb51d0f7a531 -> 
+  custom:scripting/monoscript/fileName/MixedRealityFeaturePlugin.cs: 59bb5e56cdd83a2bc6a9b759caa150a3 -> 
+  custom:scripting/monoscript/fileName/ARPlaneManager.cs: 7fe2439e94eb408eb1b117ac13af2046 -> 
+  custom:scripting/monoscript/fileName/XRHumanBodySubsystemDescriptor.cs: 9da380d1b56ba23ec07f1005b1d4fc16 -> 
+  custom:scripting/monoscript/fileName/FindObjectsUtility.cs: c250e105b567049be2d7674c455c9970 -> 
+  custom:scripting/monoscript/fileName/XRAnchor.cs: 5dfb4f3cf8d10dc1968170631c967539 -> 
+  custom:scripting/monoscript/fileName/ARSceneAnalysis.cs: 5e73409db216d9df7d0dbe846594feaf -> 
+  custom:scripting/monoscript/fileName/half3.gen.cs: 935b3c49f9c5126f28352e4a48406e0a -> 
+  custom:scripting/monoscript/fileName/PlaneFindingParams.cs: b5d344be442e0b70e2a2fd4b43549791 -> 
+  custom:scripting/monoscript/fileName/PoseExtensions.cs: 614f53f3378d527956cbb02e9ef4d0c6 -> 04e2b738e62ba02835186f5368bff217
+  custom:scripting/monoscript/fileName/MaterialInspector.cs: c863f1ec0a0c3b279e6c736e0d2d6898 -> 
+  custom:scripting/monoscript/fileName/AppRemotingPlugin.cs: ac719fc7f7daef3d80ffd5631594a30b -> 
+  custom:scripting/monoscript/fileName/XRCameraConfiguration.cs: 2a3c102a0e8e566ddb2e1ed78ab9cd6f -> 
+  custom:scripting/monoscript/fileName/GestureSubsystem.cs: 79b82e35b9c5703e21745fbfc140f907 -> 
+  custom:scripting/monoscript/fileName/XRReferenceImageLibraryEditor.cs: 6e16575b59fef8f50fa144316217cbc1 -> 
+  custom:scripting/monoscript/fileName/SimulationSceneManager.cs: 608910333ffcb114d1181b6665ef7f62 -> 
+  custom:scripting/monoscript/fileName/XRParticipantSubsystem.cs: 7236b4705041579fc67600357593cc52 -> 
+  custom:scripting/monoscript/fileName/AREnvironmentProbe.cs: 62e64b1314fc7874015cbcc87b27ceeb -> 
+  custom:scripting/monoscript/fileName/TrackingMode.cs: 1c1d96c732a48363e369f716666d32dc -> 
+  custom:scripting/monoscript/fileName/uint2x4.gen.cs: 817d68c720fa6aa9b67a61d7c1b206d0 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:scripting/monoscript/fileName/WMRFeatureSet.cs: cabd2acb13f77bcacd1d31cb845ba1bb -> 
+  custom:scripting/monoscript/fileName/XRayRegion.cs: 16680a6806fc5459b02a9657c223005b -> 
+  custom:scripting/monoscript/fileName/LitGUI.cs: 48c38e16f353b70a1e615c536e691e9e -> 
+  custom:scripting/monoscript/fileName/Assert.cs: 8e3102bfe2c61769e1c41a7a4017bb12 -> 
+  custom:scripting/monoscript/fileName/bool4.gen.cs: ca7c0171e1585aef1c2900b66db0977a -> 
+  custom:scripting/monoscript/fileName/SceneHook.cs: 908c0f54c160a6ae56fd4ab3ab714edd -> 
+  custom:scripting/monoscript/fileName/XREnvironmentViewCamera.cs: db491f1ba95b53dc8eb134ad86f12826 -> 
+  custom:scripting/monoscript/fileName/IReferenceImageLibrary.cs: dbb2a413ff5d5eb59de3b2bfc90ad5c2 -> 
+  custom:scripting/monoscript/fileName/ConversionParams.cs: b1685f512b8b1f0d529bde81e584f665 -> 
+  custom:scripting/monoscript/fileName/BuildHelper.cs: 292a077908b6140f9083de5a82361a50 -> 
+  custom:scripting/monoscript/fileName/ARCameraFrameEventArgs.cs: ff3b2fc17c4c7aa656a76a68f346a5de -> 
+  custom:scripting/monoscript/fileName/XRParticipant.cs: f9d8ea8dfa605d14c14afa295aefd46a -> 
+  custom:scripting/monoscript/fileName/XRPointCloudData.cs: 9846b62b24bdfe26b4a5fb2a8a59f488 -> 
+  custom:scripting/monoscript/fileName/ARTrackedImage.cs: 23fdf0455a65b13b9d879942edb9f7c7 -> 
+  custom:scripting/monoscript/fileName/EnvironmentChangeHook.cs: cdc6a9b21fd2806a7eda7e1173f0f92d -> 
+  custom:scripting/monoscript/fileName/float4x3.gen.cs: 82da2e74a1c9948cc673acd7425c23e5 -> 
+  custom:scripting/monoscript/fileName/float3x4.gen.cs: f425eda36f0a9a6a9785ce693ab31c65 -> 
+  custom:scripting/monoscript/fileName/HashCodeUtil.cs: ee7a4f9a9650d3c7f74eced4bfed8831 -> c0b300e342f12c77737b8543de36271c
+  custom:scripting/monoscript/fileName/ScopedProfiler.cs: 38ec2724f11034f2c01514181b36b402 -> 
+  custom:scripting/monoscript/fileName/MixedRealityFeatureValidator.cs: 2127b3317b143d57f80381b0a87a07bc -> 
+  custom:scripting/monoscript/fileName/bool4x4.gen.cs: 832d1ba72f52e457d65ecd6ca1ba2b2e -> 
+  custom:scripting/monoscript/fileName/math_unity_conversion.cs: 717272b42fdbca1935830b3071b2da3c -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:scripting/monoscript/fileName/HandTracker.cs: a2044f3b82499f6e09eb2a21d6814dcf -> 
+  custom:scripting/monoscript/fileName/RaycastSubsystem.cs: c17f943a3e9d6207d4307311d387b421 -> 
+  custom:scripting/monoscript/fileName/XRFaceSubsystem.cs: 82dc23de39a8b3830703c745ca5b799a -> 
+  custom:scripting/monoscript/fileName/XRReferenceImageLibraryBuildProcessor.cs: b571a7d532a8407115f1b5fb081e330a -> 
+  custom:scripting/monoscript/fileName/ARMarkerManager.cs: 6e8c79725d35f504c123a93a759d8aec -> 
+  custom:scripting/monoscript/fileName/ARTrackedObjectManager.cs: 4614d5e5db2b7fd8490b513e48540b37 -> 
+  custom:scripting/monoscript/fileName/SimulationImageTrackingSubsystem.cs: a05c3c902f2bad7fcdf3c895dbb2e3c9 -> 
+  custom:scripting/monoscript/fileName/double3x3.gen.cs: cf2bca4cc9e8b93d47929417a1a999f7 -> 
+  custom:scripting/monoscript/fileName/AnchorStore.cs: 2d3d1c77e1672937ccafab0028361820 -> 
+  custom:scripting/monoscript/fileName/PlayModeRemotingValidator.cs: 37c3f816f33b44f635dd774efbeeda29 -> 
+  custom:scripting/monoscript/fileName/TrackedImageDiscoveryParamsPropertyDrawer.cs: 48ba425bad2e784b374a6d77f3315844 -> 
+  custom:scripting/monoscript/fileName/SimulationSubsystemAnalytics.cs: 35e0c14360eeae853568c42566e1aef7 -> 
+  custom:scripting/monoscript/fileName/SpatialGraphNode.cs: de272f1f567a1e351cbbc22f77f82536 -> 
+  custom:scripting/monoscript/fileName/TransformExtensions.cs: 9920c4094555b7b3e69cde2759e9deeb -> 07cdb3efe1bc04accb93473dad737367
+  custom:scripting/monoscript/fileName/double3x2.gen.cs: 87fbe5b4a5a90e3c915d83933bb7a691 -> 
+  custom:scripting/monoscript/fileName/PlayModeRemotingPluginInspector.cs: 2ec723d2fd6c437e6a80fb04a716b2d3 -> 
+  custom:scripting/monoscript/fileName/ARHumanBody.cs: 5e06f983da1724be789ae2a5be64f29f -> 
+  custom:scripting/monoscript/fileName/XREnvironmentProbe.cs: 9b160615f5508a465d8797f5cc7a89e3 -> 
+  custom:scripting/monoscript/fileName/bool3x2.gen.cs: 6ad67e842e9f001f4905675e041c0394 -> 
+  custom:scripting/monoscript/fileName/PlaneFindingParamsPropertyDrawer.cs: 7a09cc05451660b85a1d64fceda017e7 -> 
+  custom:scripting/monoscript/fileName/SimulatedTrackedImage.cs: 97c712c7d6ae6a202cb96d93be573b2d -> 
+  custom:scripting/monoscript/fileName/ARSessionStateChangedEventArgs.cs: d5807315301cf3999b49f55b78e8891e -> 
+  custom:scripting/monoscript/fileName/XRSimulationSettings.cs: 89f3ca7d9f933ce63503fbc2e15a1c44 -> 
+  custom:scripting/monoscript/fileName/XREnvironmentToolbarOverlay.cs: c6e91b63617902693d8db597192e7b02 -> 
+  custom:scripting/monoscript/fileName/half2.gen.cs: a6f90a50ab057fcfbb93f80dff9467ec -> 
+  custom:scripting/monoscript/fileName/ARPointCloudMeshVisualizer.cs: 676f8ec3c7cfc9f218f2c418d7f8afa1 -> 
+  custom:scripting/monoscript/fileName/TrackableChanges.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/ValidationRuleset.cs: fc5ffb55f190c69636302d67a591db64 -> 
+  custom:scripting/monoscript/fileName/Il2CppEagerStaticClassConstructionAttribute.cs: 5ae90a36296d2fe83dd98e9361e907e8 -> 
+  custom:scripting/monoscript/fileName/MutableRuntimeReferenceImageLibrary.cs: e40c29360e1054f724901cfc5b0182f4 -> 
+  custom:scripting/monoscript/fileName/SelectKeywordRecognizer.cs: 08da0712d1ce2100a479e7213f508db5 -> 
+  custom:scripting/monoscript/fileName/XRRaycastSubsystem.cs: e460d7090f464bfc78600c55312d0f4e -> 
+  custom:scripting/monoscript/fileName/ARSession.cs: 066385ea7c2a2c433441578beeece62b -> 
+  custom:scripting/monoscript/fileName/EnvironmentDepthMode.cs: 5d22a30fa449bc7abf6e828d0dc2cbc5 -> 
+  custom:scripting/monoscript/fileName/SimulatedMeshClassification.cs: baff69c11d59574c186d707ddee640a4 -> 
+  custom:scripting/monoscript/fileName/XRAnchorStore.cs: f572b49f5f9ab10faa35f5da1bcfabde -> 
+  custom:scripting/monoscript/fileName/cellular2x2.cs: 2eb29bf877494e27d7b8d68303a33727 -> 
+  custom:scripting/precompiled-assembly-types:Microsoft.MixedReality.OpenXR.Editor: 3e32622803cde77d853a4c9b0ef62578 -> 
+  custom:scripting/monoscript/fileName/PreprocessBuildEventArgs.cs: 4b543558c03873777fc6c881dc0373db -> 
+  custom:scripting/monoscript/fileName/half.cs: cf3f2b0bcee127ccdac6d87167bcc406 -> 
+  custom:scripting/monoscript/fileName/AnchorTransferBatch.cs: dc6c8815e369d8bffe41178b278fadec -> 
+  custom:scripting/monoscript/fileName/XRSessionUpdateParams.cs: 1d26d8d97c544554b3b0a208616430eb -> 
+  custom:scripting/monoscript/fileName/ARLightEstimationData.cs: eec35268a8e6b29dd949c108c1ce1be0 -> 
+  custom:scripting/monoscript/fileName/XRPlaneSubsystemDescriptor.cs: 6d369c6a5360033667ba36954e4ad9ae -> 
+  custom:scripting/monoscript/fileName/SerializableDictionary.cs: 7d654a2b5b3a10da3e7d8472196e96d1 -> 90647cc400823b41df847a6cbfc29026
+  custom:scripting/monoscript/fileName/noise3Dgrad.cs: 2eb29bf877494e27d7b8d68303a33727 -> 
+  custom:scripting/precompiled-assembly-types:Unity.XR.ARFoundation.Editor: 389a2fca3a4f99a4c4165067d380b303 -> 
+  custom:scripting/monoscript/fileName/bool4x2.gen.cs: 5e92d30f937bc7e4e4a07b2b81c06b27 -> 
+  custom:scripting/monoscript/fileName/Plane.cs: 0cc01f9aed13d0d55e699d5e703758d6 -> 
+  custom:scripting/monoscript/fileName/ARAnchorManager.cs: fe4ceb11879ce62e08589d1b533c5b5c -> 
+  custom:scripting/monoscript/fileName/BuildHook.cs: dc6b03344f2ff5bfd6c0d133918bd427 -> 
+  custom:scripting/monoscript/fileName/ARCameraBackground.cs: f64f8d4bbfcde8a820f2c0f2f1e8712b -> 
+  custom:scripting/monoscript/fileName/LabelWidthAttributeDrawer.cs: 2d5e723ed1a8565c8d48cb995ea0385d -> 
+  custom:scripting/monoscript/fileName/ViewConfiguration.cs: 7644ee2afec64d055cc8db93011cec13 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:scripting/monoscript/fileName/classicnoise3D.cs: 2eb29bf877494e27d7b8d68303a33727 -> 
+  custom:scripting/monoscript/fileName/MinMaxAABB.cs: 87e440667b74c17b186d7505988d93e6 -> 
+  custom:scripting/monoscript/fileName/BaseShaderGUI.cs: 228a0dfb5f3420edba1553e876f179a4 -> 
+  custom:scripting/monoscript/fileName/ViewConfigurationSettings.cs: 40529f6e5e738f6262b3667b769b8ab4 -> 
+  custom:scripting/monoscript/fileName/HPMixedRealityControllerProfile.cs: b828704a887292c122e5b3bedee84824 -> 
+  custom:scripting/monoscript/fileName/XREnvironmentProbeSubsystem.cs: 165b595088e3034859317ea514f0ecba -> 
+  custom:scripting/monoscript/fileName/double2x2.gen.cs: 1b24b88380b01d73274245c8a3f891ca -> 
+  custom:scripting/monoscript/fileName/GestureRecognizer.cs: e47bb2b7b2a1e0e6c2c9a111e85d4042 -> 
+  custom:scripting/monoscript/fileName/XRayRuntimeUtils.cs: 44e4615e97afc1b383195393c066655f -> 
+  custom:scripting/monoscript/fileName/ARFaceUpdatedEventArgs.cs: e41d4743ada2e04251b37910f7d2f2d2 -> 
+  custom:scripting/monoscript/fileName/LayerPlaneData.cs: 3b34ba30bbbcdc5e2bd1374915262551 -> 
+  custom:scripting/monoscript/fileName/AREnvironmentProbesChangedEvent.cs: d3ede3876cb31e16bd82d66b0a678abd -> 
+  custom:scripting/monoscript/fileName/PlaneRaycaster.cs: bc1c0c51e0c950a5f33b4ba3cafbd828 -> 
+  custom:scripting/monoscript/fileName/float2x2.gen.cs: f203c6ed52cbda2033cd1859a76ab02f -> 
+  custom:scripting/monoscript/fileName/NativeLib.cs: a44f558f2ac7dd0ff31d662eceb90aec -> 
+  custom:scripting/monoscript/fileName/XRPointCloudSubsystem.cs: ba57c6d6b9622a57ff0a583a5e62107c -> 
+  custom:scripting/monoscript/fileName/XRCpuImage.cs: b1685f512b8b1f0d529bde81e584f665 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/XRSimulationPreferences.cs: 163a72d10bf443c8a25ad6ce61f120ca -> 
+  custom:scripting/monoscript/fileName/bool2x4.gen.cs: 0202187d1d97b3838c3acec749a94370 -> 
+  custom:scripting/monoscript/fileName/SimulationEditorUtilities.cs: ce09e2bddc1549314e728c9b115b7318 -> 
+  custom:scripting/monoscript/fileName/uint2x3.gen.cs: dc149d5147f76ef2e3b7b3e87df71cde -> 
+  custom:scripting/monoscript/fileName/SimulationSettingsBuildProcessor.cs: eaf6a3b07a7f39c91d67118bba05fb63 -> 
+  custom:scripting/monoscript/fileName/XRHumanBodyPose2DJoint.cs: 5df6623ce65124b6f97e3415d1e948f5 -> 
+  custom:scripting/monoscript/fileName/ARRaycast.cs: d45a1e226bba459a296e65db48f2ba26 -> 
+  custom:scripting/monoscript/fileName/classicnoise4D.cs: 2eb29bf877494e27d7b8d68303a33727 -> 
+  custom:scripting/monoscript/fileName/XRReferenceObjectLibrary.cs: a6d4711b597b8d7631b2491c068545fc -> 
+  custom:scripting/monoscript/fileName/int4x3.gen.cs: 8504016f71ab8b36158b7cb8a5461a8b -> 
+  custom:scripting/monoscript/fileName/classicnoise2D.cs: 2eb29bf877494e27d7b8d68303a33727 -> 
+  custom:scripting/monoscript/fileName/XRCameraFrame.cs: 614097eeeddccb2a8d2ec08df6229787 -> 
+  custom:scripting/monoscript/fileName/XRSubsystem.deprecated.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/MatrixDrawer.cs: 54f407ec7134aa445531b0da7f5e0ded -> 
+  custom:scripting/monoscript/fileName/EditorDrawerVisibleToBuildTargetAttributeDrawer.cs: 1f18ab2d5db88b377f5a7b2f7ecfe2b3 -> 
+  custom:scripting/precompiled-assembly-types:Microsoft.MixedReality.Toolkit.Providers.OpenXR: 7dc6266774d18504b3b745ae56a001cd -> c661c9a286405c3a283664a02c158607
+  custom:scripting/monoscript/fileName/ARMarker.cs: bc3fb128253aa94f87e940afd49218b5 -> 
+  custom:scripting/monoscript/fileName/XRPointCloudSubsystemDescriptor.cs: 53013091235b3c389e0b9c28c710d863 -> 
+  custom:scripting/monoscript/fileName/float2x4.gen.cs: 8f6e3792d53a47d3e0816efd26cbabde -> 
+  custom:scripting/monoscript/fileName/ARInputManager.cs: 7c167298b0f4b26996935925a6c68943 -> 
+  custom:scripting/monoscript/fileName/SampleEnvironmentsHelper.cs: 8edfa6ad0ab18dc00b9d3c48a433d6cf -> 
+  custom:scripting/monoscript/fileName/matrix.gen.cs: 8040951fec6b586df3a34908a47f7536 -> 
+  custom:scripting/monoscript/fileName/AppRemotingFeatureSet.cs: c9bc2508ba8bcb67af45f02f402f77e0 -> 
+  custom:scripting/monoscript/fileName/Feature.cs: f0de26a98608a1261eb44482290b7ce2 -> 
+  custom:scripting/monoscript/fileName/XRReferenceObjectLibraryExtensions.cs: e17e8f6564ebea904d343b7605bf8c24 -> 
+  custom:scripting/monoscript/fileName/ARPlaneBoundaryChangedEventArgs.cs: 990a44dcfa59c17f168c34ee328a4a0f -> 
+  custom:scripting/monoscript/fileName/PostNormalizedVectorDrawer.cs: 1e9cc5a1d5ea64a4691d9edff2f31467 -> 
+  custom:scripting/monoscript/fileName/XRDepthSubsystemDescriptor.deprecated.cs: 829ab52ba28494a6166026aa3f9ad1ad -> 
+  custom:scripting/monoscript/fileName/int2x4.gen.cs: 5edaa4c8e18b723d836f4e66d7a2ad24 -> 
+  custom:scripting/monoscript/fileName/XRMarker.cs: 2ffbd9a894388ee2ff18628a9e1e5af1 -> 
+  custom:scripting/monoscript/fileName/ARTrackedImageManager.cs: db7920a7a6bf54e5575251cf39f2eb12 -> 
+  custom:scripting/monoscript/fileName/PlaneVoxelGrid.cs: d8126fac8fe8ca402dcda945d4eb9929 -> 
+  custom:scripting/monoscript/fileName/CameraFPSModeHandler.cs: a4eacc0cbe55fd4a0fdf4ab95f2adf64 -> 
+  custom:scripting/monoscript/fileName/ARMeshManager.cs: 61866862bf0d3c0a1236f513d1884580 -> 
+  custom:scripting/monoscript/fileName/ISimulationSessionResetHandler.cs: a0a1af2eec61de2104d6f1482fae6eb7 -> 
+  custom:scripting/monoscript/fileName/double2.gen.cs: 9fcc709faf542a3c28101e289489d3c3 -> 
+  custom:scripting/monoscript/fileName/GuidUtil.cs: f92f0341d94f269381d41631abcea62f -> d1f5a09d9fee592e550b9629f93c4c63
+  custom:scripting/monoscript/fileName/bool2x2.gen.cs: 4649c574bdda23c59b5d49d1b662bc61 -> 
+  custom:scripting/monoscript/fileName/GuidExtensions.cs: 44db2c6de632233215541342af9cfb6b -> 4f96c234827c9f502739689050ba31d7
+  custom:scripting/monoscript/fileName/LightEstimation.cs: 6cfa7177083321dcce146e0df74ab6e8 -> 
+  custom:scripting/monoscript/fileName/uint3x2.gen.cs: e9ed99b7eae876425b9236af5d545e3a -> 
+  custom:scripting/monoscript/fileName/SimulationRaycastSubsystem.cs: d783be9bb0a793f8259281df46c67b74 -> 
+  custom:scripting/precompiled-assembly-types:Unity.Mathematics: eda48956a0bece48f802264722748d9b -> 
+  custom:scripting/monoscript/fileName/SubsystemLifecycleManager.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/SelectKeywordRecognizerProvider.cs: fd2d144537e2bb18d1c6db9322bcabf0 -> 
+  custom:scripting/monoscript/fileName/PlayModeRemotingWindow.cs: 96cc6c0ad729c95e151c6a4dd25da99c -> 
+  custom:scripting/monoscript/fileName/ARPointCloudParticleVisualizer.cs: 0824b74f267c7aab83bab381f63e9144 -> 
+  custom:scripting/monoscript/fileName/int2x2.gen.cs: 63739a46f5092b211c341383068e9d3a -> 
+  custom:scripting/monoscript/fileName/SimulationEnvironmentScanner.cs: 79c5cc498175c3fc40bd4103458db5ca -> 
+  custom:scripting/monoscript/fileName/DebugSlider.cs: debdbbb62eea499f90508fe0da990aab -> 
+  custom:scripting/monoscript/fileName/PerceptionInterop.cs: 662fb9d5d79060c4a4f1bf54ba6ee068 -> 
+  custom:scripting/monoscript/fileName/SimulationCamera.cs: 65fd8eb9eb306e40c88f046573d4ef0b -> 
+  custom:scripting/monoscript/fileName/Transformation.cs: 0dbf90ddaadf0405507add4b334fb3ba -> 
+  custom:scripting/monoscript/fileName/XRSimulationRuntimeSettings.cs: b523ae7ca0d58745909a89f216098218 -> 
+  custom:scripting/monoscript/fileName/SimulationXRCpuImageAPI.cs: d05f9f7aac034e30486bd6bece2a38c2 -> 
+  custom:scripting/monoscript/fileName/AddReferenceImageJobState.cs: e425b44d19a70e5b72f3014fb7a18a36 -> 
+  custom:scripting/monoscript/fileName/uint3.gen.cs: 2439c557987b3f1dafd36143ddfb8c40 -> 
+  custom:scripting/monoscript/fileName/double4x4.gen.cs: d67599d4a9300cb241e4695cd70324ae -> 
+  custom:scripting/monoscript/fileName/XRSessionSubsystem.cs: 6cd554ebac214f08d6efedce5d4c66e4 -> 
+  custom:scripting/monoscript/fileName/XRReferenceImageLibraryExtensions.cs: c77dcfd796f513ff3b704e2f66ba68e6 -> 
+  custom:scripting/monoscript/fileName/PointCloudRaycaster.cs: c00055be304e8f4d2f825bde66a708d7 -> 
+  custom:scripting/monoscript/fileName/ARTextureInfo.cs: 68ff4ab2b8bbbea47156b3756f3353aa -> 
+  custom:scripting/monoscript/fileName/AppRemotingValidator.cs: a58a15a93dd76671614e46744d0a7102 -> 
+  custom:scripting/monoscript/fileName/MutableRuntimeReferenceImageLibraryExtensions.cs: e75ae5ec6d2e5371216d1f73953792e9 -> 
+  custom:scripting/monoscript/fileName/SimulationEnvironment.cs: 0c7c82e33d0c557d6e04cc7ccf80d8f8 -> 
+  custom:scripting/monoscript/fileName/SimulationEnvironmentEditor.cs: 62587ce180ef5d9c5e672daee630f10d -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:scripting/monoscript/fileName/BaseSimulationSceneManager.cs: 5aaea97b570093548e37377abf59b2ff -> 
+  custom:scripting/monoscript/fileName/bool2x3.gen.cs: c45708c9bd53a8b7f658164314a10c61 -> 
+  custom:scripting/monoscript/fileName/XRReferenceImage.cs: cc885b928e2d4aabc53e72ad3a4754a6 -> 
+  custom:scripting/monoscript/fileName/AROcclusionManager.cs: 218bc72f075c7d56e2c8406f9fbba123 -> 
+  custom:scripting/precompiled-assembly-types:Unity.XR.ARFoundation.InternalUtils: 20043b392278ce7225aa60895a71e9f1 -> 
+  custom:scripting/monoscript/fileName/ARTrackedImagesChangedEventArgs.cs: c5a27adfe435f7a84ad0382afa1b0c92 -> 
+  custom:scripting/monoscript/fileName/ARFaceMeshVisualizer.cs: 02b460d5f2b6368936c9ead58fb93e58 -> 
+  custom:scripting/monoscript/fileName/SimulationPreferencesProvider.cs: 504a9658ebb3ee5a0632676edf72cdd5 -> 
+  custom:scripting/monoscript/fileName/ARSessionEditor.cs: 314d9be71d10657eb27ef5e11794e341 -> 
+  custom:scripting/monoscript/fileName/math.cs: 3e1f77dfafdda862ef1fdae58189cdb5 -> 
+  custom:scripting/monoscript/fileName/ToolButton.cs: b8a91f56c6bb4a2b822a2d6e0236fbc8 -> 
+  custom:scripting/monoscript/fileName/ARMarkersChangedEventArgs.cs: 268d4ad74d3d1a7ae4be8c3b7d8a82a2 -> 
+  custom:scripting/monoscript/fileName/ARBackgroundRendererFeature.cs: ddad93c2a06722e80045a8aa2be1f276 -> 
+  custom:scripting/monoscript/fileName/double4x3.gen.cs: 0f480b77cbe2235a6a07fec4a8104303 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:scripting/monoscript/fileName/XRCameraIntrinsics.cs: 4b8e8fc2ec43b565add9620b9dbc1b68 -> 
+  custom:scripting/monoscript/fileName/AppRemotingCoroutineRunner.cs: 85f938d145981e9bd5faa4d43cffc786 -> 
+  custom:scripting/monoscript/fileName/ARFaceManager.cs: 59c7f357f7d7aee545637ae657771228 -> 
+  custom:scripting/monoscript/fileName/float3.gen.cs: 61e461104f30d07064c299c5ac2c9a3e -> 
+  custom:scripting/monoscript/fileName/SimulationBuildProcessor.cs: 5f63df23470d0fad085e45d8de89224e -> 
+  custom:scripting/monoscript/fileName/ARPointCloud.cs: 3a30bd19cd8da38a0c24bc814d03907d -> 
+  custom:scripting/monoscript/fileName/SimulationMesh.cs: 349fc85964073e7c08688619bf40ba9d -> 
+  custom:scripting/monoscript/fileName/HelpUrls.cs: f284e650ec70450e74fa8208bab72bf9 -> c1a90585e3e9c9d25f58f9141655f24f
+  custom:scripting/monoscript/fileName/XRFaceMesh.cs: 6ba33157396dd845406ce61fb9eaab9c -> 
+  custom:scripting/monoscript/fileName/AnchorConverter.cs: a6b08022f476b120961579aad677e719 -> 
+  custom:scripting/monoscript/fileName/ARPointCloudChangedEventArgs.cs: 611e28116723d2b69fa0a4321f7a65a6 -> 
+  custom:scripting/monoscript/fileName/ARUpdateOrder.cs: f8276e5ac1883c66bdcd288ad0c70cd6 -> 
+  custom:scripting/monoscript/fileName/int3.gen.cs: f3e7aece5ea81aaaacfae8f3b0dbf645 -> 
+  custom:scripting/monoscript/fileName/ARPlanesChangedEventArgs.cs: 2703dda10bb789ef43917252d5fd9e90 -> 
+  custom:scripting/monoscript/fileName/XRCameraSubsystemDescriptor.cs: c403ec65be36fe8c5146f01b8bbfe049 -> 
+  custom:scripting/monoscript/fileName/XRDepthSubsystem.deprecated.cs: 48339247b1b387bf4f59b28195f8d8b0 -> 
+  custom:scripting/monoscript/fileName/XRParticipantSubsystemDescriptor.cs: 5ae63592fd14fae9d57c8dde63f9df30 -> 
+  custom:scripting/monoscript/fileName/int3x3.gen.cs: dc1405f0f1704a2ec1efb4946b5d5f85 -> 
+  custom:scripting/monoscript/fileName/quaternion.cs: 0762c6482396ed4f34408952c0956647 -> 
+  custom:scripting/monoscript/fileName/int4x4.gen.cs: e1c5029dddb71a1513ebdf470db7528e -> 
+  custom:scripting/monoscript/fileName/BuildProcessorHelpers.cs: c73375f954b0c14867f791242c595f08 -> 
+  custom:scripting/monoscript/fileName/float4x4.gen.cs: a5bb36679a244217e37dd9fb5d3d2ed4 -> 
+  custom:scripting/monoscript/fileName/HandTrackingSubsystem.cs: 99a09b420b308adb050f31c07cbca1bc -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:scripting/monoscript/fileName/XRReferenceObject.cs: fc34f4a4234e9a29316a073fbd02a03c -> 
+  custom:scripting/monoscript/fileName/AddReferenceImageJobStatus.cs: 9e049cc004b5da9ae447d349ebffa743 -> 
+  custom:scripting/monoscript/fileName/double3x4.gen.cs: d3f6959e28d6480d7d5313a2c890e5a1 -> 
+  custom:scripting/monoscript/fileName/bool4x3.gen.cs: 3b9b4adbcec8eec926ee3ca5bd1a9e49 -> 
+  custom:scripting/monoscript/fileName/XRHumanBody.cs: c7b22a9980909db4e8a66ae6bce43105 -> 
+  custom:scripting/monoscript/fileName/ARCameraBackgroundEditor.cs: dccbc64997c65927efca78decd59298e -> 
+  custom:scripting/monoscript/fileName/XRSimulationPreferencesEditor.cs: 62de291d7bb16241ebe535c6bc859eae -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:scripting/monoscript/fileName/XRReferenceObjectEntry.cs: b47986b67a84647c38d0f296f4734aea -> 
+  custom:scripting/monoscript/fileName/InputLayoutLoader.cs: a6fad719a67e63b0838341df7c073961 -> 
+  custom:scripting/monoscript/fileName/HandheldARInputDevice.cs: cf623326f856d46f890798f090da8267 -> 
+  custom:scripting/monoscript/fileName/PlaneDiscoveryVoxelGrid.cs: 1f783cfbbe64ae912f5eb045d33c9a08 -> 
+  custom:scripting/monoscript/fileName/SimulationPlaneSubsystem.cs: 096fb4ec11cbc51749dd1d5c1fda06f1 -> 
+  custom:scripting/monoscript/fileName/half4.gen.cs: abea9356568c8480c38dd790db58969d -> 
+  custom:scripting/monoscript/fileName/EyeLevelSceneOrigin.cs: 31b177ed74384aa92c99cc9be72c5a76 -> 
+  custom:scripting/precompiled-assembly-types:Microsoft.MixedReality.OpenXR: 99792b687d48309f39e702d8f13b20ef -> 
+  custom:scripting/monoscript/fileName/XRTrackedImage.cs: 022160c0d74b5ffbb1dbf97d0d2b98d5 -> 
+  custom:scripting/monoscript/fileName/SimulationApi.cs: 21adf40359762246bb94df8af6044299 -> 
+  custom:scripting/precompiled-assembly-types:Unity.XR.Simulation.Editor: 2e5f582f596bd12a5a76a64ec30bcb52 -> 
+  custom:scripting/monoscript/fileName/ARBuildProcessor.cs: a7261c23ed233ada246edfc8263e1e8d -> 
+  custom:scripting/monoscript/fileName/ARAnchorsChangedEventArgs.cs: 840ec36d48c9fa0d79deea008dda34f8 -> 
+  custom:scripting/monoscript/fileName/MetaBuildProcessor.cs: ba3d460e9da8b3e3d74a61a064e66c02 -> 
+  custom:scripting/monoscript/fileName/BakedLitGUI.cs: 177e461adddd174db9ebae5deafad20c -> 
+  custom:scripting/monoscript/fileName/SimulationRenderSettings.cs: ec0a4a3635bb6813cc10f0127b35c0a4 -> 
+  custom:scripting/monoscript/fileName/XRSettingsHelpers.cs: 79e72988b5149127fe9536ddd1d4535c -> 
+  custom:scripting/monoscript/fileName/XRMarkerSubsystem.cs: 3fc8e7d2b3cc64ebe857bf7e448016d3 -> 
+  custom:scripting/monoscript/fileName/TrackedImageDiscoveryParams.cs: 411fd1d32a742c815a7815691e28be2d -> 
+  custom:scripting/monoscript/fileName/AREditorAnalytics.cs: a84946e23b56957b6c288d582ff45b2b -> 
+  custom:scripting/monoscript/fileName/RuntimeReferenceImageLibrary.cs: 13ba3d3ddb5cda4f79e3dfa78272c794 -> 
+  custom:scripting/monoscript/fileName/uint4x3.gen.cs: b01c5cd7a56bd5c67682617427bf7881 -> 
+  custom:scripting/monoscript/fileName/XRRaycastHit.cs: a88ce8347620d4c3d80414850d7d5d63 -> 
+  custom:scripting/precompiled-assembly-types:Unity.XR.Simulation: 286878313c073bfe84f25ccb5d5c31e5 -> 
+  custom:scripting/monoscript/fileName/noise2D.cs: 2eb29bf877494e27d7b8d68303a33727 -> 
+  custom:scripting/monoscript/fileName/LabelWidthAttribute.cs: e7ca5a1db126d7b45f3e966c5098663c -> 
+  custom:scripting/monoscript/fileName/ValidationUtility.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/bool2.gen.cs: 26e96b66e2dc8fbd46eb4ce6284c510a -> 
+  custom:scripting/monoscript/fileName/EnvironmentScanParamsPropertyDrawer.cs: 2121c27e40d5b2dc07799915bed0f88c -> 
+  custom:scripting/monoscript/fileName/bool3.gen.cs: 5af2629b3ff9dbb3bbfcc70064a35529 -> 
+  custom:scripting/monoscript/fileName/SerializableGuid.cs: c6fbd1c3c6155e6d798cedd295f449f8 -> 21f04f1b94377c8ad9d3b1908a67282d
+  custom:scripting/monoscript/fileName/ARHumanBodyManager.cs: a01c9599ce19017697d8b67aec462eed -> 
+  custom:scripting/monoscript/fileName/RemotingSettingsInspector.cs: 9bce3c2c146186b6adadfd5b0f513255 -> 
+  custom:scripting/monoscript/fileName/uint4x2.gen.cs: b7591412c0d582e5dffe67f85a90dd0a -> 
+  custom:scripting/monoscript/fileName/int3x2.gen.cs: 3713def57441460b7d8181bf2ebb068b -> 
+  custom:scripting/monoscript/fileName/random.cs: 773187f16d25a3763332e4d0e08067fb -> 
+  custom:scripting/precompiled-assembly-types:Unity.XR.ARSubsystems.Editor: 30003016644227704ad1a95c67c2b612 -> 
+  custom:scripting/monoscript/fileName/Promise.cs: 0cdf409b5aa8d4c25876d72b5c6a3b60 -> 
+  custom:scripting/monoscript/fileName/OpenXRContext.cs: ab5beca7ac40a3df9e5e6d67812d58fa -> 
+  custom:scripting/monoscript/fileName/float4.gen.cs: b782c632ec38515e69077afe722e950b -> 
+  custom:scripting/monoscript/fileName/uint3x4.gen.cs: 85b37160b72ca5d09aa390a0ed4ac5d3 -> 
+  custom:scripting/monoscript/fileName/AROcclusionManagerEditor.cs: 213a50163ed797ad8e03c9e6f8b67ca1 -> 
+  custom:scripting/monoscript/fileName/PlayModeRemotingPlugin.cs: bd2f8870cafc14622e273d93711ecb30 -> 
+  custom:scripting/monoscript/fileName/ARDebugMenu.cs: 20d752a03d81283598cc0d170d0f55e8 -> 
+  custom:scripting/monoscript/fileName/XROcclusionSubsystemDescriptor.cs: 34debb040dd414fbd96d2015f81a50d1 -> 
+  custom:scripting/monoscript/fileName/SimulationSessionSubsystem.cs: 02ddfd7d0bea7527649028640cc2256e -> 
+  custom:scripting/monoscript/fileName/AsyncConversion.cs: b1685f512b8b1f0d529bde81e584f665 -> 
+  custom:scripting/monoscript/fileName/float3x2.gen.cs: c82cdc670988a624afef0b4a59da9960 -> 
+  custom:scripting/monoscript/fileName/TrackableCollection.cs: 0cdf409b5aa8d4c25876d72b5c6a3b60 -> 
+  custom:scripting/monoscript/fileName/HumanSegmentationDepthMode.cs: 2cc38a5a6eb12727d1d2b5db6b035e77 -> 
+  custom:scripting/monoscript/fileName/SimulationConstants.cs: 1776b27a51e3ba9f5f60578111b7d666 -> 
+  custom:scripting/monoscript/fileName/SimulationRaycasterRegistry.cs: 7317575bc32b9bcf7ce7e088dcf3eaa8 -> 
+  custom:scripting/monoscript/fileName/int4x2.gen.cs: 03019ae5b6ae2c22f6bcc41f109a6f3f -> 
+  custom:scripting/monoscript/fileName/PluginEnvironment.cs: eafd49112e397ce752df53c2f8d116de -> 
+  custom:scripting/monoscript/fileName/XRTrackedObject.cs: eb9fb4fbc5d221a0cca8dbc198dec067 -> 
+  custom:scripting/monoscript/fileName/ConfigurationChooser.cs: 2f19d59ada0b060f58a4b2e653057b25 -> 
+  custom:scripting/monoscript/fileName/XRHumanBodySubsystem.cs: 563341d34ded47eaecff3df7d3860238 -> 
+  custom:scripting/monoscript/fileName/ControllerModelArticulator.cs: ec1c588a26f09b9a05ba4378e2a1f260 -> 
+  custom:scripting/monoscript/fileName/SimulationMeshSubsystem.cs: 0920f0ed5273d61df2ed94d4145e240a -> 
+  custom:scripting/monoscript/fileName/ARRaycastHit.cs: e2cf7b50af20820c044440bbe671fea9 -> 
+  custom:scripting/monoscript/fileName/XRSimulationRuntimeSettingsEditor.cs: cff042d7631a9b07b2704eed98810591 -> 
+  custom:scripting/monoscript/fileName/XRRaycast.cs: 6fff0a2e2c71494691793c44b24b33ef -> 
+  custom:scripting/monoscript/fileName/ARFacesChangedEventArgs.cs: 9f732c717790e59a35e5b58d0e7e4c9e -> 
+  custom:scripting/monoscript/fileName/double3.gen.cs: 377c7acd7948bf71aea5d8cf8236ee9b -> 
+  custom:scripting/monoscript/fileName/MarkerSubsystem.cs: dd45232e2b6381dd1ecc53af0354489f -> 
+  custom:scripting/monoscript/fileName/XRObjectTrackingSubsystemDescriptor.cs: 48d0e4da2ac909b4cde8bd990db1197e -> 
+  custom:scripting/monoscript/fileName/PlaneAlignment.cs: 01040ef3c3f48ab7290e1503ca6e9c28 -> 
+  custom:scripting/monoscript/fileName/OpenXRRuntimeRestartHandler.cs: efb460ddd96d390539d04148a250dd75 -> 
+  custom:scripting/monoscript/fileName/SessionSubsystem.cs: 521e64b35c09c2cb1bc769442cdcbbea -> 
+  custom:scripting/monoscript/fileName/ARTrackedObjectsChangedEventArgs.cs: 5cef0e252032aa6127132df4f9a08259 -> 
+  custom:scripting/monoscript/fileName/CameraFacingDirection.cs: 5c2cd7c674162ba6c1c854e68d5485b6 -> 
+  custom:scripting/monoscript/fileName/XROcclusionSubsystem.cs: 9309b78b853379b8deca5715c60abec1 -> 
+  custom:scripting/monoscript/fileName/XRMarkerSubsystemDescriptor.cs: fcc6b2b0f8983da1bd8b224516f82d41 -> 
+  custom:scripting/monoscript/fileName/TrackingSubsystem.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/CameraTextureProvider.cs: 9b1eef0e6f8997c3150b3104e2f6ae50 -> 
+  custom:scripting/monoscript/fileName/DefaultConfigurationChooser.cs: f24e13f28988d14c36b0b00ad4f54d72 -> 
+  custom:scripting/monoscript/fileName/XRAnchorSubsystemDescriptor.cs: ccd4c47b552e574ccc238106e47b9207 -> 
+  custom:scripting/monoscript/fileName/HoloLensFeatureSet.cs: de0c2f67d4b600c851a7a1ec1ac5277c -> 
+  custom:scripting/monoscript/fileName/XRPlaneSubsystem.cs: 093859ac2b6b7fc3b70fc625941bed11 -> 
+  custom:scripting/monoscript/fileName/uint2.gen.cs: f442e48493395c3c057fa324c1ed7700 -> 
+  custom:scripting/monoscript/fileName/ConfigurationDescriptor.cs: 9c9f98951b79f802ba978138df30fd98 -> 
+  custom:scripting/monoscript/fileName/ARUsageAnalyticsArgs.cs: 1a78eea3dbc84e2ccc5fa8e34d4b16b1 -> 
+  custom:scripting/monoscript/fileName/float2x3.gen.cs: dd8be2164b904b64628efafb474868f4 -> 
+  custom:scripting/monoscript/fileName/cellular2x2x2.cs: 2eb29bf877494e27d7b8d68303a33727 -> 
+  custom:scripting/monoscript/fileName/matrix.cs: 17bd875ecbf69296bc7f1415237b5bf7 -> 
+  custom:scripting/monoscript/fileName/MeshSettings.cs: 7362f1480a949a6ecd7ae54064aa7454 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:scripting/monoscript/fileName/XROriginCreateUtil.cs: 77d1615465fcdd2d108636763b670982 -> 
+  custom:scripting/monoscript/fileName/PlaneDetectionModeMaskAttribute.cs: 0bbecbc18207926b4ca1cfcddf7e4583 -> 
+  custom:scripting/monoscript/fileName/ARPoseDriver.cs: 545cfd81de869381012a18de5d48c0e5 -> 
+  custom:scripting/monoscript/fileName/cellular3D.cs: 2eb29bf877494e27d7b8d68303a33727 -> 
+  custom:scripting/monoscript/fileName/HandMeshTracker.cs: dfbb1a3be78a604bb12a749320adc9b3 -> 
+  custom:scripting/monoscript/fileName/XRFaceSubsystemDescriptor.cs: 710b97fcd67f6eeba4a70e6fe9fd6873 -> 
+  custom:scripting/monoscript/fileName/XRHumanBodyJoint.cs: 6c68fbf420e392e691815f7824b65dec -> 
+  custom:scripting/monoscript/fileName/ARParticipantManager.cs: f4ef5f485065ed5a1f9fc8a8ac0a77f4 -> 
+  custom:scripting/monoscript/fileName/bool3x4.gen.cs: dd64119ecce8747c9d345fc62ed63bff -> 
+  custom:scripting/monoscript/fileName/EyeLevelSceneOriginInspector.cs: a014c182ede514a7247e0ad0cffc147f -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/ControllerModel.cs: 22b3d5e404805785f6445a533824393f -> 
+  custom:scripting/monoscript/fileName/int2x3.gen.cs: 377af658550da76bc0efa7c5a755eb90 -> 
+  custom:scripting/monoscript/fileName/MixedRealityBuildProcessor.cs: 451bd9d1f807cf3098e99407a710f01b -> 
+  custom:scripting/monoscript/fileName/ARPlaneMeshVisualizer.cs: cec119a9873bc636b670ed4e3511b40d -> 
+  custom:scripting/monoscript/fileName/ARCameraBackgroundRenderingUtils.cs: 34ef7588647d3dd73434ccb9b87a1f19 -> 
+  custom:scripting/monoscript/fileName/AROcclusionFrameEventArgs.cs: e033af903cb0acd46ff4849f39e42826 -> 
+  custom:scripting/monoscript/fileName/InternalMeshSettings.cs: 093b574912223f158ceb98b3d828db98 -> 
+  custom:scripting/monoscript/fileName/ARCameraManager.cs: 2c59209fbd293d5b87f49f80cd406ed5 -> 
+  custom:scripting/monoscript/fileName/MeshSubsystem.cs: 129aca9e874e987f7f03395418aa2a47 -> 
+  custom:scripting/monoscript/fileName/TrackableId.cs: e3b94fc1f69378334cebd8235dfb0db3 -> 
+  custom:scripting/monoscript/fileName/EnvironmentScanParams.cs: 3807e1832246946c609b8dac37a129a5 -> 
+  custom:scripting/monoscript/fileName/SessionAvailability.cs: aba22cb76004750d18e78922fdc67970 -> 
+  custom:scripting/monoscript/fileName/Configuration.cs: e1f88d5c26e809ccbf42081e8154788a -> 
+  custom:scripting/monoscript/fileName/LoaderUtility.cs: 76be9f8ad104289b5d0e00a2d37b66ff -> 
+  custom:scripting/monoscript/fileName/SceneUtils.cs: e4139b47c22b93ba62168857ee624426 -> 
+  custom:scripting/monoscript/fileName/double2x4.gen.cs: 685c5fa921181be1c5c2624181389ad3 -> 
+  custom:scripting/monoscript/fileName/MotionControllerFeaturePlugin.cs: 0fe45d9a2dfc71a95124ef1fb8652790 -> 
+  custom:scripting/monoscript/fileName/OpenXRFeaturePlugin.cs: 8b5a3483a183045ea91ccce110ce1396 -> 
+  custom:scripting/monoscript/fileName/SimulationCameraSubsystem.cs: 711a3572aaeec67b947eb488e6f8deb9 -> 
+  custom:scripting/monoscript/fileName/SimulationRuntimeImageLibrary.cs: 7f44de255eed0801113cc3032556671b -> 
+  custom:scripting/monoscript/fileName/uint4.gen.cs: 39973cd09553f87c6828ba478621c98d -> 
+  custom:scripting/precompiled-assembly-types:Unity.Mathematics.Editor: 067e2f26d70b07279a04fc60a0f0bbd6 -> 
+  custom:scripting/monoscript/fileName/cellular2D.cs: 2eb29bf877494e27d7b8d68303a33727 -> 
+  custom:scripting/monoscript/fileName/XRAnchorTransferBatch.cs: 0972cae2e990e685fc41245ffda7b3cc -> 
+  custom:scripting/monoscript/fileName/SerializableGuidUtil.cs: 301b8bc5f1c67ccc31545d311cc07034 -> 32d48c1ce2e2a96b72bee78a51a5306f
+  custom:scripting/monoscript/fileName/CpuImageFormat.cs: f9e3d836e01441e4d5032a41cc87117d -> 
+  custom:scripting/monoscript/fileName/PlayModeHook.cs: 45f6e3650bb12b29d48e638494c824b1 -> 
+  custom:scripting/monoscript/fileName/CameraTextureFrameEventArgs.cs: 9e9c5049bacf17431910a1cc514cf23b -> 
+  custom:scripting/monoscript/fileName/FeatureUtils.cs: 804d45d21a572eca1016a41b4e7252b3 -> 
+  custom:scripting/monoscript/fileName/CreateUtils.cs: b981668764c459e615a9324c0616f22f -> 
+  custom:scripting/monoscript/fileName/XRReferenceImageLibrary.cs: c31b82edc9c57630b8224fbfaf6e4f46 -> 
+  custom:scripting/monoscript/fileName/AnchorSubsystem.cs: cd262f1a8daf52d7fd25b62c280f244d -> 
+  custom:scripting/monoscript/fileName/double2x3.gen.cs: 2fbeb18c538397a8260f5c41cab0741e -> 
+  custom:scripting/monoscript/fileName/AREditorAnalyticsEvent.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/XRImageTrackingSubsystem.cs: 7829a4ccccda0643ef676711c10f6be7 -> 
+  custom:scripting/monoscript/fileName/ARAnchor.cs: c3f780b2cf86850afd21e0595aeb6153 -> 
+  custom:scripting/monoscript/fileName/IRaycaster.cs: 5544c70d7608100035623d6616577bce -> 
+  custom:scripting/monoscript/fileName/SimulationTrackedImageDiscoverer.cs: 322c3d9c38620584714a2dca426dfe11 -> 
+  custom:scripting/monoscript/fileName/int3x4.gen.cs: 8460bfcadb3ac350c26daa6b9595294c -> 
+  custom:scripting/monoscript/fileName/noise4D.cs: 2eb29bf877494e27d7b8d68303a33727 -> 
+  custom:scripting/monoscript/fileName/psrdnoise2D.cs: 2eb29bf877494e27d7b8d68303a33727 -> 
+  custom:scripting/monoscript/fileName/XRObjectTrackingSubsystem.cs: 0e083c5ecef7ada9d8399cfff9ca4119 -> 
+  custom:scripting/monoscript/fileName/DocURLAttributeDrawer.cs: d41bd96ae25a57b1d19f8df8b6de2ace -> 
+  custom:scripting/monoscript/fileName/PlaneDetectionModeAttributeDrawer.cs: e04c0c448b856ab94f60c56be7751fc6 -> 
+  custom:scripting/monoscript/fileName/EditorSimulationSceneManager.cs: bc844af3595566df156e7b0f9a388e3f -> 
+  custom:scripting/monoscript/fileName/XRCameraSubsystem.cs: 64b91600ca012c04444b44a811377b19 -> 
+  custom:scripting/monoscript/fileName/NativeCopyUtility.cs: c7fbc9feb0e47601484d6e44770e756a -> 
+  custom:scripting/monoscript/fileName/ARSessionOrigin.cs: 4f429473de483e9c426288e110976703 -> 
+  custom:scripting/monoscript/fileName/XRReferenceObjectLibraryEditor.cs: 04aef79447a61f5b4ed9abf8aafb4c20 -> 
+  custom:scripting/monoscript/fileName/ARPlane.cs: b53859bb2a6098ae6bf42116c3675d9b -> 
+  custom:scripting/monoscript/fileName/SimulationXRayManager.cs: 6f4d5afe290867abd4ece4c454d593a3 -> 
+  custom:scripting/monoscript/fileName/ARRaycastManager.cs: fca1facaff445909873206e9b5d2f2d0 -> 
+  custom:scripting/monoscript/fileName/QuaternionDrawer.cs: 11323f18a038f5e869f0b55e53c54a31 -> 
+  custom:scripting/precompiled-assembly-types:Unity.XR.ARFoundation: 0bb08fd21016124ddf3c7a606f7dbbf0 -> 
+  custom:scripting/monoscript/fileName/XRSimulationSettingsEditor.cs: c07202acde2aca175b9a6571f2e716f7 -> 
+  custom:scripting/monoscript/fileName/AsyncConversionStatus.cs: fc109f05ccdd7ee38c25be79c450abcf -> 
+  custom:scripting/monoscript/fileName/common.cs: 2eb29bf877494e27d7b8d68303a33727 -> 
+  custom:scripting/monoscript/fileName/ARHumanBodiesChangedEventArgs.cs: b16d1eaadd15193ab95b7e7e840c8c69 -> 
+  custom:scripting/monoscript/fileName/EditorDrawerVisibleToBuildTargetAttribute.cs: bdd2b58eea0d39c533db2ff38de66e8c -> 
+  custom:scripting/monoscript/fileName/BoundedPlane.cs: d01a39a8f14ce6d9a10a8e338f8b7835 -> 
+  custom:scripting/monoscript/fileName/XREnvironmentViewUtilities.cs: 331fc0a8ab2668403705b58d7fab9f3e -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/uint2x2.gen.cs: ef58eafb69337704525106c30b2f9c86 -> 
+  custom:scripting/monoscript/fileName/float3x3.gen.cs: 48f350102ac697de2455487383306e62 -> 
+  custom:scripting/monoscript/fileName/ITrackable.cs: 6abfbc2d1fcb9b9add0e1f882a81c1c7 -> 
+  custom:scripting/monoscript/fileName/ARTrackable.cs: 0d3009fecc67abdc50e7491f4f253c9f -> 
+  custom:scripting/monoscript/fileName/float2.gen.cs: 6120954cdb3e1af6bb1e798ca56424e4 -> 
+  custom:scripting/monoscript/fileName/bool3x3.gen.cs: f3dd982fcc1d0b33ec635c43c306a1b8 -> 
+  custom:scripting/monoscript/fileName/OpenXRFeaturePluginManager.cs: 7e18b79e648827432de1a06462436d35 -> 
+  custom:scripting/monoscript/fileName/DiscoveredPlane.cs: 1839e2b8d7642e6a56b670bbadf7d6b0 -> 
+  custom:scripting/monoscript/fileName/HandTrackingFeaturePlugin.cs: 1f802f43bd6a169f9a2ee7cba0395ecb -> 
+  custom:scripting/monoscript/fileName/double4x2.gen.cs: 530f8410a1ca9a96d8c16e723573cfae -> 
+  custom:scripting/monoscript/fileName/SimulationLoader.cs: f321d85f2e4780c8119d2e21fc538467 -> 
+  custom:scripting/monoscript/fileName/ARParticipant.cs: f683d8d8dec771a8931ad627bdcebdc2 -> 
+  custom:scripting/monoscript/fileName/DocURLAttribute.cs: ddb5dd3058d51da24a160ab944f80d1b -> 
+  custom:scripting/monoscript/fileName/ARPointCloudManager.cs: 388b87647138632d19ebe1dd47756056 -> 
+  custom:scripting/monoscript/fileName/CameraBackgroundRenderingMode.cs: 1aca6d697a44c28d351d68d5cc88333d -> 
+  custom:scripting/monoscript/fileName/XREnvironmentProbeSubsystemDescriptor.cs: 6d0989995bfd13831fe7436c1857de37 -> 
+  custom:scripting/monoscript/fileName/XRImageTrackingSubsystemDescriptor.cs: 3c407f896fdba2de2933595e2d01116c -> 
+  custom:scripting/monoscript/fileName/ARParticipantsChangedEventArgs.cs: dd53b670cb1cac889ef41a7a4c8c5f55 -> 
+  custom:scripting/monoscript/fileName/XRFace.cs: fc74c5c9c10c84e43dc79a564c0e3066 -> 
+  custom:scripting/monoscript/fileName/PrimitiveVectorDrawer.cs: 3e4cc385215599322653e09117c642ee -> 
+  custom:scripting/monoscript/fileName/SimulationSessionAnalyticsArgs.cs: 078abe4bfc81a75769093b632264aa4c -> 
+  custom:scripting/monoscript/fileName/AREnvironmentProbeManager.cs: 71a4dc22fd53f24ee05667ed7d6a2446 -> 
+  custom:scripting/monoscript/fileName/ARFace.cs: 59f2f841b672e84c40b075fb8a7d2199 -> 
+  custom:scripting/monoscript/fileName/Api.cs: b1685f512b8b1f0d529bde81e584f665 -> 
+  custom:scripting/precompiled-assembly-types:Microsoft.MixedReality.Toolkit.Providers.OpenXR.Editor: dbdb198e4c907b6e82579abb554e4bcb -> 6d41b8ec2c9e0a8b12c3277715476767
+  custom:scripting/monoscript/fileName/SimulatedBoundedPlane.cs: 4823976364680bc283a7d3c12d207e64 -> 
+  custom:scripting/monoscript/fileName/SubsystemController.cs: db7342d83e11a62926df35b29e07a2d8 -> 
+========================================================================
+Received Prepare
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.699 seconds
-Refreshing native plugins compatible for Editor in 12.11 ms, found 8 plugins.
+- Loaded All Assemblies, in  0.908 seconds
+Refreshing native plugins compatible for Editor in 13.61 ms, found 14 plugins.
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
-Native extension for Android target not found
-Native extension for WebGL target not found
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
@@ -342,46 +686,213 @@ Mono: successfully reloaded assembly
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
-- Finished resetting the current domain, in  0.821 seconds
-Domain Reload Profiling: 1517ms
-	BeginReloadAssembly (462ms)
+- Finished resetting the current domain, in  0.884 seconds
+Domain Reload Profiling: 1788ms
+	BeginReloadAssembly (615ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (3ms)
+		DisableScriptedObjects (4ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (33ms)
+		CreateAndSetChildDomain (31ms)
 	RebuildCommonClasses (27ms)
-	RebuildNativeTypeToScriptingClass (10ms)
-	initialDomainReloadingComplete (26ms)
-	LoadAllAssembliesAndSetupDomain (171ms)
-		LoadAssemblies (224ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (22ms)
+	LoadAllAssembliesAndSetupDomain (230ms)
+		LoadAssemblies (230ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (14ms)
-			TypeCache.Refresh (7ms)
-				TypeCache.ScanAssembly (0ms)
-			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (6ms)
-	FinalizeReload (821ms)
+		AnalyzeDomain (68ms)
+			TypeCache.Refresh (36ms)
+				TypeCache.ScanAssembly (26ms)
+			ScanForSourceGeneratedMonoScriptInfo (24ms)
+			ResolveRequiredComponents (7ms)
+	FinalizeReload (884ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (420ms)
+		SetupLoadedEditorAssemblies (470ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (23ms)
+			InitializePlatformSupportModulesInManaged (6ms)
 			SetLoadedEditorAssemblies (3ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (67ms)
-			ProcessInitializeOnLoadAttributes (288ms)
-			ProcessInitializeOnLoadMethodAttributes (32ms)
+			BeforeProcessingInitializeOnLoad (70ms)
+			ProcessInitializeOnLoadAttributes (328ms)
+			ProcessInitializeOnLoadMethodAttributes (55ms)
+			AfterProcessingInitializeOnLoad (7ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (6ms)
+Refreshing native plugins compatible for Editor in 12.66 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3969 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 78 unused Assets / (2.0 MB). Loaded Objects now: 4493.
+Memory consumption went from 144.3 MB to 142.3 MB.
+Total: 3.835400 ms (FindLiveObjects: 0.316200 ms CreateObjectMapping: 0.155500 ms MarkObjects: 2.545700 ms  DeleteObjects: 0.816500 ms)
+
+Prepare: number of updated asset objects reloaded= 50
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.732 seconds
+Refreshing native plugins compatible for Editor in 12.69 ms, found 14 plugins.
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  0.837 seconds
+Domain Reload Profiling: 1566ms
+	BeginReloadAssembly (508ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (28ms)
+	RebuildCommonClasses (24ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (21ms)
+	LoadAllAssembliesAndSetupDomain (168ms)
+		LoadAssemblies (217ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (15ms)
+			TypeCache.Refresh (5ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (8ms)
+	FinalizeReload (837ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (450ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (6ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (71ms)
+			ProcessInitializeOnLoadAttributes (315ms)
+			ProcessInitializeOnLoadMethodAttributes (49ms)
 			AfterProcessingInitializeOnLoad (6ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (5ms)
-Refreshing native plugins compatible for Editor in 10.06 ms, found 8 plugins.
+		AwakeInstancesAfterBackupRestoration (8ms)
+Refreshing native plugins compatible for Editor in 14.40 ms, found 14 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3372 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 58 unused Assets / (46.8 KB). Loaded Objects now: 3949.
-Memory consumption went from 132.3 MB to 132.3 MB.
-Total: 3.026700 ms (FindLiveObjects: 0.235500 ms CreateObjectMapping: 0.090500 ms MarkObjects: 2.621000 ms  DeleteObjects: 0.078900 ms)
+Unloading 3954 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 78 unused Assets / (2.1 MB). Loaded Objects now: 4505.
+Memory consumption went from 144.2 MB to 142.1 MB.
+Total: 4.348400 ms (FindLiveObjects: 0.346800 ms CreateObjectMapping: 0.106400 ms MarkObjects: 3.087900 ms  DeleteObjects: 0.806100 ms)
+
+Prepare: number of updated asset objects reloaded= 59
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 17.70 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 12 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 13 unused Assets / (2.0 MB). Loaded Objects now: 4510.
+Memory consumption went from 83.0 MB to 81.1 MB.
+Total: 3.842600 ms (FindLiveObjects: 0.276600 ms CreateObjectMapping: 0.112300 ms MarkObjects: 2.566100 ms  DeleteObjects: 0.885900 ms)
+
+Prepare: number of updated asset objects reloaded= 63
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.885 seconds
+Refreshing native plugins compatible for Editor in 18.36 ms, found 14 plugins.
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  0.977 seconds
+Domain Reload Profiling: 1860ms
+	BeginReloadAssembly (645ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (34ms)
+	RebuildCommonClasses (30ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (23ms)
+	LoadAllAssembliesAndSetupDomain (175ms)
+		LoadAssemblies (226ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (18ms)
+			TypeCache.Refresh (6ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (10ms)
+	FinalizeReload (977ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (494ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (9ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (83ms)
+			ProcessInitializeOnLoadAttributes (338ms)
+			ProcessInitializeOnLoadMethodAttributes (53ms)
+			AfterProcessingInitializeOnLoad (7ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (9ms)
+Refreshing native plugins compatible for Editor in 12.92 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3954 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 78 unused Assets / (2.1 MB). Loaded Objects now: 4514.
+Memory consumption went from 144.2 MB to 142.1 MB.
+Total: 4.628600 ms (FindLiveObjects: 0.397000 ms CreateObjectMapping: 0.173300 ms MarkObjects: 3.199800 ms  DeleteObjects: 0.857300 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
@@ -397,8 +908,101 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
-TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: The I/O operation has been aborted because of either a thread exit or an application request.
-AssetImportWorker is now disconnected from the server
-Process exiting
-Exiting without the bug reporter. Application will terminate with return code 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.800 seconds
+Refreshing native plugins compatible for Editor in 13.79 ms, found 14 plugins.
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  0.887 seconds
+Domain Reload Profiling: 1685ms
+	BeginReloadAssembly (557ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (32ms)
+	RebuildCommonClasses (31ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (23ms)
+	LoadAllAssembliesAndSetupDomain (177ms)
+		LoadAssemblies (231ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (15ms)
+			TypeCache.Refresh (6ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (9ms)
+	FinalizeReload (888ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (478ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (7ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (74ms)
+			ProcessInitializeOnLoadAttributes (326ms)
+			ProcessInitializeOnLoadMethodAttributes (60ms)
+			AfterProcessingInitializeOnLoad (7ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (9ms)
+Refreshing native plugins compatible for Editor in 12.40 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3954 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 78 unused Assets / (2.0 MB). Loaded Objects now: 4518.
+Memory consumption went from 144.1 MB to 142.1 MB.
+Total: 4.166700 ms (FindLiveObjects: 0.347600 ms CreateObjectMapping: 0.122800 ms MarkObjects: 2.764100 ms  DeleteObjects: 0.931100 ms)
+
+[XR] Error loading subsystem: Display (1) (header mismatch?)
+[XR] [MROpenXR][Info   ][09:59:16.233725][tid:14ba4] OnPluginStarted UnityVersion=2022.3.8f1 OpenXRPluginVersion=1.9.1 MROpenXRPluginVersion=1.9.0.0 PartA_PrivTags=33554432
+[XR] [MROpenXR][Info   ][09:59:16.233725][tid:14ba4] OnPluginStarted UnityVersion=2022.3.8f1 OpenXRPluginVersion=1.9.1 MROpenXRPluginVersion=1.9.0.0 PartA_PrivTags=33554432
+Prepare: number of updated asset objects reloaded= 63
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 13.76 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 12 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 13 unused Assets / (2.0 MB). Loaded Objects now: 4518.
+Memory consumption went from 83.1 MB to 81.0 MB.
+Total: 4.557800 ms (FindLiveObjects: 0.321800 ms CreateObjectMapping: 0.115200 ms MarkObjects: 3.248800 ms  DeleteObjects: 0.870900 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 

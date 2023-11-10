@@ -12,6 +12,8 @@ EditorBuildSettings:
     path: Assets/Scenes/TS-Unity.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects:
+    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 3210abc08674c7c43afc688101c11b43,
+      type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: e314bffe9cbb4214fad5d2db2a1fa4ec,
       type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: bc3b76ff0e865da4586881d65442e9be,

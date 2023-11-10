@@ -696,7 +696,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &174798905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13828,7 +13828,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1747991754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14545,9 +14545,9 @@ MonoBehaviour:
   waitingMessagesFrequency: 1
   m_ReceivedMessage: 
   CurrentTimePoint: 0
-  NrOfChannels: 20
-  NrOfSelectedChannels: 20
-  SelectedChannels: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  NrOfChannels: 10
+  NrOfSelectedChannels: 10
+  SelectedChannels: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   values: 
 --- !u!114 &1955909500
 MonoBehaviour:

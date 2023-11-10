@@ -24,6 +24,14 @@
         "size": 2111115,
         "localPath": "C:\\Users\\andre\\Desktop\\BCI-GAME\\Packages\\MixedReality\\com.microsoft.mixedreality.toolkit.tools-2.8.3.tgz"
       }
+    },
+    "com.microsoft.mixedreality.openxr": {
+      "tarball": {
+        "hash": "570cf286e70a",
+        "mtime": 1697116552891,
+        "size": 10451121,
+        "localPath": "C:\\Users\\andre\\Desktop\\BCI-GAME\\Packages\\MixedReality\\com.microsoft.mixedreality.openxr-1.9.0.tgz"
+      }
     }
   }
 }
