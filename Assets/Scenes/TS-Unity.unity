@@ -2057,7 +2057,7 @@ Transform:
   m_GameObject: {fileID: 372985877}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.273, y: -4.8613963, z: -3.079994}
+  m_LocalPosition: {x: 0.273, y: -4.8613963, z: 0}
   m_LocalScale: {x: 5, y: 49.246864, z: 591.1023}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -4056,8 +4056,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Follow Me
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6a84f857bec7e7345843ae29404c57ce, type: 2}
-  m_sharedMaterial: {fileID: 21202819797275496, guid: 6a84f857bec7e7345843ae29404c57ce,
+  m_fontAsset: {fileID: 11400000, guid: ad601d838b0fb2744937cd5dad890e81, type: 2}
+  m_sharedMaterial: {fileID: 21202819797275496, guid: ad601d838b0fb2744937cd5dad890e81,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -4155,7 +4155,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 21202819797275496, guid: 6a84f857bec7e7345843ae29404c57ce, type: 2}
+  - {fileID: 21202819797275496, guid: ad601d838b0fb2744937cd5dad890e81, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4241,7 +4241,7 @@ Transform:
   m_GameObject: {fileID: 608287470}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.001, y: -4.8613963, z: -3.079994}
+  m_LocalPosition: {x: -0.001, y: -4.8613963, z: 0}
   m_LocalScale: {x: 5, y: 49.246864, z: 591.1023}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -8302,7 +8302,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1108454853
 Transform:
   m_ObjectHideFlags: 0
@@ -14733,7 +14733,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &1973185505
 AudioSource:
   m_ObjectHideFlags: 0
