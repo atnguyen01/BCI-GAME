@@ -669,9 +669,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.13875784, y: 0.9378519, z: 1.2052577}
+    m_Target: {x: 0.3234924, y: 0.8156848, z: 1.2034361}
     speed: 2
-    m_Value: {x: -0.13875784, y: 0.9378519, z: 1.2052577}
+    m_Value: {x: 0.3234924, y: 0.8156848, z: 1.2034361}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -717,13 +717,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.058448393, y: 0.024555152, z: -0.0014458246, w: 0.9979746}
+    m_Target: {x: 0.17411198, y: -0.6656715, z: 0.16395059, w: 0.70685226}
     speed: 2
-    m_Value: {x: 0.059946053, y: 0.02455327, z: -0.0014826728, w: 0.9978985}
+    m_Value: {x: 0.17436177, y: -0.66462594, z: 0.16369304, w: 0.70786643}
   m_Size:
-    m_Target: 0.38875777
+    m_Target: 0.30261657
     speed: 2
-    m_Value: 0.38875777
+    m_Value: 0.28958523
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -785,10 +785,10 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 121}
+      scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 2cfbffffe8640000ec6400001465000030650000606500009e650000f065000014660000d46600005e6700007c6700008a670000ec6700003268000062680000be680000
+      m_ExpandedIDs: 2cfbffffe8640000ec6400004665000060650000e86600007c670000ec67000032680000e0680000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -959,7 +959,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Packages/com.microsoft.mixedreality.toolkit.foundation/SDK/StandardAssets/Materials
+    - Packages/com.microsoft.mixedreality.toolkit.standardassets/FontsSDFTextures/DepthWriteOn
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -967,16 +967,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Packages/com.microsoft.mixedreality.toolkit.foundation/SDK/StandardAssets/Materials
+  - Packages/com.microsoft.mixedreality.toolkit.standardassets/FontsSDFTextures/DepthWriteOn
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\andre\Desktop\BCI-GAME
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 767}
-    m_SelectedIDs: 046f0000
-    m_LastClickedID: 28420
-    m_ExpandedIDs: 00000000f06d0000f26d0000f46d0000f66d0000f86d0000fa6d0000fc6d0000fe6d0000006e0000026e0000046e0000066e0000086e00002c6e0000bc6e0000ffffff7f
+    scrollPos: {x: 0, y: 879}
+    m_SelectedIDs: 326f0000
+    m_LastClickedID: 28466
+    m_ExpandedIDs: 00000000f06d0000f26d0000f46d0000f66d0000f86d0000fa6d0000fc6d0000fe6d0000006e0000026e0000046e0000066e0000086e00002c6e00002e6e0000346f0000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
