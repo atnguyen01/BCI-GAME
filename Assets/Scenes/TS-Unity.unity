@@ -1927,7 +1927,7 @@ GameObject:
   - component: {fileID: 372985880}
   - component: {fileID: 372985879}
   m_Layer: 0
-  m_Name: Pressable Button (5)
+  m_Name: Pressable Button (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4122,7 +4122,7 @@ GameObject:
   - component: {fileID: 608287473}
   - component: {fileID: 608287472}
   m_Layer: 0
-  m_Name: Pressable Button (4)
+  m_Name: Pressable Button (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5196,7 +5196,7 @@ GameObject:
   - component: {fileID: 672391129}
   - component: {fileID: 672391137}
   m_Layer: 0
-  m_Name: Pressable Button (3)
+  m_Name: Pressable Button (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14755,6 +14755,7 @@ MonoBehaviour:
   potter: 0
   response_counter: 0
   clickedButton: 
+  button_num: 0
 --- !u!1 &1958948914
 GameObject:
   m_ObjectHideFlags: 0
