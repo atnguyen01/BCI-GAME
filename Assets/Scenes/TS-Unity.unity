@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 3788898}
   - component: {fileID: 3788897}
   m_Layer: 0
-  m_Name: TextMeshPro
+  m_Name: Label2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Follow Me
+  m_text: Gaming
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6a84f857bec7e7345843ae29404c57ce, type: 2}
   m_sharedMaterial: {fileID: 21202819797275496, guid: 6a84f857bec7e7345843ae29404c57ce,
@@ -3905,7 +3905,7 @@ GameObject:
   - component: {fileID: 606208118}
   - component: {fileID: 606208117}
   m_Layer: 0
-  m_Name: TextMeshPro
+  m_Name: Label3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3950,7 +3950,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Follow Me
+  m_text: Where's Jagger when i need him?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ad601d838b0fb2744937cd5dad890e81, type: 2}
   m_sharedMaterial: {fileID: 21202819797275496, guid: ad601d838b0fb2744937cd5dad890e81,
@@ -14750,12 +14750,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TSImanager: {fileID: 1955909497}
   jim: {fileID: 953504986}
+  buttonlabel1: {fileID: 2051358712}
+  buttonlabel2: {fileID: 3788897}
+  buttonlabel3: {fileID: 606208117}
   baker: 0
   carpenter: 0
   potter: 0
   response_counter: 0
   clickedButton: 
   button_num: 0
+  button_name: 
+  button: {fileID: 0}
 --- !u!1 &1958948914
 GameObject:
   m_ObjectHideFlags: 0
@@ -15621,7 +15626,7 @@ GameObject:
   - component: {fileID: 2051358713}
   - component: {fileID: 2051358712}
   m_Layer: 0
-  m_Name: TextMeshPro
+  m_Name: Label1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15666,7 +15671,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Follow Me
+  m_text: Is that the bite of '87?!?!?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6a84f857bec7e7345843ae29404c57ce, type: 2}
   m_sharedMaterial: {fileID: 21202819797275496, guid: 6a84f857bec7e7345843ae29404c57ce,
