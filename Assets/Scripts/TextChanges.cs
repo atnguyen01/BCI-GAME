@@ -21,6 +21,7 @@ public class TextChanges : MonoBehaviour
         public string clickedButton = "";
         public int button_num = 0;
         public string button_name = null;
+        public bool isFocused = true;
         public GameObject button;
     // Start is called before the first frame update
     void Start()
@@ -89,8 +90,13 @@ public class TextChanges : MonoBehaviour
           case 1:
             switch(button_num){
                 case 1:
+                if(isFocused){
                 jim.text = "FNAF is the best movie ever";
                 setButtonText(turn_num);
+                }else {
+                jim.text = "FNAF is the worst movie ever";
+                setButtonText(turn_num);
+                }
                 break;
                 case 2:
                 jim.text = "Skyrim is the best game ever";
