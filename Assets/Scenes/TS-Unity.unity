@@ -1231,7 +1231,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 8906421259659844081, guid: 405ff1b6d34178a4a987fc2f6908a1f3, type: 3}
+  - {fileID: 2100000, guid: a5e028070ace428d8971079be1d965a6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2132,7 +2132,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1955909501}
         m_TargetAssemblyTypeName: TSI2Unity.TextChanges, Assembly-CSharp
-        m_MethodName: clickresponse
+        m_MethodName: playTurn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4327,7 +4327,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1955909501}
         m_TargetAssemblyTypeName: TSI2Unity.TextChanges, Assembly-CSharp
-        m_MethodName: clickresponse
+        m_MethodName: playTurn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5401,7 +5401,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1955909501}
         m_TargetAssemblyTypeName: TSI2Unity.TextChanges, Assembly-CSharp
-        m_MethodName: clickresponse
+        m_MethodName: playTurn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12666,7 +12666,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 8906421259659844081, guid: 405ff1b6d34178a4a987fc2f6908a1f3, type: 3}
+  - {fileID: 2100000, guid: a5e028070ace428d8971079be1d965a6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14573,7 +14573,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 8906421259659844081, guid: 405ff1b6d34178a4a987fc2f6908a1f3, type: 3}
+  - {fileID: 2100000, guid: a5e028070ace428d8971079be1d965a6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
