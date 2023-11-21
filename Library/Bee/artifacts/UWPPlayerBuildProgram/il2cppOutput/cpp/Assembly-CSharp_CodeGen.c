@@ -40,6 +40,17 @@ extern void U3CorderU3Ed__5_System_Collections_IEnumerator_Reset_m9ED94E768A1164
 extern void U3CorderU3Ed__5_System_Collections_IEnumerator_get_Current_mDF9A7FD259DF4E0369FA05201D27A692FB4DFE7E (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (void);
+extern void TextChanges_Start_mE690D2D26D0591567EF19593A2BCA4FEA964CE6E (void);
+extern void TextChanges_UpdateField_m6682F3215C784E8A633DE7E21F034A8ED4AAB14F (void);
+extern void TextChanges_Update_m81574952346B3C1DC4FD31D3EF27E79ED25AEC11 (void);
+extern void TextChanges_clickresponse_m8BA73440DDF58FC948E9F95A9DC5B813B575306E (void);
+extern void TextChanges_setButtonText_m43C0A92E8D89D1089CDE53F6428D6F45D15FB26A (void);
+extern void TextChanges_playTurn_m9ED62E7C5F7A8CA32FC6248AA14FD87A2FD5F889 (void);
+extern void TextChanges__ctor_m5295C61B71A910FC1811599AA506B73C863356DA (void);
+extern void TextChanges_U3CclickresponseU3Eb__17_1_m908B941651AFA221D58CE1957280B0D721A9D5E5 (void);
+extern void TextChanges_U3CclickresponseU3Eb__17_2_m1021B8CE26D533F2EC1A40713619BEF98EDACD61 (void);
+extern void U3CU3Ec__DisplayClass17_0__ctor_mE7CD94F4B86CFA0BF448A14EF9047841198BF141 (void);
+extern void U3CU3Ec__DisplayClass17_0_U3CclickresponseU3Eb__0_m03D296097A774913B7B0695F4E874C89E2C8A6A1 (void);
 extern void TSIMessage__ctor_m82558A2186B6C0587E5263E53FDF1DC6CA3ED15B (void);
 extern void TSIMessage_byteToNum_m5085CBF9469F1278ADC5A2298BC9DCE0AE2ECD01 (void);
 extern void TSIMessage_byteToDouble_mE6867E0236B00133B794AFEB48275BF6DDA263B9 (void);
@@ -93,7 +104,7 @@ extern void VisualizationExample_Start_mE2F7E5F1B5E21319205CF232561F8EA0D2254AB1
 extern void VisualizationExample_UpdateOxyDisplay_mFDC938FD8BB292398CDB412FBAC9F07EE99E53DE (void);
 extern void VisualizationExample_UpdateDeOxyDisplay_mD75584A85D2FCADF084115B6C5C453549E6960FD (void);
 extern void VisualizationExample__ctor_m9C721C934F8ADD039D31CD60991AD9F6266A1DBB (void);
-static Il2CppMethodPointer s_methodPointers[81] = 
+static Il2CppMethodPointer s_methodPointers[92] = 
 {
 	ip_input_script_Connect_m0F9A4EDAD0A53FF688955A6F53019DD28D85E76C,
 	ip_input_script_CoRoutine2_mBA21D1AE381EDE217BB4792BC935F0954B68274C,
@@ -123,6 +134,17 @@ static Il2CppMethodPointer s_methodPointers[81] =
 	U3CorderU3Ed__5_System_Collections_IEnumerator_get_Current_mDF9A7FD259DF4E0369FA05201D27A692FB4DFE7E,
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033,
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1,
+	TextChanges_Start_mE690D2D26D0591567EF19593A2BCA4FEA964CE6E,
+	TextChanges_UpdateField_m6682F3215C784E8A633DE7E21F034A8ED4AAB14F,
+	TextChanges_Update_m81574952346B3C1DC4FD31D3EF27E79ED25AEC11,
+	TextChanges_clickresponse_m8BA73440DDF58FC948E9F95A9DC5B813B575306E,
+	TextChanges_setButtonText_m43C0A92E8D89D1089CDE53F6428D6F45D15FB26A,
+	TextChanges_playTurn_m9ED62E7C5F7A8CA32FC6248AA14FD87A2FD5F889,
+	TextChanges__ctor_m5295C61B71A910FC1811599AA506B73C863356DA,
+	TextChanges_U3CclickresponseU3Eb__17_1_m908B941651AFA221D58CE1957280B0D721A9D5E5,
+	TextChanges_U3CclickresponseU3Eb__17_2_m1021B8CE26D533F2EC1A40713619BEF98EDACD61,
+	U3CU3Ec__DisplayClass17_0__ctor_mE7CD94F4B86CFA0BF448A14EF9047841198BF141,
+	U3CU3Ec__DisplayClass17_0_U3CclickresponseU3Eb__0_m03D296097A774913B7B0695F4E874C89E2C8A6A1,
 	TSIMessage__ctor_m82558A2186B6C0587E5263E53FDF1DC6CA3ED15B,
 	TSIMessage_byteToNum_m5085CBF9469F1278ADC5A2298BC9DCE0AE2ECD01,
 	TSIMessage_byteToDouble_mE6867E0236B00133B794AFEB48275BF6DDA263B9,
@@ -177,7 +199,7 @@ static Il2CppMethodPointer s_methodPointers[81] =
 	VisualizationExample_UpdateDeOxyDisplay_mD75584A85D2FCADF084115B6C5C453549E6960FD,
 	VisualizationExample__ctor_m9C721C934F8ADD039D31CD60991AD9F6266A1DBB,
 };
-static const int32_t s_InvokerIndices[81] = 
+static const int32_t s_InvokerIndices[92] = 
 {
 	7996,
 	7846,
@@ -206,6 +228,17 @@ static const int32_t s_InvokerIndices[81] =
 	7996,
 	7846,
 	11671,
+	7996,
+	7996,
+	6372,
+	7996,
+	7996,
+	6321,
+	3183,
+	7996,
+	7996,
+	7996,
+	7996,
 	7996,
 	6372,
 	5298,
@@ -265,7 +298,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	81,
+	92,
 	s_methodPointers,
 	0,
 	NULL,
