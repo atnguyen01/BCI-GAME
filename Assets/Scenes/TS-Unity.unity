@@ -7813,7 +7813,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.057, y: -1}
+  m_AnchoredPosition: {x: -0.05, y: -1.062}
   m_SizeDelta: {x: 5, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &953504986
@@ -7838,7 +7838,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Hello? Hello Hello? Uh, I wanted to record a message for you to help you
     get settled on your first night. Um, I actually worked in that office before
-    you.
+    you. I'm finishing up my last week now, as a matter of fact. So, I know it can
+    be abit overwhelming, but I'm here to tell you there's nothing to worry about...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7873,7 +7874,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 4096
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
