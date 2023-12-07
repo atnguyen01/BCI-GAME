@@ -1,5 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
+using System.IO;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
@@ -17,26 +20,45 @@ public class TextChanges : MonoBehaviour
         public int baker = 0;
         public int carpenter = 0;
         public int potter = 0;
-        public int response_counter = 0; //-2 to deal with the double click bug at beginning
-        public string clickedButton = "";
+        public int response_counter = 0; 
         public int button_num = 0;
         public string button_name = null;
         public bool isFocused = true;
-        public GameObject button;
+        public string Path;
+        public string[][] csvValues;
+        public string[] labelRow; // 1st row with commands
     // Start is called before the first frame update
+
+    public void LoadFile(string path){
+    var data = File.ReadAllLines(path).Select(l => l.Split(',')).ToArray().ToArray();
+    csvValues = data;
+    /*
+    for(int i=0; i <csvValues.GetLength(0); i++){
+        labelRow[i] = csvValues[i][0];
+    }*/
+    }
     void Start()
     {
+        Path = Application.dataPath + @"\story_script.csv";
+        //Debug.Log(Path);
         tSINetworkInterface = TSImanager.GetComponent<TSINetworkInterface>();
-                var allInteractables = GameObject.FindObjectsOfType<Interactable>();
+        var allInteractables = GameObject.FindObjectsOfType<Interactable>();
             foreach (var i in allInteractables)
             {
            // i.OnClick.AddListener(() => Debug.Log(Time.time + ": " + i.gameObject.name + " was clicked"));
             //i.OnClick.AddListener(() =>button_name = i.gameObject.name);
-            i.OnClick.AddListener(() => UpdateField(i));
+            i.OnClick.AddListener(() => getButton(i));
             }
+            LoadFile(Path);
+            //Debug.Log(csvValues.GetLength(0)); //getting number of rows
+            for(int i=0; i <csvValues.GetLength(0); i++){
+            //Debug.Log(csvValues[i][0]);
+            labelRow[i] = csvValues[i][0];
+            //Debug.Log(labelRow[i]);
+            }   //shows row 1 for debugging and sanity purposes
     }
 
-    public void UpdateField(Microsoft.MixedReality.Toolkit.UI.Interactable index)
+    public void getButton(Microsoft.MixedReality.Toolkit.UI.Interactable index)
     {
         //button_name = index.gameObject.name;
         //set button number for clickresponse to use as switch case 
@@ -55,28 +77,6 @@ public class TextChanges : MonoBehaviour
     void Update()
     {
         
-    }
-
-    public void clickresponse(){
- //       button_name = GetComponent<Interactable>().name;
- /*
-        var allInteractables = GameObject.FindObjectsOfType<Interactable>();
-            foreach (var i in allInteractables)
-            {
-           // i.OnClick.AddListener(() => Debug.Log(Time.time + ": " + i.gameObject.name + " was clicked"));
-            //i.OnClick.AddListener(() =>button_name = i.gameObject.name);
-            i.OnClick.AddListener(() => UpdateField(i));
-            i.OnClick.AddListener(() => playTurn(response_counter));
-            //i.OnClick.AddListener(() => response_counter += 1);
-            }
-            */
-            /*
-        Debug.Log(button_name);
-        response_counter += 1;
-        Debug.Log(response_counter);
-        Debug.Log("Button num: " + button_num);
-        playTurn(response_counter, button_num);
-        */
     }
 
     public void setButtonText(int turn_num){
@@ -109,6 +109,20 @@ public class TextChanges : MonoBehaviour
             break;
         }
     }
+
+public void playTurn(){ 
+    switch(labelRow[response_counter]){
+        case "start_story":
+            break;
+        case "dialogue":
+            break;
+        case "":
+            break;            
+    }
+}
+
+//old play turn
+/*
 
     public void playTurn(){
        switch(response_counter){
@@ -200,6 +214,6 @@ public class TextChanges : MonoBehaviour
 }
 response_counter += 1;
 Debug.Log(response_counter);
-}
+} */
 }
 }
