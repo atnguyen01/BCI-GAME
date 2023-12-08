@@ -30,7 +30,7 @@ public class TextChanges : MonoBehaviour
     // Start is called before the first frame update
 
     public void LoadFile(string path){
-    var data = File.ReadAllLines(path).Select(l => l.Split(',')).ToArray().ToArray();
+    var data = File.ReadAllLines(path).Select(l => l.Split(';')).ToArray().ToArray();
     csvValues = data;
     /*
     for(int i=0; i <csvValues.GetLength(0); i++){
@@ -115,10 +115,26 @@ public void playTurn(){
         case "start_story":
             break;
         case "dialogue":
+            jim.text = csvValues[response_counter][1];
+            buttonlabel2.text = "Continue";
+            if(labelRow[response_counter+1].Equals("choice_2")){
+                buttonlabel1.text = csvValues[response_counter+1][1];
+                buttonlabel2.text = "";
+                buttonlabel3.text = csvValues[response_counter+1][2];
+                response_counter += 1; // skip choice in csv to show at the same time
+            }
             break;
-        case "":
+        case "path_2":
+                switch(button_num){
+                    case 1:
+                    jim.text = csvValues[response_counter][1];
+                    break;
+                    case 3: jim.text = csvValues[response_counter][2];
+                    break;
+                }
             break;            
     }
+    response_counter +=1;
 }
 
 //old play turn
