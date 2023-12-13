@@ -103,6 +103,6 @@ path_3;Local Detective Found Dead in an Alleyway!;“Well, since our last call, 
 path_3;A well-known detective, Jim Moore, was found stabbed to death in an alleyway near his home. Evidence points to his death being a murder. At this current time, the murderer is unknown and still at large.;“You’ve really gone into the wrong business, you should have become a full-time detective with how adept your deduction skills are!”;A well-known detective, Jim Moore, was found stabbed to death in an alleyway near his home. Evidence points to his death being a murder. At this current time, the murderer is unknown and still at large.;;;
 path_3;skip;“Anyways, I have a new case, and I would like your expertise on it. How about it?”;skip;;;
 dialogue;Fin;;;;;
-dialogue;Credits: James Cao (main writer), Jagger Polvino (writer, emotional support), Andrew Nguyen (writer, emotional support);;;;;
+dialogue;Credits: James Cao, Jagger Polvino, Andrew Nguyen;;;;;
 dialogue;Thank you for playing our game!;;;;;
 end_story;;;;;;
