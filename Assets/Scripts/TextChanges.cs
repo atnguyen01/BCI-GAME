@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.IO;
 using System.Linq;
+using Unity.IO;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
@@ -25,7 +26,7 @@ public class TextChanges : MonoBehaviour
         public int button_num = 0;
         public string button_name = null;
         public bool isFocused = true;
-        public string Path;
+        //public string Path;
         public string[][] csvValues;
         public string[] labelRow; // 1st row with commands
         string[] strsplit; //for point changes
@@ -41,7 +42,11 @@ public class TextChanges : MonoBehaviour
     }
     void Start()
     {
-        Path = Application.dataPath + @"\story_script.csv";
+        isFocused = true;
+        //var resources = Resources.Load("story_script");
+        //Path = Application.dataPath + @"\Resources\story_script.csv";
+        var basePath = Path.Combine(Application.streamingAssetsPath, "story_script.csv");
+        csvValues = File.ReadAllLines(basePath).Select(l => l.Split(';')).ToArray().ToArray();
         //Debug.Log(Path);
         tSINetworkInterface = TSImanager.GetComponent<TSINetworkInterface>();
         var allInteractables = GameObject.FindObjectsOfType<Interactable>();
@@ -51,7 +56,7 @@ public class TextChanges : MonoBehaviour
             //i.OnClick.AddListener(() =>button_name = i.gameObject.name);
             i.OnClick.AddListener(() => getButton(i));
             }
-            LoadFile(Path);
+            //LoadFile(Path);
             Debug.Log(csvValues.GetLength(0)); //getting number of rows
             for(int i=0; i <csvValues.GetLength(0); i++){
             //Debug.Log(csvValues[i][0]);
