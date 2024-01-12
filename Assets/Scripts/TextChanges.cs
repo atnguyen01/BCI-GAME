@@ -129,12 +129,16 @@ public void playTurn(){
             }
             break;
         case "state_dialogue":
-            if(isFocused){
+            if(isFocused && !csvValues[response_counter][1].Equals("skip")){
                 jim.text = csvValues[response_counter][1];
-            }else{
+            }else if(!isFocused && !csvValues[response_counter][2].Equals("skip")){
                 jim.text = csvValues[response_counter][2];
+            } else if (isFocused && csvValues[response_counter][1].Equals("skip")){
+                playTurn();
             }
-
+            else if (!isFocused && csvValues[response_counter][2].Equals("skip")){
+                playTurn();
+            }
             if(isFocused && labelRow[response_counter+1].Equals("comment") && labelRow[response_counter+2].Equals("state_choice_3") && labelRow[response_counter+3].Equals("point_change")){
             buttonlabel1.text = csvValues[response_counter+2][1];
             buttonlabel2.text = csvValues[response_counter+2][2];
@@ -167,11 +171,14 @@ public void playTurn(){
                 buttonlabel3.text = "";
             break;
         case "state_path_3":
+                buttonlabel1.text = "";
+                buttonlabel2.text = "Continue";
+                buttonlabel3.text = "";
             switch(button_num){
                 case 1:
                 if(isFocused){
-                   strsplit = csvValues[response_counter-1][1].Split(' ');
-                   jim.text = csvValues[response_counter][1];
+                   strsplit = csvValues[response_counter-1][1].Split(' '); // if point change before
+                   jim.text = csvValues[response_counter][1]; //if skip then skip
                 } else {
                   strsplit = csvValues[response_counter-1][4].Split(' ');
                   jim.text = csvValues[response_counter][4];  
@@ -218,14 +225,24 @@ public void playTurn(){
                     buttonlabel1.text = csvValues[response_counter][2];
                     buttonlabel2.text = "";
                     buttonlabel3.text = csvValues[response_counter][3];
-
-                    if(labelRow[response_counter+1].Equals("comment") && labelRow[response_counter+2].Equals("state")){
-                        response_counter += 2;
-                    }
-
                     if(button_num == 2 || button_num == 3){
-                        response_counter -= 3; //stay where you are 
+                        jim.text = csvValues[response_counter+1][2]; 
+                    } else {
+                        jim.text = csvValues[response_counter+1][1];
                     }
+
+
+            break;
+            case "wait_response":
+                    if(button_num == 2 || button_num == 3){
+                        jim.text = csvValues[response_counter][2];
+                        response_counter -= 1; //stay where you are 
+                    } else {
+                        jim.text = csvValues[response_counter][1];
+                         response_counter += 2; //skip past comment and state
+                    }
+
+
             break;        
     }
     response_counter +=1;

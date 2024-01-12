@@ -63,7 +63,8 @@ dialogue;“To me, these kinds of wounds indicate that the murder weapon was a k
 dialogue;“I’ve narrowed the knives down to one from each suspect that seemed most likely to have caused the wounds on Mr. Payne’s body.”;;;;;
 dialogue;“Mr. Baker’s is a bread knife, Mr. Carpenter’s is a whittling knife, and Mr. Potter’s is a clay cutting knife.”;;;;;
 dialogue;“It’s somewhat difficult to exactly describe the knives in detail, so I’ve sent some replicas to you. I actually sent them to you with quick delivery when we first started talking, so they should have arrived to you by now. Look around you, they should be in a box with red tape. Take some time to examine them.”;;;;;
-wait;“Have you finished examining them?”;1. [Yes];2. [No];“Good, let’s continue.”;“Alright, I’ll give you some more time.”;
+wait;“Have you finished examining them?”;1. [Yes];2. [No];;;
+wait_response;“Good, let’s continue.”;“Alright, I’ll give you some more time.”;;;;
 comment;end recording focus;;;;;
 state;;;;;;
 state_dialogue;“As you’ve likely noticed, each knife has a different width, length, and shape. Remember that the wounds inflicted were numerous, long, and especially shallow, likely cuts rather than stabs. What are your thoughts and deductions you can make about them?”;“As you’ve likely noticed, each knife has a different width, length, and shape. Remember that the wounds on the victim were long cuts rather than stabs. What are your thoughts and deductions you can make about them?”;;;;
@@ -76,7 +77,8 @@ dialogue;“Alright, this will be the last clue. I have to leave soon, so I’ll
 dialogue;“In the alleyway where the murder took place, a receipt book with blood splatters was found near the entrance to the alleyway. It contains records of purchases from the ‘The Good Generals,’ and has all three suspects’ names in it in different places.”;;;;;
 dialogue;“Mr. Baker bought a whetstone, undoubtedly to sharpen his knives. Mr. Carpenter bought a bundle of small blades, which were used to replace his whittling knife’s blade once it had become too dull. Mr. Potter bought some mugwort, which is a medicinal herb used as an anesthetic, and has ties to occultist rituals.”;;;;;
 dialogue;“I sent you some copies of the relevant records in it to you. They should be in a box with yellow tape. I’ll give you some time to look through them.”;;;;;
-wait;“Have you finished examining them?”;1. [Yes];2. [No];“Good, let’s continue.”;“Alright, I’ll give you some more time.”;
+wait;“Have you finished examining them?”;1. [Yes];2. [No];;;
+wait_response;“Good, let’s continue.”;“Alright, I’ll give you some more time.”;;;;
 comment;end recording focus;;;;;
 state;;;;;;
 dialogue;“Any questions?”;;;;;
