@@ -178,28 +178,76 @@ public void playTurn(){
                 case 1:
                 if(isFocused){
                    strsplit = csvValues[response_counter-1][1].Split(' '); // if point change before
-                   jim.text = csvValues[response_counter][1]; //if skip then skip
+                   if(!csvValues[response_counter][1].Equals("skip") && !csvValues[response_counter][1].Equals("pass 4")){
+                   jim.text = csvValues[response_counter][1]; 
+                   } else if (csvValues[response_counter][1].Equals("skip")){ //if skip then skip
+                    response_counter += 1;
+                    playTurn();
+                   } else if(csvValues[response_counter][1].Equals("pass 4")){
+                    response_counter += 4;
+                    playTurn();
+                   }
                 } else {
                   strsplit = csvValues[response_counter-1][4].Split(' ');
-                  jim.text = csvValues[response_counter][4];  
+                    if(!csvValues[response_counter][4].Equals("skip") && !csvValues[response_counter][4].Equals("pass 4")){
+                   jim.text = csvValues[response_counter][4]; 
+                   } else if(csvValues[response_counter][4].Equals("skip")){ //if skip then skip
+                    response_counter += 1;
+                    playTurn();
+                   } else if(csvValues[response_counter][4].Equals("pass 4")){
+                    response_counter += 4;
+                    playTurn();
+                   }
                 }
                 break;
                 case 2:
                 if(isFocused){
                    strsplit = csvValues[response_counter-1][2].Split(' ');
-                   jim.text = csvValues[response_counter][2];
+                    if(!csvValues[response_counter][2].Equals("skip")){
+                   jim.text = csvValues[response_counter][2]; 
+                   } else if(csvValues[response_counter][2].Equals("skip")){ //if skip then skip
+                    response_counter += 1;
+                    playTurn();
+                   } else if(csvValues[response_counter][2].Equals("pass 4")){
+                    response_counter += 4;
+                    playTurn();
+                   }
                 } else {
                   strsplit = csvValues[response_counter-1][5].Split(' ');
-                  jim.text = csvValues[response_counter][5];  
+                    if(!csvValues[response_counter][5].Equals("skip") && !csvValues[response_counter][5].Equals("pass 4")){
+                   jim.text = csvValues[response_counter][5]; 
+                   } else if(csvValues[response_counter][5].Equals("skip")){ //if skip then skip
+                    response_counter += 1;
+                    playTurn();
+                   } else if(csvValues[response_counter][5].Equals("pass 4")){
+                    response_counter += 4;
+                    playTurn();
+                   }
                 }
                 break;
                 case 3:
                 if(isFocused){
                    strsplit = csvValues[response_counter-1][3].Split(' ');
-                   jim.text = csvValues[response_counter][3];
+                    if(!csvValues[response_counter][3].Equals("skip")){
+                   jim.text = csvValues[response_counter][3]; 
+                   } else if(csvValues[response_counter][3].Equals("skip")){ //if skip then skip
+                    response_counter += 1;
+                    playTurn();
+                   } else if(csvValues[response_counter][3].Equals("pass 4")){
+                    response_counter += 4;
+                    playTurn();
+                   }
                 } else {
                   strsplit = csvValues[response_counter-1][6].Split(' ');  
-                  jim.text = csvValues[response_counter][6];
+                    if(!csvValues[response_counter][6].Equals("skip")){
+                   jim.text = csvValues[response_counter][6]; 
+                   } else if(csvValues[response_counter][6].Equals("skip")){ //if skip then skip
+                    response_counter += 1;
+                    playTurn();
+                   } else if(csvValues[response_counter][6].Equals("pass 4")){
+                    response_counter += 4;
+                    playTurn();
+                   }
                 } 
                 break;
             }
@@ -210,7 +258,9 @@ public void playTurn(){
                 } else if(strsplit[0].Equals("Potter")){
                     potter += Int32.Parse(strsplit[1]);
                 }
-
+                for(int i = 0; i < strsplit.Length; i++){
+                Debug.Log(strsplit[i]);
+                }
                 if(labelRow[response_counter+1].Equals("comment")){
                 response_counter += 1; //skip comment
                 }
@@ -241,9 +291,39 @@ public void playTurn(){
                         jim.text = csvValues[response_counter][1];
                          response_counter += 2; //skip past comment and state
                     }
+            break;
 
+            case "accuse":
+                if(baker > carpenter && baker > potter){
+                    jim.text = csvValues[response_counter][1];
+                } else if(carpenter > baker && carpenter > potter){
+                    jim.text = csvValues[response_counter][2];
+                } else if(potter > baker && potter > carpenter){
+                    jim.text = csvValues[response_counter][3];
+                }
+            break;
 
-            break;        
+            case "path_3":
+                if(baker > carpenter && baker > potter && !csvValues[response_counter][1].Equals("skip")){
+                    jim.text = csvValues[response_counter][1];
+                }else if(carpenter > baker && carpenter > potter && csvValues[response_counter][1].Equals("skip")){
+                    response_counter += 1;
+                    playTurn();
+                }else if(carpenter > baker && carpenter > potter && csvValues[response_counter][2].Equals("skip")){
+                    response_counter += 1;
+                    playTurn();
+                } 
+                else if(carpenter > baker && carpenter > potter && !csvValues[response_counter][2].Equals("skip")){
+                    jim.text = csvValues[response_counter][2];
+                } 
+                else if(potter > baker && potter > carpenter && !csvValues[response_counter][3].Equals("skip")){
+                    jim.text = csvValues[response_counter][3];
+                }else if(potter > baker && potter > carpenter && !csvValues[response_counter][3].Equals("skip")){
+                    response_counter += 1;
+                    playTurn();
+                }
+                
+            break;                   
     }
     response_counter +=1;
 }
