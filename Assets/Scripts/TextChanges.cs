@@ -24,6 +24,7 @@ public class TextChanges : MonoBehaviour
         public int potter = 0;
         public int response_counter = 0; 
         public int button_num = 0;
+        public int choice = 0; //set previous button num for choice 3s
         public bool isFocused = true;
         //public string Path;
         public string[][] csvValues;
@@ -134,14 +135,38 @@ public void playTurn(){
             buttonlabel1.text = csvValues[response_counter+2][1];
             buttonlabel2.text = csvValues[response_counter+2][2];
             buttonlabel3.text = csvValues[response_counter+2][3];
-            response_counter += 2; //skip comment and point change, ste choices at same time so skip
+            response_counter += 2; //skip ste choices 
             }
 
             if(!isFocused && labelRow[response_counter+1].Equals("comment") && labelRow[response_counter+2].Equals("state_choice_3")){
             buttonlabel1.text = csvValues[response_counter+2][4];
             buttonlabel2.text = csvValues[response_counter+2][5];
             buttonlabel3.text = csvValues[response_counter+2][6];
-            response_counter += 2; //skip comment and point change, ste choices at same time so skip
+            response_counter += 2; //skip ste choices 
+            }
+
+            if(isFocused && labelRow[response_counter+1].Equals("state_choice_3")){
+            buttonlabel1.text = csvValues[response_counter+1][1];
+            buttonlabel2.text = csvValues[response_counter+1][2];
+            buttonlabel3.text = csvValues[response_counter+1][3];
+            response_counter += 1; //skip ste choices 
+            }
+
+            if(!isFocused && labelRow[response_counter+1].Equals("state_choice_3")){
+            buttonlabel1.text = csvValues[response_counter+1][4];
+            buttonlabel2.text = csvValues[response_counter+1][5];
+            buttonlabel3.text = csvValues[response_counter+1][6];
+            response_counter += 1; //skip comment and point change, ste choices at same time so skip
+            }
+
+            break;
+        case "choice_3":
+            if(button_num == 1){
+                choice = 1;
+            } else if(button_num == 2){
+                choice = 2;
+            }else if(button_num == 3){
+                choice = 3;
             }
             break;
         case "path_2":
@@ -165,6 +190,7 @@ public void playTurn(){
                 buttonlabel1.text = "";
                 buttonlabel2.text = "Continue";
                 buttonlabel3.text = "";
+            if(choice == 0){
             switch(button_num){
                 case 1:
                 if(isFocused){
@@ -242,7 +268,80 @@ public void playTurn(){
                 } 
                 break;
             }
-
+    } else if(choice == 1){
+        if(isFocused){
+                    strsplit = csvValues[response_counter-1][1].Split(' '); // if point change before
+                   if(!csvValues[response_counter][1].Equals("skip") && !csvValues[response_counter][1].Equals("pass 4")){
+                   jim.text = csvValues[response_counter][1]; 
+                   } else if (csvValues[response_counter][1].Equals("skip")){ //if skip then skip
+                    response_counter += 1;
+                    playTurn();
+                   } else if(csvValues[response_counter][1].Equals("pass 4")){
+                    response_counter += 4;
+                    playTurn();
+                   }
+                } else {
+                  strsplit = csvValues[response_counter-1][4].Split(' ');
+                    if(!csvValues[response_counter][4].Equals("skip") && !csvValues[response_counter][4].Equals("pass 4")){
+                   jim.text = csvValues[response_counter][4]; 
+                   } else if(csvValues[response_counter][4].Equals("skip")){ //if skip then skip
+                    response_counter += 1;
+                    playTurn();
+                   } else if(csvValues[response_counter][4].Equals("pass 4")){
+                    response_counter += 4;
+                    playTurn();
+                   }
+                }
+        } else if(choice == 2){
+        if(isFocused){
+                   strsplit = csvValues[response_counter-1][2].Split(' ');
+                    if(!csvValues[response_counter][2].Equals("skip")){
+                   jim.text = csvValues[response_counter][2]; 
+                   } else if(csvValues[response_counter][2].Equals("skip")){ //if skip then skip
+                    response_counter += 1;
+                    playTurn();
+                   } else if(csvValues[response_counter][2].Equals("pass 4")){
+                    response_counter += 4;
+                    playTurn();
+                   }
+                } else {
+                  strsplit = csvValues[response_counter-1][5].Split(' ');
+                    if(!csvValues[response_counter][5].Equals("skip") && !csvValues[response_counter][5].Equals("pass 4")){
+                   jim.text = csvValues[response_counter][5]; 
+                   } else if(csvValues[response_counter][5].Equals("skip")){ //if skip then skip
+                    response_counter += 1;
+                    playTurn();
+                   } else if(csvValues[response_counter][5].Equals("pass 4")){
+                    response_counter += 4;
+                    playTurn();
+                   }
+        }
+        } else if(choice == 3){
+            if(isFocused){
+                   strsplit = csvValues[response_counter-1][3].Split(' ');
+                    if(!csvValues[response_counter][3].Equals("skip")){
+                   jim.text = csvValues[response_counter][3]; 
+                   } else if(csvValues[response_counter][3].Equals("skip")){ //if skip then skip
+                    response_counter += 1;
+                    playTurn();
+                   } else if(csvValues[response_counter][3].Equals("pass 4")){
+                    response_counter += 4;
+                    playTurn();
+                   }
+                } else {
+                  strsplit = csvValues[response_counter-1][6].Split(' ');  
+                    if(!csvValues[response_counter][6].Equals("skip")){
+                   jim.text = csvValues[response_counter][6]; 
+                   } else if(csvValues[response_counter][6].Equals("skip")){ //if skip then skip
+                    response_counter += 1;
+                    playTurn();
+                   } else if(csvValues[response_counter][6].Equals("pass 4")){
+                    response_counter += 4;
+                    playTurn();
+                   }
+        }
+        }
+    
                 for(int i = 0; i < strsplit.Length; i++){
                 Debug.Log(strsplit[i]);
                 }
