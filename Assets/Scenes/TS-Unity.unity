@@ -957,6 +957,7 @@ Transform:
   m_Children:
   - {fileID: 1973185513}
   - {fileID: 1108454853}
+  - {fileID: 635258423}
   - {fileID: 1717431531}
   - {fileID: 2013399523}
   - {fileID: 926088526}
@@ -2130,6 +2131,18 @@ MonoBehaviour:
   OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1955909501}
+        m_TargetAssemblyTypeName: TSI2Unity.TextChanges, Assembly-CSharp
+        m_MethodName: setButton3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1955909501}
         m_TargetAssemblyTypeName: TSI2Unity.TextChanges, Assembly-CSharp
         m_MethodName: playTurn
@@ -4327,6 +4340,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1955909501}
         m_TargetAssemblyTypeName: TSI2Unity.TextChanges, Assembly-CSharp
+        m_MethodName: setButton2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1955909501}
+        m_TargetAssemblyTypeName: TSI2Unity.TextChanges, Assembly-CSharp
         m_MethodName: playTurn
         m_Mode: 1
         m_Arguments:
@@ -4673,15 +4698,15 @@ Transform:
   m_GameObject: {fileID: 635258422}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0165, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.36442578, y: 0.14597654, z: 0.038812876}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 107431373}
   - {fileID: 309628336}
   - {fileID: 1919737201}
   - {fileID: 1331487372}
-  m_Father: {fileID: 1108454853}
+  m_Father: {fileID: 174798913}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &635258424
 MonoBehaviour:
@@ -5401,6 +5426,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1955909501}
         m_TargetAssemblyTypeName: TSI2Unity.TextChanges, Assembly-CSharp
+        m_MethodName: setButton1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1955909501}
+        m_TargetAssemblyTypeName: TSI2Unity.TextChanges, Assembly-CSharp
         m_MethodName: playTurn
         m_Mode: 1
         m_Arguments:
@@ -5824,7 +5861,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 38a587e9218b3284485088c9925af61f, type: 2}
+  - {fileID: 2100000, guid: f40914b49f8741e39df5b08d3db15497, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8514,7 +8551,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1108454853
 Transform:
   m_ObjectHideFlags: 0
@@ -8529,7 +8566,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1419003164}
-  - {fileID: 635258423}
   m_Father: {fileID: 174798913}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1108454854
@@ -9175,7 +9211,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 329cdefad4cf0f14e9b6767d0af094b0, type: 2}
+  - {fileID: 2100000, guid: a5e028070ace428d8971079be1d965a6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10959,7 +10995,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1419003164
 Transform:
   m_ObjectHideFlags: 0
@@ -11501,7 +11537,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1434411969}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.0096}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14916,7 +14952,6 @@ MonoBehaviour:
   potter: 0
   response_counter: 0
   button_num: 0
-  button_name: 
   isFocused: 0
   labelRow:
   - 

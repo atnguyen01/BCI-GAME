@@ -24,7 +24,6 @@ public class TextChanges : MonoBehaviour
         public int potter = 0;
         public int response_counter = 0; 
         public int button_num = 0;
-        public string button_name = null;
         public bool isFocused = true;
         //public string Path;
         public string[][] csvValues;
@@ -49,13 +48,7 @@ public class TextChanges : MonoBehaviour
         csvValues = File.ReadAllLines(basePath).Select(l => l.Split(';')).ToArray().ToArray();
         //Debug.Log(Path);
         tSINetworkInterface = TSImanager.GetComponent<TSINetworkInterface>();
-        var allInteractables = GameObject.FindObjectsOfType<Interactable>();
-            foreach (var i in allInteractables)
-            {
-           // i.OnClick.AddListener(() => Debug.Log(Time.time + ": " + i.gameObject.name + " was clicked"));
-            //i.OnClick.AddListener(() =>button_name = i.gameObject.name);
-            i.OnClick.AddListener(() => getButton(i));
-            }
+
             //LoadFile(Path);
             Debug.Log(csvValues.GetLength(0)); //getting number of rows
             for(int i=0; i <csvValues.GetLength(0); i++){
@@ -65,20 +58,18 @@ public class TextChanges : MonoBehaviour
             }   //shows row 1 for debugging and sanity purposes
     }
 
-    public void getButton(Microsoft.MixedReality.Toolkit.UI.Interactable index)
-    {
-        //button_name = index.gameObject.name;
-        //set button number for clickresponse to use as switch case 
-           if(index.gameObject.name.Equals("Pressable Button (1)")){
-                button_num = 1;
-            } 
-            if(index.gameObject.name.Equals("Pressable Button (2)")){
-                button_num = 2;
-            } 
-            if(index.gameObject.name.Equals("Pressable Button (3)")){
-                button_num = 3;
-            }
-    } 
+
+    public void setButton1(){
+        button_num = 1;
+    }
+    public void setButton2(){
+        button_num = 2;
+    }
+
+    public void setButton3(){
+        button_num = 3;
+    }
+
 
     // Update is called once per frame
     void Update()
@@ -139,18 +130,18 @@ public void playTurn(){
             else if (!isFocused && csvValues[response_counter][2].Equals("skip")){
                 playTurn();
             }
-            if(isFocused && labelRow[response_counter+1].Equals("comment") && labelRow[response_counter+2].Equals("state_choice_3") && labelRow[response_counter+3].Equals("point_change")){
+            if(isFocused && labelRow[response_counter+1].Equals("comment") && labelRow[response_counter+2].Equals("state_choice_3")){
             buttonlabel1.text = csvValues[response_counter+2][1];
             buttonlabel2.text = csvValues[response_counter+2][2];
             buttonlabel3.text = csvValues[response_counter+2][3];
-            response_counter += 3; //skip comment and point change, ste choices at same time so skip
+            response_counter += 2; //skip comment and point change, ste choices at same time so skip
             }
 
-            if(!isFocused && labelRow[response_counter+1].Equals("comment") && labelRow[response_counter+2].Equals("state_choice_3") && labelRow[response_counter+3].Equals("point_change")){
+            if(!isFocused && labelRow[response_counter+1].Equals("comment") && labelRow[response_counter+2].Equals("state_choice_3")){
             buttonlabel1.text = csvValues[response_counter+2][4];
             buttonlabel2.text = csvValues[response_counter+2][5];
             buttonlabel3.text = csvValues[response_counter+2][6];
-            response_counter += 3; //skip comment and point change, ste choices at same time so skip
+            response_counter += 2; //skip comment and point change, ste choices at same time so skip
             }
             break;
         case "path_2":
@@ -251,13 +242,7 @@ public void playTurn(){
                 } 
                 break;
             }
-                if(strsplit[0].Equals("Carpenter")){
-                    carpenter += Int32.Parse(strsplit[1]);
-                } else if(strsplit[0].Equals("Baker")){
-                    baker += Int32.Parse(strsplit[1]);
-                } else if(strsplit[0].Equals("Potter")){
-                    potter += Int32.Parse(strsplit[1]);
-                }
+
                 for(int i = 0; i < strsplit.Length; i++){
                 Debug.Log(strsplit[i]);
                 }
@@ -270,6 +255,51 @@ public void playTurn(){
                 //Debug.Log(potter);
 
             break;    
+            case "point_change":
+                 switch(button_num){
+                case 1:
+                if(isFocused){
+                   strsplit = csvValues[response_counter][1].Split(' '); // if point change before
+                } else {
+                  strsplit = csvValues[response_counter][4].Split(' ');
+                }
+                break;
+                case 2:
+                if(isFocused){
+                   strsplit = csvValues[response_counter][2].Split(' ');
+                } else {
+                  strsplit = csvValues[response_counter][5].Split(' ');
+                }
+                break;
+                case 3:
+                if(isFocused){
+                   strsplit = csvValues[response_counter][3].Split(' ');
+                } else {
+                  strsplit = csvValues[response_counter][6].Split(' ');  
+                } 
+                break;
+            }
+                if(strsplit[0].Equals("Carpenter")){
+                    carpenter += Int32.Parse(strsplit[1]);
+                } else if(strsplit[0].Equals("Baker")){
+                    baker += Int32.Parse(strsplit[1]);
+                } else if(strsplit[0].Equals("Potter")){
+                    potter += Int32.Parse(strsplit[1]);
+                }
+
+                if(strsplit.Length > 3){
+                    if(strsplit[2].Equals("Carpenter")){
+                        carpenter += Int32.Parse(strsplit[3]);
+                    } else if(strsplit[2].Equals("Baker")){
+                        baker += Int32.Parse(strsplit[3]);
+                    } else if(strsplit[2].Equals("Potter")){
+                        potter += Int32.Parse(strsplit[3]);
+                    }
+                }
+                response_counter += 1;
+                playTurn();
+
+            break;
             case "wait":
                     jim.text = csvValues[response_counter][1];
                     buttonlabel1.text = csvValues[response_counter][2];
