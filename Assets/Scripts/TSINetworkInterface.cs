@@ -127,7 +127,7 @@ namespace TSI2Unity
             }
             catch (SocketException)
             {
-                ClientLog("Socket Exception: Start Server first", Color.red);
+       //         ClientLog("Socket Exception: Start Server first", Color.red);
                 CloseClient();
             }          
         }
@@ -174,7 +174,7 @@ namespace TSI2Unity
             }
             catch (Exception)
             {
-                ClientLog("Non-Connected Socket exception", Color.red);
+      //          ClientLog("Non-Connected Socket exception", Color.red);
                 CloseClient();
                 return;
             }
@@ -182,7 +182,7 @@ namespace TSI2Unity
             //early out if there is nothing connected
             if (!m_Client.Connected)
             {
-                ClientLog("Socket Error: Stablish Server connection first", Color.red);
+     //           ClientLog("Socket Error: Stablish Server connection first", Color.red);
                 return;
             }
 
@@ -265,7 +265,7 @@ namespace TSI2Unity
         //Close client connection
         public void CloseClient()
         {
-            ClientLog("Client Closed", Color.red);
+      //      ClientLog("Client Closed", Color.red);
 
             //Reset everything to defaults
             if (m_Client.Connected)

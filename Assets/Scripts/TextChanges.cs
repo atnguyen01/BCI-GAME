@@ -1,5 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
+using System.IO;
+using System.Linq;
+using Unity.IO;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
@@ -17,39 +22,54 @@ public class TextChanges : MonoBehaviour
         public int baker = 0;
         public int carpenter = 0;
         public int potter = 0;
-        public int response_counter = 0; //-2 to deal with the double click bug at beginning
-        public string clickedButton = "";
+        public int response_counter = 0; 
         public int button_num = 0;
-        public string button_name = null;
         public bool isFocused = true;
-        public GameObject button;
+        //public string Path;
+        public string[][] csvValues;
+        public string[] labelRow; // 1st row with commands
+        string[] strsplit; //for point changes
     // Start is called before the first frame update
+
+    public void LoadFile(string path){
+    var data = File.ReadAllLines(path).Select(l => l.Split(';')).ToArray().ToArray();
+    csvValues = data;
+    /*
+    for(int i=0; i <csvValues.GetLength(0); i++){
+        labelRow[i] = csvValues[i][0];
+    }*/
+    }
     void Start()
     {
+        isFocused = true;
+        //var resources = Resources.Load("story_script");
+        //Path = Application.dataPath + @"\Resources\story_script.csv";
+        var basePath = Path.Combine(Application.streamingAssetsPath, "story_script.csv");
+        csvValues = File.ReadAllLines(basePath).Select(l => l.Split(';')).ToArray().ToArray();
+        //Debug.Log(Path);
         tSINetworkInterface = TSImanager.GetComponent<TSINetworkInterface>();
-                var allInteractables = GameObject.FindObjectsOfType<Interactable>();
-            foreach (var i in allInteractables)
-            {
-           // i.OnClick.AddListener(() => Debug.Log(Time.time + ": " + i.gameObject.name + " was clicked"));
-            //i.OnClick.AddListener(() =>button_name = i.gameObject.name);
-            i.OnClick.AddListener(() => UpdateField(i));
-            }
+
+            //LoadFile(Path);
+            Debug.Log(csvValues.GetLength(0)); //getting number of rows
+            for(int i=0; i <csvValues.GetLength(0); i++){
+            //Debug.Log(csvValues[i][0]);
+            labelRow[i] = csvValues[i][0];
+            //Debug.Log(labelRow[i]);
+            }   //shows row 1 for debugging and sanity purposes
     }
 
-    public void UpdateField(Microsoft.MixedReality.Toolkit.UI.Interactable index)
-    {
-        //button_name = index.gameObject.name;
-        //set button number for clickresponse to use as switch case 
-           if(index.gameObject.name.Equals("Pressable Button (1)")){
-                button_num = 1;
-            } 
-            if(index.gameObject.name.Equals("Pressable Button (2)")){
-                button_num = 2;
-            } 
-            if(index.gameObject.name.Equals("Pressable Button (3)")){
-                button_num = 3;
-            }
+
+    public void setButton1(){
+        button_num = 1;
     }
+    public void setButton2(){
+        button_num = 2;
+    }
+
+    public void setButton3(){
+        button_num = 3;
+    }
+
 
     // Update is called once per frame
     void Update()
@@ -57,58 +77,290 @@ public class TextChanges : MonoBehaviour
         
     }
 
-    public void clickresponse(){
- //       button_name = GetComponent<Interactable>().name;
- /*
-        var allInteractables = GameObject.FindObjectsOfType<Interactable>();
-            foreach (var i in allInteractables)
-            {
-           // i.OnClick.AddListener(() => Debug.Log(Time.time + ": " + i.gameObject.name + " was clicked"));
-            //i.OnClick.AddListener(() =>button_name = i.gameObject.name);
-            i.OnClick.AddListener(() => UpdateField(i));
-            i.OnClick.AddListener(() => playTurn(response_counter));
-            //i.OnClick.AddListener(() => response_counter += 1);
-            }
-            */
-            /*
-        Debug.Log(button_name);
-        response_counter += 1;
-        Debug.Log(response_counter);
-        Debug.Log("Button num: " + button_num);
-        playTurn(response_counter, button_num);
-        */
-    }
 
-    public void setButtonText(int turn_num){
-        Debug.Log("button: "+ button_num);
-        switch(turn_num){
-            case 1:
-            buttonlabel1.text = "Did Andrew do it?";
-            buttonlabel2.text = "Who's James?";
-            buttonlabel3.text = "Is Jagger sus?!?!?!?";
+//not done need to figure out point change for two characters at once
+//lines 43-45 need to figure out (prob case for state choice) 
+public void playTurn(){ 
+    switch(labelRow[response_counter]){
+        case "start_story":
             break;
-            case 2:
-            buttonlabel1.text = "Cool";
-            buttonlabel2.text = "Nice!";
-            buttonlabel3.text = "Called it";
+        case "dialogue":
+            jim.text = csvValues[response_counter][1];
+                buttonlabel1.text = "";
+                buttonlabel2.text = "Continue";
+                buttonlabel3.text = "";
+            if(labelRow[response_counter+1].Equals("choice_2")){
+                buttonlabel1.text = csvValues[response_counter+1][1];
+                buttonlabel2.text = "";
+                buttonlabel3.text = csvValues[response_counter+1][2];
+               // response_counter += 1; // skip choice in csv to show at the same time
+            }
+            if(labelRow[response_counter+1].Equals("choice_3")){
+                buttonlabel1.text = csvValues[response_counter+1][1];
+                buttonlabel2.text = csvValues[response_counter+1][2];
+                buttonlabel3.text = csvValues[response_counter+1][3];
+               // response_counter += 1; // skip choice in csv to show at the same time
+            }
+            if(labelRow[response_counter+1].Equals("state_choice_3") && isFocused){
+                buttonlabel1.text = csvValues[response_counter+1][1];
+                buttonlabel2.text = csvValues[response_counter+1][2];
+                buttonlabel3.text = csvValues[response_counter+1][3];
+            } else if(labelRow[response_counter+1].Equals("state_choice_3") && !isFocused){
+                buttonlabel1.text = csvValues[response_counter+1][4];
+                buttonlabel2.text = csvValues[response_counter+1][5];
+                buttonlabel3.text = csvValues[response_counter+1][6];               
+            }
+
+            if(labelRow[response_counter+1].Equals("comment") && labelRow[response_counter+2].Equals("state") && labelRow[response_counter+3].Equals("comment")){
+            response_counter += 3; //skip comment state and coment
+            }else if(labelRow[response_counter+1].Equals("comment") && labelRow[response_counter+2].Equals("state")){
+            response_counter += 2; //skip comment and state
+            }else if(labelRow[response_counter+1].Equals("comment")){
+            response_counter += 1; //skip comment
+            }
             break;
-            case 3:
-            buttonlabel1.text = "wha";
-            buttonlabel2.text = "cool!";
-            buttonlabel3.text = "knew it was coming";
+        case "state_dialogue":
+            if(isFocused && !csvValues[response_counter][1].Equals("skip")){
+                jim.text = csvValues[response_counter][1];
+            }else if(!isFocused && !csvValues[response_counter][2].Equals("skip")){
+                jim.text = csvValues[response_counter][2];
+            } else if (isFocused && csvValues[response_counter][1].Equals("skip")){
+                playTurn();
+            }
+            else if (!isFocused && csvValues[response_counter][2].Equals("skip")){
+                playTurn();
+            }
+            if(isFocused && labelRow[response_counter+1].Equals("comment") && labelRow[response_counter+2].Equals("state_choice_3")){
+            buttonlabel1.text = csvValues[response_counter+2][1];
+            buttonlabel2.text = csvValues[response_counter+2][2];
+            buttonlabel3.text = csvValues[response_counter+2][3];
+            response_counter += 2; //skip comment and point change, ste choices at same time so skip
+            }
+
+            if(!isFocused && labelRow[response_counter+1].Equals("comment") && labelRow[response_counter+2].Equals("state_choice_3")){
+            buttonlabel1.text = csvValues[response_counter+2][4];
+            buttonlabel2.text = csvValues[response_counter+2][5];
+            buttonlabel3.text = csvValues[response_counter+2][6];
+            response_counter += 2; //skip comment and point change, ste choices at same time so skip
+            }
             break;
-            case 4:
-            buttonlabel1.text = "Cool";
-            buttonlabel2.text = "Nice!";
-            buttonlabel3.text = "Called it";
+        case "path_2":
+                switch(button_num){
+                    case 1:
+                    jim.text = csvValues[response_counter][1];
+                    break;
+                    case 2:
+                    response_counter -=1; //so clicking will do nothing here
+                    break;
+                    case 3: 
+                    jim.text = csvValues[response_counter][2];
+                    break;
+                }
+
+                buttonlabel1.text = "";
+                buttonlabel2.text = "Continue";
+                buttonlabel3.text = "";
             break;
-            case 5:
-            buttonlabel1.text = "wha";
-            buttonlabel2.text = "cool!";
-            buttonlabel3.text = "knew it was coming";
+        case "state_path_3":
+                buttonlabel1.text = "";
+                buttonlabel2.text = "Continue";
+                buttonlabel3.text = "";
+            switch(button_num){
+                case 1:
+                if(isFocused){
+                   strsplit = csvValues[response_counter-1][1].Split(' '); // if point change before
+                   if(!csvValues[response_counter][1].Equals("skip") && !csvValues[response_counter][1].Equals("pass 4")){
+                   jim.text = csvValues[response_counter][1]; 
+                   } else if (csvValues[response_counter][1].Equals("skip")){ //if skip then skip
+                    response_counter += 1;
+                    playTurn();
+                   } else if(csvValues[response_counter][1].Equals("pass 4")){
+                    response_counter += 4;
+                    playTurn();
+                   }
+                } else {
+                  strsplit = csvValues[response_counter-1][4].Split(' ');
+                    if(!csvValues[response_counter][4].Equals("skip") && !csvValues[response_counter][4].Equals("pass 4")){
+                   jim.text = csvValues[response_counter][4]; 
+                   } else if(csvValues[response_counter][4].Equals("skip")){ //if skip then skip
+                    response_counter += 1;
+                    playTurn();
+                   } else if(csvValues[response_counter][4].Equals("pass 4")){
+                    response_counter += 4;
+                    playTurn();
+                   }
+                }
+                break;
+                case 2:
+                if(isFocused){
+                   strsplit = csvValues[response_counter-1][2].Split(' ');
+                    if(!csvValues[response_counter][2].Equals("skip")){
+                   jim.text = csvValues[response_counter][2]; 
+                   } else if(csvValues[response_counter][2].Equals("skip")){ //if skip then skip
+                    response_counter += 1;
+                    playTurn();
+                   } else if(csvValues[response_counter][2].Equals("pass 4")){
+                    response_counter += 4;
+                    playTurn();
+                   }
+                } else {
+                  strsplit = csvValues[response_counter-1][5].Split(' ');
+                    if(!csvValues[response_counter][5].Equals("skip") && !csvValues[response_counter][5].Equals("pass 4")){
+                   jim.text = csvValues[response_counter][5]; 
+                   } else if(csvValues[response_counter][5].Equals("skip")){ //if skip then skip
+                    response_counter += 1;
+                    playTurn();
+                   } else if(csvValues[response_counter][5].Equals("pass 4")){
+                    response_counter += 4;
+                    playTurn();
+                   }
+                }
+                break;
+                case 3:
+                if(isFocused){
+                   strsplit = csvValues[response_counter-1][3].Split(' ');
+                    if(!csvValues[response_counter][3].Equals("skip")){
+                   jim.text = csvValues[response_counter][3]; 
+                   } else if(csvValues[response_counter][3].Equals("skip")){ //if skip then skip
+                    response_counter += 1;
+                    playTurn();
+                   } else if(csvValues[response_counter][3].Equals("pass 4")){
+                    response_counter += 4;
+                    playTurn();
+                   }
+                } else {
+                  strsplit = csvValues[response_counter-1][6].Split(' ');  
+                    if(!csvValues[response_counter][6].Equals("skip")){
+                   jim.text = csvValues[response_counter][6]; 
+                   } else if(csvValues[response_counter][6].Equals("skip")){ //if skip then skip
+                    response_counter += 1;
+                    playTurn();
+                   } else if(csvValues[response_counter][6].Equals("pass 4")){
+                    response_counter += 4;
+                    playTurn();
+                   }
+                } 
+                break;
+            }
+
+                for(int i = 0; i < strsplit.Length; i++){
+                Debug.Log(strsplit[i]);
+                }
+                if(labelRow[response_counter+1].Equals("comment")){
+                response_counter += 1; //skip comment
+                }
+            
+                //Debug.Log(carpenter);
+                //Debug.Log(baker);
+                //Debug.Log(potter);
+
+            break;    
+            case "point_change":
+                 switch(button_num){
+                case 1:
+                if(isFocused){
+                   strsplit = csvValues[response_counter][1].Split(' '); // if point change before
+                } else {
+                  strsplit = csvValues[response_counter][4].Split(' ');
+                }
+                break;
+                case 2:
+                if(isFocused){
+                   strsplit = csvValues[response_counter][2].Split(' ');
+                } else {
+                  strsplit = csvValues[response_counter][5].Split(' ');
+                }
+                break;
+                case 3:
+                if(isFocused){
+                   strsplit = csvValues[response_counter][3].Split(' ');
+                } else {
+                  strsplit = csvValues[response_counter][6].Split(' ');  
+                } 
+                break;
+            }
+                if(strsplit[0].Equals("Carpenter")){
+                    carpenter += Int32.Parse(strsplit[1]);
+                } else if(strsplit[0].Equals("Baker")){
+                    baker += Int32.Parse(strsplit[1]);
+                } else if(strsplit[0].Equals("Potter")){
+                    potter += Int32.Parse(strsplit[1]);
+                }
+
+                if(strsplit.Length > 3){
+                    if(strsplit[2].Equals("Carpenter")){
+                        carpenter += Int32.Parse(strsplit[3]);
+                    } else if(strsplit[2].Equals("Baker")){
+                        baker += Int32.Parse(strsplit[3]);
+                    } else if(strsplit[2].Equals("Potter")){
+                        potter += Int32.Parse(strsplit[3]);
+                    }
+                }
+                response_counter += 1;
+                playTurn();
+
             break;
-        }
+            case "wait":
+                    jim.text = csvValues[response_counter][1];
+                    buttonlabel1.text = csvValues[response_counter][2];
+                    buttonlabel2.text = "";
+                    buttonlabel3.text = csvValues[response_counter][3];
+                    if(button_num == 2 || button_num == 3){
+                        jim.text = csvValues[response_counter+1][2]; 
+                    } else {
+                        jim.text = csvValues[response_counter+1][1];
+                    }
+
+
+            break;
+            case "wait_response":
+                    if(button_num == 2 || button_num == 3){
+                        jim.text = csvValues[response_counter][2];
+                        response_counter -= 1; //stay where you are 
+                    } else {
+                        jim.text = csvValues[response_counter][1];
+                         response_counter += 2; //skip past comment and state
+                    }
+            break;
+
+            case "accuse":
+                if(baker > carpenter && baker > potter){
+                    jim.text = csvValues[response_counter][1];
+                } else if(carpenter > baker && carpenter > potter){
+                    jim.text = csvValues[response_counter][2];
+                } else if(potter > baker && potter > carpenter){
+                    jim.text = csvValues[response_counter][3];
+                }
+            break;
+
+            case "path_3":
+                if(baker > carpenter && baker > potter && !csvValues[response_counter][1].Equals("skip")){
+                    jim.text = csvValues[response_counter][1];
+                }else if(carpenter > baker && carpenter > potter && csvValues[response_counter][1].Equals("skip")){
+                    response_counter += 1;
+                    playTurn();
+                }else if(carpenter > baker && carpenter > potter && csvValues[response_counter][2].Equals("skip")){
+                    response_counter += 1;
+                    playTurn();
+                } 
+                else if(carpenter > baker && carpenter > potter && !csvValues[response_counter][2].Equals("skip")){
+                    jim.text = csvValues[response_counter][2];
+                } 
+                else if(potter > baker && potter > carpenter && !csvValues[response_counter][3].Equals("skip")){
+                    jim.text = csvValues[response_counter][3];
+                }else if(potter > baker && potter > carpenter && !csvValues[response_counter][3].Equals("skip")){
+                    response_counter += 1;
+                    playTurn();
+                }
+                
+            break;                   
     }
+    response_counter +=1;
+}
+
+//old play turn
+/*
+
 
     public void playTurn(){
        switch(response_counter){
@@ -200,6 +452,6 @@ public class TextChanges : MonoBehaviour
 }
 response_counter += 1;
 Debug.Log(response_counter);
-}
+} */
 }
 }

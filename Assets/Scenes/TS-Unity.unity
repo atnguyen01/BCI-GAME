@@ -151,15 +151,15 @@ RectTransform:
   m_GameObject: {fileID: 3788895}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.0083}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 209708140}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0.0109}
-  m_SizeDelta: {x: 0.032, y: 0.01}
+  m_AnchoredPosition: {x: -0.0011, y: -0.0011}
+  m_SizeDelta: {x: 0.05, y: 0.01}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3788897
 MonoBehaviour:
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Gaming
+  m_text: Start
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6a84f857bec7e7345843ae29404c57ce, type: 2}
   m_sharedMaterial: {fileID: 21202819797275496, guid: 6a84f857bec7e7345843ae29404c57ce,
@@ -209,8 +209,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.04
-  m_fontSizeBase: 0.04
+  m_fontSize: 0.041
+  m_fontSizeBase: 0.041
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -957,6 +957,7 @@ Transform:
   m_Children:
   - {fileID: 1973185513}
   - {fileID: 1108454853}
+  - {fileID: 635258423}
   - {fileID: 1717431531}
   - {fileID: 2013399523}
   - {fileID: 926088526}
@@ -1942,9 +1943,9 @@ Transform:
   m_GameObject: {fileID: 372985877}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.273, y: -4.8613963, z: -4.5}
-  m_LocalScale: {x: 5, y: 49.246864, z: 591.1023}
-  m_ConstrainProportionsScale: 1
+  m_LocalPosition: {x: 0.294, y: -4.8613963, z: -4.5}
+  m_LocalScale: {x: 7, y: 70, z: 840.1989}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 790099540}
   - {fileID: 165887502}
@@ -2130,6 +2131,18 @@ MonoBehaviour:
   OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1955909501}
+        m_TargetAssemblyTypeName: TSI2Unity.TextChanges, Assembly-CSharp
+        m_MethodName: setButton3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1955909501}
         m_TargetAssemblyTypeName: TSI2Unity.TextChanges, Assembly-CSharp
         m_MethodName: playTurn
@@ -3920,15 +3933,15 @@ RectTransform:
   m_GameObject: {fileID: 606208115}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.0083}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 282929232}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0.0109}
-  m_SizeDelta: {x: 0.032, y: 0.01}
+  m_AnchoredPosition: {x: -0.0011, y: -0.0011}
+  m_SizeDelta: {x: 0.05, y: 0.01}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &606208117
 MonoBehaviour:
@@ -3950,7 +3963,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Where's Jagger when i need him?
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ad601d838b0fb2744937cd5dad890e81, type: 2}
   m_sharedMaterial: {fileID: 21202819797275496, guid: ad601d838b0fb2744937cd5dad890e81,
@@ -3978,8 +3991,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.04
-  m_fontSizeBase: 0.04
+  m_fontSize: 0.041
+  m_fontSizeBase: 0.041
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4137,9 +4150,9 @@ Transform:
   m_GameObject: {fileID: 608287470}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.001, y: -4.8613963, z: -4.5}
-  m_LocalScale: {x: 5, y: 49.246864, z: 591.1023}
-  m_ConstrainProportionsScale: 1
+  m_LocalPosition: {x: -0.005, y: -4.8613963, z: -4.5}
+  m_LocalScale: {x: 7, y: 70, z: 840.199}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 28734171}
   - {fileID: 1371294898}
@@ -4325,6 +4338,18 @@ MonoBehaviour:
   OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1955909501}
+        m_TargetAssemblyTypeName: TSI2Unity.TextChanges, Assembly-CSharp
+        m_MethodName: setButton2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1955909501}
         m_TargetAssemblyTypeName: TSI2Unity.TextChanges, Assembly-CSharp
         m_MethodName: playTurn
@@ -4673,15 +4698,15 @@ Transform:
   m_GameObject: {fileID: 635258422}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0165, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.36442578, y: 0.14597654, z: 0.038812876}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 107431373}
   - {fileID: 309628336}
   - {fileID: 1919737201}
   - {fileID: 1331487372}
-  m_Father: {fileID: 1108454853}
+  m_Father: {fileID: 174798913}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &635258424
 MonoBehaviour:
@@ -5211,9 +5236,9 @@ Transform:
   m_GameObject: {fileID: 672391127}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.284, y: -4.8613963, z: -4.5}
-  m_LocalScale: {x: 5, y: 49.24686, z: 591.1023}
-  m_ConstrainProportionsScale: 1
+  m_LocalPosition: {x: -0.301, y: -4.8613963, z: -4.5}
+  m_LocalScale: {x: 7, y: 70, z: 840.199}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 520960387}
   - {fileID: 2039183569}
@@ -5399,6 +5424,18 @@ MonoBehaviour:
   OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1955909501}
+        m_TargetAssemblyTypeName: TSI2Unity.TextChanges, Assembly-CSharp
+        m_MethodName: setButton1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1955909501}
         m_TargetAssemblyTypeName: TSI2Unity.TextChanges, Assembly-CSharp
         m_MethodName: playTurn
@@ -5824,7 +5861,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 38a587e9218b3284485088c9925af61f, type: 2}
+  - {fileID: 2100000, guid: f40914b49f8741e39df5b08d3db15497, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7458,8 +7495,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.0683, y: -0.1723187, z: 0.060496032}
-  m_LocalScale: {x: 0.83226997, y: 0.47105, z: 0.0352}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1, y: 0.5659822, z: 0.04229397}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1682388902}
   m_Father: {fileID: 174798913}
@@ -7813,7 +7850,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.05, y: -1.062}
+  m_AnchoredPosition: {x: -0.05, y: -1.047}
   m_SizeDelta: {x: 5, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &953504986
@@ -7836,10 +7873,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Hello? Hello Hello? Uh, I wanted to record a message for you to help you
-    get settled on your first night. Um, I actually worked in that office before
-    you. I'm finishing up my last week now, as a matter of fact. So, I know it can
-    be abit overwhelming, but I'm here to tell you there's nothing to worry about...
+  m_text: Press Start
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8231,8 +8265,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2051358711}
-  - {fileID: 1408924078}
   - {fileID: 1634269177}
+  - {fileID: 1408924078}
   - {fileID: 1375924430}
   m_Father: {fileID: 1844735642}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8517,7 +8551,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1108454853
 Transform:
   m_ObjectHideFlags: 0
@@ -8532,7 +8566,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1419003164}
-  - {fileID: 635258423}
   m_Father: {fileID: 174798913}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1108454854
@@ -9178,7 +9211,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 329cdefad4cf0f14e9b6767d0af094b0, type: 2}
+  - {fileID: 2100000, guid: a5e028070ace428d8971079be1d965a6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10962,7 +10995,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1419003164
 Transform:
   m_ObjectHideFlags: 0
@@ -11504,7 +11537,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1434411969}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.0096}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11675,7 +11708,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1434898034
 Transform:
   m_ObjectHideFlags: 0
@@ -14918,11 +14951,119 @@ MonoBehaviour:
   carpenter: 0
   potter: 0
   response_counter: 0
-  clickedButton: 
   button_num: 0
-  button_name: 
   isFocused: 0
-  button: {fileID: 0}
+  labelRow:
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
 --- !u!1 &1958948914
 GameObject:
   m_ObjectHideFlags: 0
@@ -15803,15 +15944,15 @@ RectTransform:
   m_GameObject: {fileID: 2051358710}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.0083}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1057242348}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0.0109}
-  m_SizeDelta: {x: 0.032, y: 0.01}
+  m_AnchoredPosition: {x: -0.0011, y: -0.0011}
+  m_SizeDelta: {x: 0.05, y: 0.01}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2051358712
 MonoBehaviour:
@@ -15833,7 +15974,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Is that the bite of '87?!?!?
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6a84f857bec7e7345843ae29404c57ce, type: 2}
   m_sharedMaterial: {fileID: 21202819797275496, guid: 6a84f857bec7e7345843ae29404c57ce,
@@ -15861,8 +16002,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.04
-  m_fontSizeBase: 0.04
+  m_fontSize: 0.041
+  m_fontSizeBase: 0.041
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
