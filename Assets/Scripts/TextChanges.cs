@@ -16,6 +16,9 @@ public class TextChanges : MonoBehaviour
         public GameObject TSImanager;
         private TSINetworkInterface tSINetworkInterface;
         public TMP_Text jim;
+        public GameObject button1;
+        public GameObject button2;
+        public GameObject button3;
         public TMP_Text buttonlabel1;
         public TMP_Text buttonlabel2;
         public TMP_Text buttonlabel3;
@@ -45,6 +48,7 @@ public class TextChanges : MonoBehaviour
         isFocused = true;
         //var resources = Resources.Load("story_script");
         //Path = Application.dataPath + @"\Resources\story_script.csv";
+        setButtonStatus();
         var basePath = Path.Combine(Application.streamingAssetsPath, "story_script.csv");
         csvValues = File.ReadAllLines(basePath).Select(l => l.Split(';')).ToArray().ToArray();
         //Debug.Log(Path);
@@ -78,7 +82,25 @@ public class TextChanges : MonoBehaviour
         
     }
 
-
+   public void setButtonStatus(){
+        if(buttonlabel1.text.Equals("")){
+            button1.SetActive(false);
+            Debug.Log("i got here");
+        } else {
+            button1.SetActive(true);
+            Debug.Log("i got here too");
+        }
+        if(buttonlabel2.text.Equals("")){
+            button2.SetActive(false);
+        } else {
+            button2.SetActive(true);
+        }
+        if(buttonlabel3.text.Equals("")){
+            button3.SetActive(false);
+        } else {
+            button3.SetActive(true);
+        }
+    }
 //not done need to figure out point change for two characters at once
 //lines 43-45 need to figure out (prob case for state choice) 
 public void playTurn(){ 
@@ -94,7 +116,7 @@ public void playTurn(){
                 buttonlabel1.text = csvValues[response_counter+1][1];
                 buttonlabel2.text = "";
                 buttonlabel3.text = csvValues[response_counter+1][2];
-               // response_counter += 1; // skip choice in csv to show at the same time
+               response_counter += 1; // skip choice in csv to show at the same time
             }
             if(labelRow[response_counter+1].Equals("choice_3")){
                 buttonlabel1.text = csvValues[response_counter+1][1];
@@ -354,7 +376,7 @@ public void playTurn(){
                 //Debug.Log(potter);
 
             break;    
-            case "point_change":
+            case "point_change": // TODO combine with dialogue state dialogue to remove double clicks
                  switch(button_num){
                 case 1:
                 if(isFocused){
@@ -418,6 +440,9 @@ public void playTurn(){
                         response_counter -= 1; //stay where you are 
                     } else {
                         jim.text = csvValues[response_counter][1];
+                    buttonlabel1.text = "";
+                    buttonlabel2.text = "Continue";
+                    buttonlabel3.text = "";
                          response_counter += 2; //skip past comment and state
                     }
             break;
@@ -454,6 +479,7 @@ public void playTurn(){
                 
             break;                   
     }
+    setButtonStatus();
     response_counter +=1;
 }
 

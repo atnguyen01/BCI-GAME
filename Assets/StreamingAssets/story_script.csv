@@ -1,5 +1,4 @@
-﻿start_story;;;;;;
-dialogue;You are sitting at your desk in your office, located in London, England. Your desk is relatively clean, with only your usual notepad and pen on it. On it are notes you usually write to keep track of details from previous cases.;;;;;
+﻿dialogue;You are sitting at your desk in your office, located in London, England. Your desk is relatively clean, with only your usual notepad and pen on it. On it are notes you usually write to keep track of details from previous cases.;;;;;
 dialogue;Suddenly, the phone starts ringing. You quickly pick it up and bring it to your ear.;;;;;
 dialogue;“Hello? Are you the private consultant I’ve heard so much about? Ah, good, I have the right number then. A client of mine has said a lot about you and how effective you are at your job.”;;;;;
 dialogue;“They claimed that you were one of the best private consultants with expertise in forensics out there, is that true?”;;;;;
@@ -107,4 +106,3 @@ path_3;skip;“Anyways, I have a new case, and I would like your expertise on it
 dialogue;Fin;;;;;
 dialogue;Credits: James Cao, Jagger Polvino, Andrew Nguyen;;;;;
 dialogue;Thank you for playing our game!;;;;;
-end_story;;;;;;
