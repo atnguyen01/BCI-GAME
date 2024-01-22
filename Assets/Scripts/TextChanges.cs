@@ -122,7 +122,7 @@ public void playTurn(){
                 buttonlabel1.text = csvValues[response_counter+1][1];
                 buttonlabel2.text = csvValues[response_counter+1][2];
                 buttonlabel3.text = csvValues[response_counter+1][3];
-               // response_counter += 1; // skip choice in csv to show at the same time
+                response_counter += 1; // skip choice in csv to show at the same time
             }
             if(labelRow[response_counter+1].Equals("state_choice_3") && isFocused){
                 buttonlabel1.text = csvValues[response_counter+1][1];
@@ -133,6 +133,69 @@ public void playTurn(){
                 buttonlabel2.text = csvValues[response_counter+1][5];
                 buttonlabel3.text = csvValues[response_counter+1][6];               
             }
+
+            if(labelRow[response_counter+1].Equals("state_choice_3") && isFocused && labelRow[response_counter+2].Equals("point_change")){
+                switch(button_num){
+                    case 1: 
+                    strsplit = csvValues[response_counter+2][1].Split(' ');
+                    break;
+                    case 2:
+                    strsplit = csvValues[response_counter+2][2].Split(' ');
+                    break;
+                    case 3:
+                    strsplit = csvValues[response_counter+2][3].Split(' ');
+                    break;
+                }
+                if(strsplit[0].Equals("Carpenter")){
+                    carpenter += Int32.Parse(strsplit[1]);
+                } else if(strsplit[0].Equals("Baker")){
+                    baker += Int32.Parse(strsplit[1]);
+                } else if(strsplit[0].Equals("Potter")){
+                    potter += Int32.Parse(strsplit[1]);
+                }
+
+                if(strsplit.Length > 3){
+                    if(strsplit[2].Equals("Carpenter")){
+                        carpenter += Int32.Parse(strsplit[3]);
+                    } else if(strsplit[2].Equals("Baker")){
+                        baker += Int32.Parse(strsplit[3]);
+                    } else if(strsplit[2].Equals("Potter")){
+                        potter += Int32.Parse(strsplit[3]);
+                    }
+                }
+                response_counter += 1; //skip point change but still goes into affect 
+            } else if(labelRow[response_counter+1].Equals("state_choice_3") && !isFocused && labelRow[response_counter+2].Equals("point_change")){
+                 switch(button_num){
+                    case 1: 
+                      strsplit = csvValues[response_counter+2][4].Split(' ');
+                    break;
+                    case 2:
+                    strsplit = csvValues[response_counter+2][5].Split(' ');
+                    break;
+                    case 3:
+                    strsplit = csvValues[response_counter+2][6].Split(' ');
+                    break;
+                }
+                if(strsplit[0].Equals("Carpenter")){
+                    carpenter += Int32.Parse(strsplit[1]);
+                } else if(strsplit[0].Equals("Baker")){
+                    baker += Int32.Parse(strsplit[1]);
+                } else if(strsplit[0].Equals("Potter")){
+                    potter += Int32.Parse(strsplit[1]);
+                }
+
+                if(strsplit.Length > 3){
+                    if(strsplit[2].Equals("Carpenter")){
+                        carpenter += Int32.Parse(strsplit[3]);
+                    } else if(strsplit[2].Equals("Baker")){
+                        baker += Int32.Parse(strsplit[3]);
+                    } else if(strsplit[2].Equals("Potter")){
+                        potter += Int32.Parse(strsplit[3]);
+                    }
+                }
+                response_counter += 1; //skip point change but still goes into affect 
+            }
+
 
             if(labelRow[response_counter+1].Equals("comment") && labelRow[response_counter+2].Equals("state") && labelRow[response_counter+3].Equals("comment")){
             response_counter += 3; //skip comment state and coment
@@ -160,11 +223,74 @@ public void playTurn(){
             response_counter += 2; //skip ste choices 
             }
 
+            if(isFocused && labelRow[response_counter+1].Equals("comment") && labelRow[response_counter+2].Equals("state_choice_3") && labelRow[response_counter+3].Equals("point_change")){
+                switch(button_num){
+                    case 1: 
+                      strsplit = csvValues[response_counter+3][1].Split(' ');
+                    break;
+                    case 2:
+                    strsplit = csvValues[response_counter+3][2].Split(' ');
+                    break;
+                    case 3:
+                    strsplit = csvValues[response_counter+3][3].Split(' ');
+                    break;
+                }
+                if(strsplit[0].Equals("Carpenter")){
+                    carpenter += Int32.Parse(strsplit[1]);
+                } else if(strsplit[0].Equals("Baker")){
+                    baker += Int32.Parse(strsplit[1]);
+                } else if(strsplit[0].Equals("Potter")){
+                    potter += Int32.Parse(strsplit[1]);
+                }
+
+                if(strsplit.Length > 3){
+                    if(strsplit[2].Equals("Carpenter")){
+                        carpenter += Int32.Parse(strsplit[3]);
+                    } else if(strsplit[2].Equals("Baker")){
+                        baker += Int32.Parse(strsplit[3]);
+                    } else if(strsplit[2].Equals("Potter")){
+                        potter += Int32.Parse(strsplit[3]);
+                    }
+                }
+                response_counter += 1; //skip point change but still goes into affect 
+            }
             if(!isFocused && labelRow[response_counter+1].Equals("comment") && labelRow[response_counter+2].Equals("state_choice_3")){
             buttonlabel1.text = csvValues[response_counter+2][4];
             buttonlabel2.text = csvValues[response_counter+2][5];
             buttonlabel3.text = csvValues[response_counter+2][6];
             response_counter += 2; //skip ste choices 
+            }
+
+            if(!isFocused && labelRow[response_counter+1].Equals("comment") && labelRow[response_counter+2].Equals("state_choice_3") && labelRow[response_counter+3].Equals("point_change")){
+                switch(button_num){
+                    case 1: 
+                      strsplit = csvValues[response_counter+3][4].Split(' ');
+                    break;
+                    case 2:
+                    strsplit = csvValues[response_counter+3][5].Split(' ');
+                    break;
+                    case 3:
+                    strsplit = csvValues[response_counter+3][6].Split(' ');
+                    break;
+                }
+                if(strsplit[0].Equals("Carpenter")){
+                    carpenter += Int32.Parse(strsplit[1]);
+                } else if(strsplit[0].Equals("Baker")){
+                    baker += Int32.Parse(strsplit[1]);
+                } else if(strsplit[0].Equals("Potter")){
+                    potter += Int32.Parse(strsplit[1]);
+                }
+
+                if(strsplit.Length > 3){
+                    if(strsplit[2].Equals("Carpenter")){
+                        carpenter += Int32.Parse(strsplit[3]);
+                    } else if(strsplit[2].Equals("Baker")){
+                        baker += Int32.Parse(strsplit[3]);
+                    } else if(strsplit[2].Equals("Potter")){
+                        potter += Int32.Parse(strsplit[3]);
+                    }
+                }
+                response_counter += 1; //skip point change but still goes into affect 
             }
 
             if(isFocused && labelRow[response_counter+1].Equals("state_choice_3")){
@@ -173,12 +299,75 @@ public void playTurn(){
             buttonlabel3.text = csvValues[response_counter+1][3];
             response_counter += 1; //skip ste choices 
             }
+            if(isFocused && labelRow[response_counter+1].Equals("state_choice_3") && labelRow[response_counter+2].Equals("point_change")){
+                switch(button_num){
+                    case 1: 
+                      strsplit = csvValues[response_counter+2][1].Split(' ');
+                    break;
+                    case 2:
+                    strsplit = csvValues[response_counter+2][2].Split(' ');
+                    break;
+                    case 3:
+                    strsplit = csvValues[response_counter+2][3].Split(' ');
+                    break;
+                }
+                if(strsplit[0].Equals("Carpenter")){
+                    carpenter += Int32.Parse(strsplit[1]);
+                } else if(strsplit[0].Equals("Baker")){
+                    baker += Int32.Parse(strsplit[1]);
+                } else if(strsplit[0].Equals("Potter")){
+                    potter += Int32.Parse(strsplit[1]);
+                }
+
+                if(strsplit.Length > 3){
+                    if(strsplit[2].Equals("Carpenter")){
+                        carpenter += Int32.Parse(strsplit[3]);
+                    } else if(strsplit[2].Equals("Baker")){
+                        baker += Int32.Parse(strsplit[3]);
+                    } else if(strsplit[2].Equals("Potter")){
+                        potter += Int32.Parse(strsplit[3]);
+                    }
+                }
+                response_counter += 1; //skip point change but still goes into affect 
+            }
 
             if(!isFocused && labelRow[response_counter+1].Equals("state_choice_3")){
             buttonlabel1.text = csvValues[response_counter+1][4];
             buttonlabel2.text = csvValues[response_counter+1][5];
             buttonlabel3.text = csvValues[response_counter+1][6];
             response_counter += 1; //skip comment and point change, ste choices at same time so skip
+            }
+            
+            if(!isFocused && labelRow[response_counter+1].Equals("state_choice_3") && labelRow[response_counter+2].Equals("point_change")){
+                switch(button_num){
+                    case 1: 
+                      strsplit = csvValues[response_counter+2][4].Split(' ');
+                    break;
+                    case 2:
+                    strsplit = csvValues[response_counter+2][5].Split(' ');
+                    break;
+                    case 3:
+                    strsplit = csvValues[response_counter+2][6].Split(' ');
+                    break;
+                }
+                if(strsplit[0].Equals("Carpenter")){
+                    carpenter += Int32.Parse(strsplit[1]);
+                } else if(strsplit[0].Equals("Baker")){
+                    baker += Int32.Parse(strsplit[1]);
+                } else if(strsplit[0].Equals("Potter")){
+                    potter += Int32.Parse(strsplit[1]);
+                }
+
+                if(strsplit.Length > 3){
+                    if(strsplit[2].Equals("Carpenter")){
+                        carpenter += Int32.Parse(strsplit[3]);
+                    } else if(strsplit[2].Equals("Baker")){
+                        baker += Int32.Parse(strsplit[3]);
+                    } else if(strsplit[2].Equals("Potter")){
+                        potter += Int32.Parse(strsplit[3]);
+                    }
+                }
+                response_counter += 1; //skip point change but still goes into affect 
             }
 
             break;
@@ -426,13 +615,6 @@ public void playTurn(){
                     buttonlabel1.text = csvValues[response_counter][2];
                     buttonlabel2.text = "";
                     buttonlabel3.text = csvValues[response_counter][3];
-                    if(button_num == 2 || button_num == 3){
-                        jim.text = csvValues[response_counter+1][2]; 
-                    } else {
-                        jim.text = csvValues[response_counter+1][1];
-                    }
-
-
             break;
             case "wait_response":
                     if(button_num == 2 || button_num == 3){
