@@ -124,77 +124,6 @@ public void playTurn(){
                 buttonlabel3.text = csvValues[response_counter+1][3];
                 response_counter += 1; // skip choice in csv to show at the same time
             }
-            if(labelRow[response_counter+1].Equals("state_choice_3") && isFocused){
-                buttonlabel1.text = csvValues[response_counter+1][1];
-                buttonlabel2.text = csvValues[response_counter+1][2];
-                buttonlabel3.text = csvValues[response_counter+1][3];
-            } else if(labelRow[response_counter+1].Equals("state_choice_3") && !isFocused){
-                buttonlabel1.text = csvValues[response_counter+1][4];
-                buttonlabel2.text = csvValues[response_counter+1][5];
-                buttonlabel3.text = csvValues[response_counter+1][6];               
-            }
-
-            if(labelRow[response_counter+1].Equals("state_choice_3") && isFocused && labelRow[response_counter+2].Equals("point_change")){
-                switch(button_num){
-                    case 1: 
-                    strsplit = csvValues[response_counter+2][1].Split(' ');
-                    break;
-                    case 2:
-                    strsplit = csvValues[response_counter+2][2].Split(' ');
-                    break;
-                    case 3:
-                    strsplit = csvValues[response_counter+2][3].Split(' ');
-                    break;
-                }
-                if(strsplit[0].Equals("Carpenter")){
-                    carpenter += Int32.Parse(strsplit[1]);
-                } else if(strsplit[0].Equals("Baker")){
-                    baker += Int32.Parse(strsplit[1]);
-                } else if(strsplit[0].Equals("Potter")){
-                    potter += Int32.Parse(strsplit[1]);
-                }
-
-                if(strsplit.Length > 3){
-                    if(strsplit[2].Equals("Carpenter")){
-                        carpenter += Int32.Parse(strsplit[3]);
-                    } else if(strsplit[2].Equals("Baker")){
-                        baker += Int32.Parse(strsplit[3]);
-                    } else if(strsplit[2].Equals("Potter")){
-                        potter += Int32.Parse(strsplit[3]);
-                    }
-                }
-                response_counter += 1; //skip point change but still goes into affect 
-            } else if(labelRow[response_counter+1].Equals("state_choice_3") && !isFocused && labelRow[response_counter+2].Equals("point_change")){
-                 switch(button_num){
-                    case 1: 
-                      strsplit = csvValues[response_counter+2][4].Split(' ');
-                    break;
-                    case 2:
-                    strsplit = csvValues[response_counter+2][5].Split(' ');
-                    break;
-                    case 3:
-                    strsplit = csvValues[response_counter+2][6].Split(' ');
-                    break;
-                }
-                if(strsplit[0].Equals("Carpenter")){
-                    carpenter += Int32.Parse(strsplit[1]);
-                } else if(strsplit[0].Equals("Baker")){
-                    baker += Int32.Parse(strsplit[1]);
-                } else if(strsplit[0].Equals("Potter")){
-                    potter += Int32.Parse(strsplit[1]);
-                }
-
-                if(strsplit.Length > 3){
-                    if(strsplit[2].Equals("Carpenter")){
-                        carpenter += Int32.Parse(strsplit[3]);
-                    } else if(strsplit[2].Equals("Baker")){
-                        baker += Int32.Parse(strsplit[3]);
-                    } else if(strsplit[2].Equals("Potter")){
-                        potter += Int32.Parse(strsplit[3]);
-                    }
-                }
-                response_counter += 1; //skip point change but still goes into affect 
-            }
 
 
             if(labelRow[response_counter+1].Equals("comment") && labelRow[response_counter+2].Equals("state") && labelRow[response_counter+3].Equals("comment")){
@@ -204,6 +133,18 @@ public void playTurn(){
             }else if(labelRow[response_counter+1].Equals("comment")){
             response_counter += 1; //skip comment
             }
+            if(labelRow[response_counter+1].Equals("state_choice_3") && isFocused && labelRow[response_counter+2].Equals("point_change")){
+                buttonlabel1.text = csvValues[response_counter+1][1];
+                buttonlabel2.text = csvValues[response_counter+1][2];
+                buttonlabel3.text = csvValues[response_counter+1][3];
+                response_counter += 2; //skip point change but still goes into affect 
+            }  else if(labelRow[response_counter+1].Equals("state_choice_3") && !isFocused && labelRow[response_counter+2].Equals("point_change")){
+                buttonlabel1.text = csvValues[response_counter+1][4];
+                buttonlabel2.text = csvValues[response_counter+1][5];
+                buttonlabel3.text = csvValues[response_counter+1][6];                    
+                response_counter += 2; //skip point change but still goes into affect 
+            }
+
             break;
         case "state_dialogue":
             if(isFocused && !csvValues[response_counter][1].Equals("skip")){
@@ -640,23 +581,41 @@ public void playTurn(){
             break;
 
             case "path_3":
-                if(baker > carpenter && baker > potter && !csvValues[response_counter][1].Equals("skip")){
-                    jim.text = csvValues[response_counter][1];
-                }else if(carpenter > baker && carpenter > potter && csvValues[response_counter][1].Equals("skip")){
-                    response_counter += 1;
-                    playTurn();
-                }else if(carpenter > baker && carpenter > potter && csvValues[response_counter][2].Equals("skip")){
-                    response_counter += 1;
-                    playTurn();
-                } 
-                else if(carpenter > baker && carpenter > potter && !csvValues[response_counter][2].Equals("skip")){
-                    jim.text = csvValues[response_counter][2];
-                } 
-                else if(potter > baker && potter > carpenter && !csvValues[response_counter][3].Equals("skip")){
-                    jim.text = csvValues[response_counter][3];
-                }else if(potter > baker && potter > carpenter && !csvValues[response_counter][3].Equals("skip")){
-                    response_counter += 1;
-                    playTurn();
+                if(tutorialOver){
+                    if(baker > carpenter && baker > potter && !csvValues[response_counter][1].Equals("skip")){
+                        jim.text = csvValues[response_counter][1];
+                    }
+                    if(baker > carpenter && baker > potter && csvValues[response_counter+1][1].Equals("skip")){
+                        response_counter += 1;
+                    }
+
+                    if(carpenter > baker && carpenter > potter && !csvValues[response_counter][1].Equals("skip")){
+                        jim.text = csvValues[response_counter][2];
+                    }
+                    if(carpenter > baker && carpenter > potter && csvValues[response_counter+1][1].Equals("skip")){
+                        response_counter += 1;
+                    }
+
+                    if(potter > baker && potter > carpenter && !csvValues[response_counter][1].Equals("skip")){
+                        jim.text = csvValues[response_counter][3];
+                    }
+                    if(potter > baker && potter > carpenter && csvValues[response_counter+1][1].Equals("skip")){
+                        response_counter += 1;
+                    }
+                    
+                } else{
+                    switch(button_num){
+                        case 1:
+                        jim.text = csvValues[response_counter][1];
+                        break;
+                        case 2:
+                        jim.text = csvValues[response_counter][2];
+                        break;
+                        case 3:
+                        jim.text = csvValues[response_counter][3];
+                        break;
+                    }
+                    tutorialOver = true;
                 }
                 
             break;                   
