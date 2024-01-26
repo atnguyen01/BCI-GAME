@@ -14957,6 +14957,7 @@ MonoBehaviour:
   button_num: 0
   choice: 0
   isFocused: 0
+  tutorialOver: 0
   labelRow:
   - 
   - 
