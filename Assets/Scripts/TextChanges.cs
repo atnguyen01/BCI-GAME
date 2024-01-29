@@ -519,6 +519,9 @@ public void playTurn(){
                 } else if(potter > baker && potter > carpenter){
                     jim.text = csvValues[response_counter][3];
                 }
+                if(labelRow[response_counter+1].Equals("comment")){
+                    response_counter += 1; //skip comment
+                    }
             break;
 
             case "path_3":
@@ -533,17 +536,17 @@ public void playTurn(){
                         response_counter += 1;
                     }
 
-                    if(carpenter > baker && carpenter > potter && !csvValues[response_counter][1].Equals("skip")){
+                    if(carpenter > baker && carpenter > potter && !csvValues[response_counter][2].Equals("skip")){
                         jim.text = csvValues[response_counter][2];
                     }
-                    if(carpenter > baker && carpenter > potter && csvValues[response_counter+1][1].Equals("skip")){
+                    if(carpenter > baker && carpenter > potter && csvValues[response_counter+1][2].Equals("skip")){
                         response_counter += 1;
                     }
 
-                    if(potter > baker && potter > carpenter && !csvValues[response_counter][1].Equals("skip")){
+                    if(potter > baker && potter > carpenter && !csvValues[response_counter][3].Equals("skip")){
                         jim.text = csvValues[response_counter][3];
                     }
-                    if(potter > baker && potter > carpenter && csvValues[response_counter+1][1].Equals("skip")){
+                    if(potter > baker && potter > carpenter && csvValues[response_counter+1][3].Equals("skip")){
                         response_counter += 1;
                     }
                     
