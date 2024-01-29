@@ -14957,7 +14957,6 @@ MonoBehaviour:
   button_num: 0
   choice: 0
   isFocused: 0
-  tutorialOver: 0
   labelRow:
   - 
   - 
@@ -15069,6 +15068,15 @@ MonoBehaviour:
   - 
   - 
   - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  tutorialOver: 0
 --- !u!1 &1958948914
 GameObject:
   m_ObjectHideFlags: 0
