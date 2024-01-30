@@ -505,7 +505,9 @@ public void playTurn(){
                     buttonlabel1.text = "";
                     buttonlabel2.text = "Continue";
                     buttonlabel3.text = "";
+                        if(labelRow[response_counter+1].Equals("comment") && labelRow[response_counter+2].Equals("state")){
                          response_counter += 2; //skip past comment and state
+                        }
                     }
             break;
 
