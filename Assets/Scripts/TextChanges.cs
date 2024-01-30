@@ -10,30 +10,32 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using TMPro;
 using Microsoft.MixedReality.Toolkit.UI;
+using Random = System.Random;
 namespace TSI2Unity{
 public class TextChanges : MonoBehaviour
 {
         public GameObject TSImanager;
         private TSINetworkInterface tSINetworkInterface;
-        public TMP_Text jim;
+        public TMP_Text jim; // main dialogue of the game, labeled as jim as that is who the main dialogue you receive is coming from
         public GameObject button1;
         public GameObject button2;
         public GameObject button3;
         public TMP_Text buttonlabel1;
         public TMP_Text buttonlabel2;
         public TMP_Text buttonlabel3;
-        public int baker = 0;
-        public int carpenter = 0;
-        public int potter = 0;
+        public int baker = 0; // baker point value
+        public int carpenter = 0; // carpenter point value
+        public int potter = 0; // potter point value
         public int response_counter = 0; 
         public int button_num = 0;
         public int choice = 0; //set previous button num for choice 3s
         public bool isFocused = true;
         //public string Path;
-        public string[][] csvValues;
+        public string[][] csvValues; 
         public string[] labelRow; // 1st row with commands
         string[] strsplit; //for point changes
-        public bool tutorialOver = false;
+        public bool tutorialOver = false; //tutorial has slightly different function for path_3
+    
     // Start is called before the first frame update
 
     public void LoadFile(string path){
@@ -83,6 +85,7 @@ public class TextChanges : MonoBehaviour
         
     }
 
+// function for setting the buttons to appear when they have text
    public void setButtonStatus(){
         if(buttonlabel1.text.Equals("")){
             button1.SetActive(false);
@@ -100,31 +103,31 @@ public class TextChanges : MonoBehaviour
             button3.SetActive(true);
         }
     }
-//not done need to figure out point change for two characters at once
-//lines 43-45 need to figure out (prob case for state choice) 
+
+
 public void playTurn(){ 
     switch(labelRow[response_counter]){
         case "start_story":
             break;
         case "dialogue":
-            jim.text = csvValues[response_counter][1];
+            jim.text = csvValues[response_counter][1]; // displays text
                 buttonlabel1.text = "";
-                buttonlabel2.text = "Continue";
+                buttonlabel2.text = "Continue"; // sets default button text
                 buttonlabel3.text = "";
             if(labelRow[response_counter+1].Equals("choice_2")){
-                buttonlabel1.text = csvValues[response_counter+1][1];
+                buttonlabel1.text = csvValues[response_counter+1][1]; // sets button text base on if there are choices
                 buttonlabel2.text = "";
                 buttonlabel3.text = csvValues[response_counter+1][2];
                response_counter += 1; // skip choice in csv to show at the same time
             }
             if(labelRow[response_counter+1].Equals("choice_3")){
-                buttonlabel1.text = csvValues[response_counter+1][1];
+                buttonlabel1.text = csvValues[response_counter+1][1]; // sets button text base on if there are choices
                 buttonlabel2.text = csvValues[response_counter+1][2];
                 buttonlabel3.text = csvValues[response_counter+1][3];
                 response_counter += 1; // skip choice in csv to show at the same time
             }
 
-
+            //skip cases
             if(labelRow[response_counter+1].Equals("comment") && labelRow[response_counter+2].Equals("state") && labelRow[response_counter+3].Equals("comment")){
             response_counter += 3; //skip comment state and coment
             }else if(labelRow[response_counter+1].Equals("comment") && labelRow[response_counter+2].Equals("state")){
@@ -132,26 +135,29 @@ public void playTurn(){
             }else if(labelRow[response_counter+1].Equals("comment")){
             response_counter += 1; //skip comment
             }
+
+            //setting buttons for choices based on state and skipping past point change row 
             if(labelRow[response_counter+1].Equals("state_choice_3") && isFocused && labelRow[response_counter+2].Equals("point_change")){
                 buttonlabel1.text = csvValues[response_counter+1][1];
                 buttonlabel2.text = csvValues[response_counter+1][2];
                 buttonlabel3.text = csvValues[response_counter+1][3];
-                response_counter += 2; //skip point change but still goes into affect 
+                response_counter += 2; //skip point change but still goes into affect in next row in csv
             }  else if(labelRow[response_counter+1].Equals("state_choice_3") && !isFocused && labelRow[response_counter+2].Equals("point_change")){
                 buttonlabel1.text = csvValues[response_counter+1][4];
                 buttonlabel2.text = csvValues[response_counter+1][5];
                 buttonlabel3.text = csvValues[response_counter+1][6];                    
-                response_counter += 2; //skip point change but still goes into affect 
+                response_counter += 2; //skip point change but still goes into affect in next row in csv
             }
 
             break;
         case "state_dialogue":
- if(isFocused && !csvValues[response_counter][1].Equals("skip")){
+        //set text based on state
+            if(isFocused && !csvValues[response_counter][1].Equals("skip")){
                 jim.text = csvValues[response_counter][1];
             }else if(!isFocused && !csvValues[response_counter][2].Equals("skip")){
                 jim.text = csvValues[response_counter][2];
             }
-
+            //skips
             if(!isFocused && csvValues[response_counter+1][2].Equals("skip") && csvValues[response_counter+2][2].Equals("skip")){
                 response_counter += 1; 
             }
@@ -166,18 +172,19 @@ public void playTurn(){
                 response_counter += 1; 
             }            
 
+            //skip rows but buttons are set based on focuse or not
             if(isFocused && labelRow[response_counter+1].Equals("comment") && labelRow[response_counter+2].Equals("state_choice_3") && labelRow[response_counter+3].Equals("point_change")){
                 buttonlabel1.text = csvValues[response_counter+2][1];
                 buttonlabel2.text = csvValues[response_counter+2][2];
                 buttonlabel3.text = csvValues[response_counter+2][3];
-                response_counter += 3; //skip point change but still goes into affect 
+                response_counter += 3; //skip point change but still goes into affect in next row in csv
             }
 
             if(!isFocused && labelRow[response_counter+1].Equals("comment") && labelRow[response_counter+2].Equals("state_choice_3") && labelRow[response_counter+3].Equals("point_change")){
                 buttonlabel1.text = csvValues[response_counter+2][4];
                 buttonlabel2.text = csvValues[response_counter+2][5];
                 buttonlabel3.text = csvValues[response_counter+2][6];
-                response_counter += 3; //skip point change but still goes into affect 
+                response_counter += 3; //skip point change but still goes into affect in next row in csv
             }
 
             
@@ -185,26 +192,18 @@ public void playTurn(){
                 buttonlabel1.text = csvValues[response_counter+1][1];
                 buttonlabel2.text = csvValues[response_counter+1][2];
                 buttonlabel3.text = csvValues[response_counter+1][3];
-                response_counter += 2; //skip point change but still goes into affect 
+                response_counter += 2; //skip point change but still goes into affect in next row in csv
             }
             
             if(!isFocused && labelRow[response_counter+1].Equals("state_choice_3") && labelRow[response_counter+2].Equals("point_change")){
                 buttonlabel1.text = csvValues[response_counter+1][4];
                 buttonlabel2.text = csvValues[response_counter+1][5];
                 buttonlabel3.text = csvValues[response_counter+1][6];
-                response_counter += 2; //skip point change but still goes into affect 
+                response_counter += 2; //skip point change but still goes into affect  in next row in csv
             }
 
             break;
-        case "choice_3":
-            if(button_num == 1){
-                choice = 1;
-            } else if(button_num == 2){
-                choice = 2;
-            }else if(button_num == 3){
-                choice = 3;
-            }
-            break;
+
         case "path_2":
                 switch(button_num){
                     case 1:
