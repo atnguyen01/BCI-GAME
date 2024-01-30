@@ -56,7 +56,7 @@ public class TextChanges : MonoBehaviour
         tSINetworkInterface = TSImanager.GetComponent<TSINetworkInterface>();
 
             //LoadFile(Path);
-            Debug.Log(csvValues.GetLength(0)); //getting number of rows
+            //Debug.Log(csvValues.GetLength(0)); //getting number of rows
             for(int i=0; i <csvValues.GetLength(0); i++){
             //Debug.Log(csvValues[i][0]);
             labelRow[i] = csvValues[i][0];
@@ -86,10 +86,8 @@ public class TextChanges : MonoBehaviour
    public void setButtonStatus(){
         if(buttonlabel1.text.Equals("")){
             button1.SetActive(false);
-            Debug.Log("i got here");
         } else {
             button1.SetActive(true);
-            Debug.Log("i got here too");
         }
         if(buttonlabel2.text.Equals("")){
             button2.SetActive(false);
