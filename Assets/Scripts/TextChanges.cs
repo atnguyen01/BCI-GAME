@@ -35,6 +35,7 @@ public class TextChanges : MonoBehaviour
         public string[] labelRow; // 1st row with commands
         string[] strsplit; //for point changes
         public bool tutorialOver = false; //tutorial has slightly different function for path_3
+        public Random rand = new Random();
     
     // Start is called before the first frame update
 
@@ -129,8 +130,20 @@ public void playTurn(){
 
             //skip cases
             if(labelRow[response_counter+1].Equals("comment") && labelRow[response_counter+2].Equals("state") && labelRow[response_counter+3].Equals("comment")){
+                var randNum = rand.Next(0,2);
+                if(randNum == 0){
+                    isFocused = true;
+                }   else{
+                    isFocused = false;
+                         }
             response_counter += 3; //skip comment state and coment
             }else if(labelRow[response_counter+1].Equals("comment") && labelRow[response_counter+2].Equals("state")){
+                var randNum = rand.Next(0,2);
+                if(randNum == 0){
+                    isFocused = true;
+                }   else{
+                    isFocused = false;
+                         }            
             response_counter += 2; //skip comment and state
             }else if(labelRow[response_counter+1].Equals("comment")){
             response_counter += 1; //skip comment
@@ -475,9 +488,7 @@ public void playTurn(){
                         potter += Int32.Parse(strsplit[3]);
                     }
                 }
-                for(int i = 0; i < strsplit.Length; i++){
-                Debug.Log(strsplit[i]);
-                }
+
                 if(labelRow[response_counter+1].Equals("comment")){
                 response_counter += 1; //skip comment
                 }
@@ -488,7 +499,6 @@ public void playTurn(){
 
             break;
 
-            break;
             case "wait":
                     jim.text = csvValues[response_counter][1];
                     buttonlabel1.text = csvValues[response_counter][2];
@@ -505,6 +515,12 @@ public void playTurn(){
                     buttonlabel2.text = "Continue";
                     buttonlabel3.text = "";
                         if(labelRow[response_counter+1].Equals("comment") && labelRow[response_counter+2].Equals("state")){
+                         var randNum = rand.Next(0,2);
+                         if(randNum == 0){
+                            isFocused = true;
+                         }   else{
+                            isFocused = false;
+                         }
                          response_counter += 2; //skip past comment and state
                         }
                     }
