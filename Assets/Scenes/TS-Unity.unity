@@ -7828,7 +7828,7 @@ GameObject:
   - component: {fileID: 953504987}
   - component: {fileID: 953504986}
   m_Layer: 5
-  m_Name: Jim response
+  m_Name: Main Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14943,7 +14943,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TSImanager: {fileID: 1955909497}
-  jim: {fileID: 953504986}
+  mainText: {fileID: 953504986}
   button1: {fileID: 672391127}
   button2: {fileID: 608287470}
   button3: {fileID: 372985877}

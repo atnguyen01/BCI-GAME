@@ -16,7 +16,7 @@ public class TextChanges : MonoBehaviour
 {
         public GameObject TSImanager;
         private TSINetworkInterface tSINetworkInterface;
-        public TMP_Text jim; // main dialogue of the game, labeled as jim as that is who the main dialogue you receive is coming from
+        public TMP_Text mainText; // main dialogue of the game, labeled as mainText as that is who the main dialogue you receive is coming from
         public GameObject button1;
         public GameObject button2;
         public GameObject button3;
@@ -30,11 +30,11 @@ public class TextChanges : MonoBehaviour
         public int button_num = 0;
         public int choice = 0; //set previous button num for choice 3s
         public bool isFocused = true;
+          public bool tutorialOver = false; //tutorial has slightly different function for path_3
         //public string Path;
         public string[][] csvValues; 
         public string[] labelRow; // 1st row with commands
-        string[] strsplit; //for point changes
-        public bool tutorialOver = false; //tutorial has slightly different function for path_3
+        string[] strsplit; //for point changes      
         public Random rand = new Random();
     
     // Start is called before the first frame update
@@ -111,7 +111,7 @@ public void playTurn(){
         case "start_story":
             break;
         case "dialogue":
-            jim.text = csvValues[response_counter][1]; // displays text
+            mainText.text = csvValues[response_counter][1]; // displays text
                 buttonlabel1.text = "";
                 buttonlabel2.text = "Continue"; // sets default button text
                 buttonlabel3.text = "";
@@ -166,9 +166,9 @@ public void playTurn(){
         case "state_dialogue":
         //set text based on state
             if(isFocused && !csvValues[response_counter][1].Equals("skip")){
-                jim.text = csvValues[response_counter][1];
+                mainText.text = csvValues[response_counter][1];
             }else if(!isFocused && !csvValues[response_counter][2].Equals("skip")){
-                jim.text = csvValues[response_counter][2];
+                mainText.text = csvValues[response_counter][2];
             }
             //skips
             if(!isFocused && csvValues[response_counter+1][2].Equals("skip") && csvValues[response_counter+2][2].Equals("skip")){
@@ -220,13 +220,13 @@ public void playTurn(){
         case "path_2":
                 switch(button_num){
                     case 1:
-                    jim.text = csvValues[response_counter][1];
+                    mainText.text = csvValues[response_counter][1];
                     break;
                     case 2:
                     response_counter -=1; //so clicking will do nothing here
                     break;
                     case 3: 
-                    jim.text = csvValues[response_counter][2];
+                    mainText.text = csvValues[response_counter][2];
                     break;
                 }
 
@@ -253,7 +253,7 @@ public void playTurn(){
                 if(isFocused){
                    strsplit = csvValues[response_counter-1][1].Split(' '); // if point change before
                    if(!csvValues[response_counter][1].Equals("skip") && !csvValues[response_counter][1].Equals("pass 4")){
-                   jim.text = csvValues[response_counter][1]; 
+                   mainText.text = csvValues[response_counter][1]; 
                    }
                     if(csvValues[response_counter+3][1].Equals("skip") && csvValues[response_counter+2][1].Equals("skip") && csvValues[response_counter+1][1].Equals("skip")){
                         response_counter += 1;
@@ -270,7 +270,7 @@ public void playTurn(){
                 } else {
                   strsplit = csvValues[response_counter-1][4].Split(' ');
                     if(!csvValues[response_counter][4].Equals("skip") && !csvValues[response_counter][4].Equals("pass 4")){
-                   jim.text = csvValues[response_counter][4]; 
+                   mainText.text = csvValues[response_counter][4]; 
                    } 
                     if(csvValues[response_counter+3][4].Equals("skip") && csvValues[response_counter+2][1].Equals("skip") && csvValues[response_counter+1][1].Equals("skip")){
                         response_counter += 1;
@@ -290,7 +290,7 @@ public void playTurn(){
                 if(isFocused){
                    strsplit = csvValues[response_counter-1][2].Split(' ');
                     if(!csvValues[response_counter][2].Equals("skip")){
-                   jim.text = csvValues[response_counter][2]; 
+                   mainText.text = csvValues[response_counter][2]; 
                    }
                     if(csvValues[response_counter+3][2].Equals("skip") && csvValues[response_counter+2][2].Equals("skip") && csvValues[response_counter+1][2].Equals("skip")){
                         response_counter += 1;
@@ -307,7 +307,7 @@ public void playTurn(){
                 } else {
                   strsplit = csvValues[response_counter-1][5].Split(' ');
                     if(!csvValues[response_counter][5].Equals("skip") && !csvValues[response_counter][5].Equals("pass 4")){
-                   jim.text = csvValues[response_counter][5]; 
+                   mainText.text = csvValues[response_counter][5]; 
                    }
                    if(csvValues[response_counter+3][5].Equals("skip") && csvValues[response_counter+2][5].Equals("skip") && csvValues[response_counter+1][5].Equals("skip")){
                         response_counter += 1;
@@ -327,7 +327,7 @@ public void playTurn(){
                 if(isFocused){
                    strsplit = csvValues[response_counter-1][3].Split(' ');
                     if(!csvValues[response_counter][3].Equals("skip")){
-                   jim.text = csvValues[response_counter][3]; 
+                   mainText.text = csvValues[response_counter][3]; 
                    } 
                     if(csvValues[response_counter+3][3].Equals("skip") && csvValues[response_counter+2][3].Equals("skip") && csvValues[response_counter+1][3].Equals("skip")){
                         response_counter += 1;
@@ -344,7 +344,7 @@ public void playTurn(){
                 } else {
                   strsplit = csvValues[response_counter-1][6].Split(' ');  
                     if(!csvValues[response_counter][6].Equals("skip")){
-                   jim.text = csvValues[response_counter][6]; 
+                   mainText.text = csvValues[response_counter][6]; 
                    } 
                     if(csvValues[response_counter+3][6].Equals("skip") && csvValues[response_counter+2][6].Equals("skip") && csvValues[response_counter+1][6].Equals("skip")){
                         response_counter += 1;
@@ -365,7 +365,7 @@ public void playTurn(){
         if(isFocused){
                     strsplit = csvValues[response_counter-1][1].Split(' '); // if point change before
                    if(!csvValues[response_counter][1].Equals("skip") && !csvValues[response_counter][1].Equals("pass 4")){
-                        jim.text = csvValues[response_counter][1]; 
+                        mainText.text = csvValues[response_counter][1]; 
                    }
                     if(csvValues[response_counter+3][1].Equals("skip") && csvValues[response_counter+2][1].Equals("skip") && csvValues[response_counter+1][1].Equals("skip")){
                         response_counter += 1;
@@ -382,7 +382,7 @@ public void playTurn(){
                 } else {
                   strsplit = csvValues[response_counter-1][4].Split(' ');
                     if(!csvValues[response_counter][4].Equals("skip") && !csvValues[response_counter][4].Equals("pass 4")){
-                   jim.text = csvValues[response_counter][4]; 
+                   mainText.text = csvValues[response_counter][4]; 
                    } 
                     if(csvValues[response_counter+3][4].Equals("skip") && csvValues[response_counter+2][1].Equals("skip") && csvValues[response_counter+1][1].Equals("skip")){
                         response_counter += 1;
@@ -401,7 +401,7 @@ public void playTurn(){
         if(isFocused){
                    strsplit = csvValues[response_counter-1][2].Split(' ');
                     if(!csvValues[response_counter][2].Equals("skip")){
-                   jim.text = csvValues[response_counter][2]; 
+                   mainText.text = csvValues[response_counter][2]; 
                    } 
                     if(csvValues[response_counter+3][2].Equals("skip") && csvValues[response_counter+2][2].Equals("skip") && csvValues[response_counter+1][2].Equals("skip")){
                         response_counter += 1;
@@ -418,7 +418,7 @@ public void playTurn(){
                 } else {
                   strsplit = csvValues[response_counter-1][5].Split(' ');
                     if(!csvValues[response_counter][5].Equals("skip") && !csvValues[response_counter][5].Equals("pass 4")){
-                   jim.text = csvValues[response_counter][5]; 
+                   mainText.text = csvValues[response_counter][5]; 
                    }
                     if(csvValues[response_counter+3][5].Equals("skip") && csvValues[response_counter+2][5].Equals("skip") && csvValues[response_counter+1][5].Equals("skip")){
                         response_counter += 1;
@@ -438,7 +438,7 @@ public void playTurn(){
             if(isFocused){
                    strsplit = csvValues[response_counter-1][3].Split(' ');
                     if(!csvValues[response_counter][3].Equals("skip")){
-                   jim.text = csvValues[response_counter][3]; 
+                   mainText.text = csvValues[response_counter][3]; 
                    }
                     if(csvValues[response_counter+3][3].Equals("skip") && csvValues[response_counter+2][3].Equals("skip") && csvValues[response_counter+1][3].Equals("skip")){
                         response_counter += 1;
@@ -455,7 +455,7 @@ public void playTurn(){
                 } else {
                   strsplit = csvValues[response_counter-1][6].Split(' ');  
                     if(!csvValues[response_counter][6].Equals("skip")){
-                   jim.text = csvValues[response_counter][6]; 
+                   mainText.text = csvValues[response_counter][6]; 
                    }
                     if(csvValues[response_counter+3][6].Equals("skip") && csvValues[response_counter+2][6].Equals("skip") && csvValues[response_counter+1][6].Equals("skip")){
                         response_counter += 1;
@@ -500,17 +500,17 @@ public void playTurn(){
             break;
 
             case "wait":
-                    jim.text = csvValues[response_counter][1];
+                    mainText.text = csvValues[response_counter][1];
                     buttonlabel1.text = csvValues[response_counter][2];
                     buttonlabel2.text = "";
                     buttonlabel3.text = csvValues[response_counter][3];
             break;
             case "wait_response":
                     if(button_num == 2 || button_num == 3){
-                        jim.text = csvValues[response_counter][2];
+                        mainText.text = csvValues[response_counter][2];
                         response_counter -= 1; //stay where you are 
                     } else {
-                        jim.text = csvValues[response_counter][1];
+                        mainText.text = csvValues[response_counter][1];
                     buttonlabel1.text = "";
                     buttonlabel2.text = "Continue";
                     buttonlabel3.text = "";
@@ -528,11 +528,11 @@ public void playTurn(){
 
             case "accuse":
                 if(baker > carpenter && baker > potter){
-                    jim.text = csvValues[response_counter][1];
+                    mainText.text = csvValues[response_counter][1];
                 } else if(carpenter > baker && carpenter > potter){
-                    jim.text = csvValues[response_counter][2];
+                    mainText.text = csvValues[response_counter][2];
                 } else if(potter > baker && potter > carpenter){
-                    jim.text = csvValues[response_counter][3];
+                    mainText.text = csvValues[response_counter][3];
                 }
                 if(labelRow[response_counter+1].Equals("comment")){
                     response_counter += 1; //skip comment
@@ -545,21 +545,21 @@ public void playTurn(){
                 buttonlabel3.text = "";
                 if(tutorialOver){
                     if(baker > carpenter && baker > potter && !csvValues[response_counter][1].Equals("skip")){
-                        jim.text = csvValues[response_counter][1];
+                        mainText.text = csvValues[response_counter][1];
                     }
                     if(baker > carpenter && baker > potter && csvValues[response_counter+1][1].Equals("skip")){
                         response_counter += 1;
                     }
 
                     if(carpenter > baker && carpenter > potter && !csvValues[response_counter][2].Equals("skip")){
-                        jim.text = csvValues[response_counter][2];
+                        mainText.text = csvValues[response_counter][2];
                     }
                     if(carpenter > baker && carpenter > potter && csvValues[response_counter+1][2].Equals("skip")){
                         response_counter += 1;
                     }
 
                     if(potter > baker && potter > carpenter && !csvValues[response_counter][3].Equals("skip")){
-                        jim.text = csvValues[response_counter][3];
+                        mainText.text = csvValues[response_counter][3];
                     }
                     if(potter > baker && potter > carpenter && csvValues[response_counter+1][3].Equals("skip")){
                         response_counter += 1;
@@ -568,13 +568,13 @@ public void playTurn(){
                 } else{
                     switch(button_num){
                         case 1:
-                        jim.text = csvValues[response_counter][1];
+                        mainText.text = csvValues[response_counter][1];
                         break;
                         case 2:
-                        jim.text = csvValues[response_counter][2];
+                        mainText.text = csvValues[response_counter][2];
                         break;
                         case 3:
-                        jim.text = csvValues[response_counter][3];
+                        mainText.text = csvValues[response_counter][3];
                         break;
                     }
                     tutorialOver = true;
@@ -596,19 +596,19 @@ public void playTurn(){
             switch(button_num){
                 case 1:
                 if(isFocused){
-                jim.text = "FNAF is the best movie ever";
+                mainText.text = "FNAF is the best movie ever";
                 setButtonText(response_counter);
                 }else {
-                jim.text = "FNAF is the worst movie ever";
+                mainText.text = "FNAF is the worst movie ever";
                 setButtonText(response_counter);
                 }
                 break;
                 case 2:
-                jim.text = "Skyrim is the best game ever";
+                mainText.text = "Skyrim is the best game ever";
                 setButtonText(response_counter);
                 break;    
                 case 3:
-                jim.text = "Jagger is always correct";
+                mainText.text = "Jagger is always correct";
                 setButtonText(response_counter);
                 break;
                }
@@ -616,15 +616,15 @@ public void playTurn(){
             case 2:
                 switch(button_num){
                     case 1:
-                    jim.text = "Andrew is innocent";
+                    mainText.text = "Andrew is innocent";
                     setButtonText(response_counter);
                     break;
                     case 2:
-                    jim.text = "james is a baker. He bakes many good things like breads,cakes, and pastries. I especially like bagels with cream cheese it's just sooooooooooooooooo good";
+                    mainText.text = "james is a baker. He bakes many good things like breads,cakes, and pastries. I especially like bagels with cream cheese it's just sooooooooooooooooo good";
                     setButtonText(response_counter);
                     break;    
                     case 3:
-                    jim.text = "Jagger did it";
+                    mainText.text = "Jagger did it";
                     setButtonText(response_counter);
                     break;
                     }
@@ -632,15 +632,15 @@ public void playTurn(){
             case 3:
                 switch(button_num){
                     case 1:
-                    jim.text = "Andrew is a wizard";
+                    mainText.text = "Andrew is a wizard";
                     setButtonText(response_counter);
                     break;
                     case 2:
-                    jim.text = "james is a baker.";
+                    mainText.text = "james is a baker.";
                     setButtonText(response_counter);
                     break;    
                     case 3:
-                    jim.text = "Jagger sus";
+                    mainText.text = "Jagger sus";
                     setButtonText(response_counter);
                     break;
                     }
@@ -648,15 +648,15 @@ public void playTurn(){
             case 4:
                 switch(button_num){
                     case 1:
-                    jim.text = "Andrew is a potter";
+                    mainText.text = "Andrew is a potter";
                     setButtonText(response_counter);
                     break;
                     case 2:
-                    jim.text = "james is just here.";
+                    mainText.text = "james is just here.";
                     setButtonText(response_counter);
                     break;    
                     case 3:
-                    jim.text = "Jagger is a gamer";
+                    mainText.text = "Jagger is a gamer";
                     setButtonText(response_counter);
                     break;
                     }
@@ -664,15 +664,15 @@ public void playTurn(){
             case 5:
                 switch(button_num){
                     case 1:
-                    jim.text = "Andrew is cool";
+                    mainText.text = "Andrew is cool";
                     setButtonText(response_counter);
                     break;
                     case 2:
-                    jim.text = "james is good with bread knives.";
+                    mainText.text = "james is good with bread knives.";
                     setButtonText(response_counter);
                     break;    
                     case 3:
-                    jim.text = "Jagger hates all of us";
+                    mainText.text = "Jagger hates all of us";
                     setButtonText(response_counter);
                     break;
                     }
