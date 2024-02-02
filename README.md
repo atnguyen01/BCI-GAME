@@ -1,3 +1,17 @@
+# The Consultant’s Case of Concentration
+This project aims to incorporate BCI via fNIRS into a simple text-based AR game.
+
+It is March 8th, 1930, London. You are a private consultant, working in your office as usual, when you get a phone call from a local detective asking for your help in a case of murder. Your job is to help the detective identify suspicious or note-worthy clues gathered from each of the suspects, all the while making sure your mind doesn’t stray, lest you miss some important details.
+
+## Features
+- A short, 15 minute AR game, including physical objects as clues
+- Depending on how focused you are, gives different dialogue and player choices
+- Detects your focus state via fNIRS headset
+
+For instructions on how to run the game, please refer to the MRTK-fNIRS section below.
+
+
+
 # MRTK-fNIRS
 Derived from: https://github.com/WPIHCILab/Unity-fNIRS/tree/main
 
