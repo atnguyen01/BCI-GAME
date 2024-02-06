@@ -108,8 +108,6 @@ public class TextChanges : MonoBehaviour
 
 public void playTurn(){ 
     switch(labelRow[response_counter]){
-        case "start_story":
-            break;
         case "dialogue":
             mainText.text = csvValues[response_counter][1]; // displays text
                 buttonlabel1.text = "";
