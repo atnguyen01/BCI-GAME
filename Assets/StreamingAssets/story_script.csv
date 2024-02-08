@@ -1,4 +1,4 @@
-﻿dialogue;Welcome to 'March 7th, 1930,' an AR game where you need to solve a murder mystery. Before the game starts, let's have a quick tutorial on how the works. Please press the middle button below to continue.;;;;;
+﻿dialogue;Welcome to 'The Consultant's Case of Concentration,' an AR game where you need to solve a murder mystery. Before the game starts, let's have a quick tutorial on how the works. Please press the middle button below to continue.;;;;;
 dialogue;This game works using buttons. You will be given details and then asked for an opinion. Two to three buttons will then have replies you can give. Press whichever reply you think is the best. Try it here:;;;;;
 choice_3;I like chocolate ice cream.;Vanilla ice cream is superior!;Ice cream? I prefer cookies.;;;
 path_3;Chocolate ice cream is definitely better than vanilla. (Whatever path you take may have unique responses.);Vanilla ice cream is good, don't get me wrong, but I prefer chocolate. (Whatever path you take may have unique responses.);Depending on what kind of cookies you are thinking, I suppose it could be better than ice cream. (Whatever path you take may have unique responses.);;;
