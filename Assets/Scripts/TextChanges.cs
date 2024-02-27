@@ -36,7 +36,7 @@ public class TextChanges : MonoBehaviour
         public string[] labelRow; // 1st row with commands
         string[] strsplit; //for point changes      
         public Random rand = new Random();
-    
+        public bool passed = false; //used for skip point changes in state path
     // Start is called before the first frame update
 
     public void LoadFile(string path){
@@ -113,6 +113,7 @@ public void playTurn(){
                 buttonlabel1.text = "";
                 buttonlabel2.text = "Continue"; // sets default button text
                 buttonlabel3.text = "";
+                
             if(labelRow[response_counter+1].Equals("choice_2")){
                 buttonlabel1.text = csvValues[response_counter+1][1]; // sets button text base on if there are choices
                 buttonlabel2.text = "";
@@ -264,6 +265,7 @@ public void playTurn(){
                     }
                     if(csvValues[response_counter+1][1].Equals("pass 4")){
                         response_counter += 5;
+                        passed = true;
                     }
                 } else {
                   strsplit = csvValues[response_counter-1][4].Split(' ');
@@ -281,6 +283,7 @@ public void playTurn(){
                     }
                     if(csvValues[response_counter+1][4].Equals("pass 4")){
                         response_counter += 5;
+                        passed = true;
                     }
                 }
                 break;
@@ -301,6 +304,7 @@ public void playTurn(){
                     }
                     if(csvValues[response_counter+1][2].Equals("pass 4")){
                         response_counter += 5;
+                        passed = true;
                     }
                 } else {
                   strsplit = csvValues[response_counter-1][5].Split(' ');
@@ -318,6 +322,7 @@ public void playTurn(){
                     }
                     if(csvValues[response_counter+1][5].Equals("pass 4")){
                         response_counter += 5;
+                        passed = true;
                     }
                 }
                 break;
@@ -338,6 +343,7 @@ public void playTurn(){
                     }
                     if(csvValues[response_counter+1][3].Equals("pass 4")){
                         response_counter += 5;
+                        passed = true;
                     }
                 } else {
                   strsplit = csvValues[response_counter-1][6].Split(' ');  
@@ -355,13 +361,15 @@ public void playTurn(){
                     }
                     if(csvValues[response_counter+1][6].Equals("pass 4")){
                         response_counter += 5;
+                        passed = true;
                     }
                 } 
                 break;
             }
     } else if(choice == 1){
         if(isFocused){
-                    strsplit = csvValues[response_counter-1][1].Split(' '); // if point change before
+
+
                    if(!csvValues[response_counter][1].Equals("skip") && !csvValues[response_counter][1].Equals("pass 4")){
                         mainText.text = csvValues[response_counter][1]; 
                    }
@@ -376,13 +384,33 @@ public void playTurn(){
                     }
                     if(csvValues[response_counter+1][1].Equals("pass 4")){
                         response_counter += 5;
+                        passed = true;
                     } 
+                   if(labelRow[response_counter-1].Equals("point_change")){
+                 switch(button_num){
+                case 1:
+                strsplit = csvValues[response_counter-1][1].Split(' ');
+                mainText.text = csvValues[response_counter][1]; 
+                break; 
+                case 2: 
+                strsplit = csvValues[response_counter-1][2].Split(' ');
+                mainText.text = csvValues[response_counter][2]; 
+                break;
+                case 3: 
+                strsplit = csvValues[response_counter-1][2].Split(' ');
+                mainText.text = csvValues[response_counter][3]; 
+                break;
+            }
+                   }
+
+
                 } else {
-                  strsplit = csvValues[response_counter-1][4].Split(' ');
+
                     if(!csvValues[response_counter][4].Equals("skip") && !csvValues[response_counter][4].Equals("pass 4")){
                    mainText.text = csvValues[response_counter][4]; 
                    } 
-                    if(csvValues[response_counter+3][4].Equals("skip") && csvValues[response_counter+2][1].Equals("skip") && csvValues[response_counter+1][1].Equals("skip")){
+
+                                       if(csvValues[response_counter+3][4].Equals("skip") && csvValues[response_counter+2][1].Equals("skip") && csvValues[response_counter+1][1].Equals("skip")){
                         response_counter += 1;
                     }
                     if(csvValues[response_counter+2][4].Equals("skip") && csvValues[response_counter+1][1].Equals("skip")){
@@ -393,11 +421,28 @@ public void playTurn(){
                     }
                     if(csvValues[response_counter+1][4].Equals("pass 4")){
                         response_counter += 5;
+                        passed = true;
                     }
-                }
+                      if(labelRow[response_counter-1].Equals("point_change")){
+                        switch(button_num){
+                case 1:
+                strsplit = csvValues[response_counter-1][4].Split(' ');
+                mainText.text = csvValues[response_counter][4]; 
+                break; 
+                case 2: 
+                strsplit = csvValues[response_counter-1][5].Split(' ');
+                mainText.text = csvValues[response_counter][5]; 
+                break;
+                case 3: 
+                strsplit = csvValues[response_counter-1][6].Split(' ');
+                mainText.text = csvValues[response_counter][6]; 
+                break;
+            } }
+                   }
+
+                
         } else if(choice == 2){
         if(isFocused){
-                   strsplit = csvValues[response_counter-1][2].Split(' ');
                     if(!csvValues[response_counter][2].Equals("skip")){
                    mainText.text = csvValues[response_counter][2]; 
                    } 
@@ -412,12 +457,30 @@ public void playTurn(){
                     }
                     if(csvValues[response_counter+1][2].Equals("pass 4")){
                         response_counter += 5;
+                        passed = true;
                     }
+                   if(labelRow[response_counter-1].Equals("point_change")){
+                 switch(button_num){
+                case 1:
+                strsplit = csvValues[response_counter-1][1].Split(' ');
+                mainText.text = csvValues[response_counter][1]; 
+                break; 
+                case 2: 
+                strsplit = csvValues[response_counter-1][2].Split(' ');
+                mainText.text = csvValues[response_counter][2]; 
+                break;
+                case 3: 
+                strsplit = csvValues[response_counter-1][2].Split(' ');
+                mainText.text = csvValues[response_counter][3]; 
+                break;
+            } }
+
                 } else {
-                  strsplit = csvValues[response_counter-1][5].Split(' ');
+
                     if(!csvValues[response_counter][5].Equals("skip") && !csvValues[response_counter][5].Equals("pass 4")){
                    mainText.text = csvValues[response_counter][5]; 
                    }
+
                     if(csvValues[response_counter+3][5].Equals("skip") && csvValues[response_counter+2][5].Equals("skip") && csvValues[response_counter+1][5].Equals("skip")){
                         response_counter += 1;
                     }
@@ -429,15 +492,34 @@ public void playTurn(){
                     }
                     if(csvValues[response_counter+1][5].Equals("pass 4")){
                         response_counter += 5;
+                        passed = true;
                     }
 
-        }
+                      if(labelRow[response_counter-1].Equals("point_change")){
+                        switch(button_num){
+                case 1:
+                strsplit = csvValues[response_counter-1][4].Split(' ');
+                mainText.text = csvValues[response_counter][4]; 
+                break; 
+                case 2: 
+                strsplit = csvValues[response_counter-1][5].Split(' ');
+                mainText.text = csvValues[response_counter][5]; 
+                break;
+                case 3: 
+                strsplit = csvValues[response_counter-1][6].Split(' ');
+                mainText.text = csvValues[response_counter][6]; 
+                break;
+            } }
+                   
+
+
+                }
         } else if(choice == 3){
-            if(isFocused){
-                   strsplit = csvValues[response_counter-1][3].Split(' ');
+            if(isFocused){                   
                     if(!csvValues[response_counter][3].Equals("skip")){
                    mainText.text = csvValues[response_counter][3]; 
                    }
+
                     if(csvValues[response_counter+3][3].Equals("skip") && csvValues[response_counter+2][3].Equals("skip") && csvValues[response_counter+1][3].Equals("skip")){
                         response_counter += 1;
                     }
@@ -449,12 +531,33 @@ public void playTurn(){
                     }
                     if(csvValues[response_counter+1][3].Equals("pass 4")){
                         response_counter += 5;
+                        passed = true;
                     }
+
+                   if(labelRow[response_counter-1].Equals("point_change")){
+                 switch(button_num){
+                case 1:
+                strsplit = csvValues[response_counter-1][1].Split(' ');
+                mainText.text = csvValues[response_counter][1]; 
+                break; 
+                case 2: 
+                strsplit = csvValues[response_counter-1][2].Split(' ');
+                mainText.text = csvValues[response_counter][2]; 
+                break;
+                case 3: 
+                strsplit = csvValues[response_counter-1][2].Split(' ');
+                mainText.text = csvValues[response_counter][3]; 
+                break;
+            }
+                   }
+
                 } else {
-                  strsplit = csvValues[response_counter-1][6].Split(' ');  
+                  
                     if(!csvValues[response_counter][6].Equals("skip")){
                    mainText.text = csvValues[response_counter][6]; 
                    }
+
+
                     if(csvValues[response_counter+3][6].Equals("skip") && csvValues[response_counter+2][6].Equals("skip") && csvValues[response_counter+1][6].Equals("skip")){
                         response_counter += 1;
                     }
@@ -466,9 +569,28 @@ public void playTurn(){
                     }
                     if(csvValues[response_counter+1][6].Equals("pass 4")){
                         response_counter += 5;
+                        passed = true;
                     } 
+
+                      if(labelRow[response_counter-1].Equals("point_change")){
+                        switch(button_num){
+                case 1:
+                strsplit = csvValues[response_counter-1][4].Split(' ');
+                mainText.text = csvValues[response_counter][4]; 
+                break; 
+                case 2: 
+                strsplit = csvValues[response_counter-1][5].Split(' ');
+                mainText.text = csvValues[response_counter][5]; 
+                break;
+                case 3: 
+                strsplit = csvValues[response_counter-1][6].Split(' ');
+                mainText.text = csvValues[response_counter][6]; 
+                break;
+            }
+                      }
         }
         }
+        if(labelRow[response_counter - 1].Equals("point_change") && !passed){
                 if(strsplit[0].Equals("Carpenter")){
                     carpenter += Int32.Parse(strsplit[1]);
                 } else if(strsplit[0].Equals("Baker")){
@@ -486,7 +608,7 @@ public void playTurn(){
                         potter += Int32.Parse(strsplit[3]);
                     }
                 }
-
+        }
                 if(labelRow[response_counter+1].Equals("comment")){
                 response_counter += 1; //skip comment
                 }
