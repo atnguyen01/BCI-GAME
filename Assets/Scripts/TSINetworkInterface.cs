@@ -1,17 +1,11 @@
 using System;
 using System.Collections;
 using System.Net.Sockets;
-using System.Text; 
+using System.Text;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.Events;
-using UnityEngine.SceneManagement;
-using Microsoft.MixedReality.Toolkit.Experimental.UI;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
-using TMPro;
-using static ip_input_script;
 
 /// <summary>
 /// Turbo Satori network interface
@@ -22,9 +16,9 @@ namespace TSI2Unity
     {
         #region Public Variables
         [Header("Network")]
-        public string ipAddress;
+        public string ipAddress = "192.168.0.101";
         public int port = 55555;
-        public int waitingMessagesFrequency = 1;
+        public int waitingMessagesFrequency = 2;
         public TSIMessage tSIMessage;
         #endregion
 
@@ -33,12 +27,14 @@ namespace TSI2Unity
         private NetworkStream m_NetStream = null;
         private byte[] m_Buffer = new byte[1024 * 1024 * 20];
         private int m_BytesReceived = 0;
+        // m_BytesReceived_ is used for debugging, use ctr/cmd f to see where it's used
+        //private int m_BytesReceived_ = 0;
         [SerializeField]
         private string m_ReceivedMessage = "";
         private byte[] m_message = new byte[0];
         
         [Tooltip("This value should be >= to Server waitingMessagesFrequency")]
-        [Min(0)] private float m_DelayedCloseTime = 2f;
+        [Min(0)] private float m_DelayedCloseTime = 4f;
         #endregion
 
         #region Delegate Variables
@@ -60,39 +56,24 @@ namespace TSI2Unity
 
         private void Start()
         {
-           // yield return new WaitForSeconds(5);
-           
-            int loop = 10;
-
-        /*   while(ip_input_script.global_ip_address is null || ip_input_script.global_ip_address == "") {
-                Debug.Log("waiting for IP, current IP:" + ip_input_script.global_ip_address);
-                // Debug.Log("Loop: " + loop);
-                // loop--;
-                StartCoroutine(customWait(1));
-           }
-         */  
-
-            Debug.Log("global IP address val: " + ip_input_script.global_ip_address);
-            // ipAddress = ip_input_script.global_ip_address;
-            ipAddress = "192.168.0.101";
-            Debug.Log("IP address val: " + ipAddress);
-            
             DontDestroyOnLoad(this);
             //SEND Request --- Connect to Request Socket
             OnClientStarted = delegate () { SendMessageToServer("Request Socket"); };
+            OnMessageReceived = delegate () { PrintMessageLog(); };
             OnMessageReceived = delegate () { UpdateTSIValues(); };
             StartClient();
-            InvokeRepeating("FetchTSI", 1,1f);
+            InvokeRepeating("FetchTSI", 1, 4f);
         }
         //Start client and stablish connection with server
-
-        private IEnumerator customWait(int sec) {
-                yield return new WaitForSecondsRealtime(sec);
-        }
 
         private void Update()
         {
 
+        }
+
+        private void OnApplicationQuit()
+        {
+            CloseClient();
         }
 
         void FetchTSI()
@@ -127,7 +108,7 @@ namespace TSI2Unity
             }
             catch (SocketException)
             {
-       //         ClientLog("Socket Exception: Start Server first", Color.red);
+                ClientLog("Socket Exception: Start Server first", Color.red);
                 CloseClient();
             }          
         }
@@ -151,6 +132,9 @@ namespace TSI2Unity
                 m_NetStream.BeginRead(m_Buffer, 0, m_Buffer.Length, MessageReceived, null);
                 if (m_BytesReceived > HEADER_MSG_SIZE)
                 {
+                    // this line is used for debugging purposes
+                    //m_BytesReceived_ = m_BytesReceived;
+
                     //data must be validated!!!
                     tSIMessage = new TSIMessage(m_message);
                     m_ReceivedMessage = tSIMessage.byteToIntString(m_message);
@@ -165,7 +149,7 @@ namespace TSI2Unity
 
 
         //Send custom string msg to server
-        protected virtual void SendMessageToServer(string messageToSend, int[] output = null)
+        protected virtual int SendMessageToServer(string messageToSend, int[] output = null)
         {
             // int[] output is an optional input
             try
@@ -174,70 +158,118 @@ namespace TSI2Unity
             }
             catch (Exception)
             {
-      //          ClientLog("Non-Connected Socket exception", Color.red);
+                ClientLog("Non-Connected Socket exception", Color.red);
                 CloseClient();
-                return;
+                return 0;
             }
 
             //early out if there is nothing connected
             if (!m_Client.Connected)
             {
-     //           ClientLog("Socket Error: Stablish Server connection first", Color.red);
-                return;
+                ClientLog("Socket Error: Stablish Server connection first", Color.red);
+                return 0;
             }
 
-            //Build message to server
-            byte[] encodedMessage = Encoding.ASCII.GetBytes(messageToSend); //Encode message as bytes
-            byte[] request = new byte[encodedMessage.Length + 1];
-            request[encodedMessage.Length] = 0;
-            Array.Copy(encodedMessage, request, encodedMessage.Length);
-            //Set length of the request
-            byte[] requestLength = numToByte(request.Length, 4);
-
-            byte[] outputVar;
-            // add request parameters - output
-            if (output != null)
+            // James: this is meant to be the equivalent of the MATLAB code's query() validation (the try-catch parts specifically), where if the send request receives an error, it stops the send request. So far, it doesn't seem to have worked.
+            try
             {
-                outputVar = new byte[output.Length*4];
-                for (int i = 0; i < output.Length; i++)
+                //Build message to server
+                byte[] encodedMessage = Encoding.ASCII.GetBytes(messageToSend); //Encode message as bytes
+                byte[] request = new byte[encodedMessage.Length + 1];
+                request[encodedMessage.Length] = 0;
+                Array.Copy(encodedMessage, request, encodedMessage.Length);
+                //Set length of the request
+                byte[] requestLength = numToByte(request.Length, 4);
+
+                byte[] outputVar;
+
+                // these variable are used for debugging only
+                int selectedChannel;
+                int currentTimePoint;
+
+                // add request parameters - output
+                if (output != null)
                 {
-                    byte[] subArray = numToByte(output[i], 4);
-                    Array.Copy(subArray, 0, outputVar, i * 4, 4);
+
+                    // these next 2 lines are used for debugging only
+                    selectedChannel = output[0];
+                    currentTimePoint = output[1];
+
+                    outputVar = new byte[output.Length*4];
+                    for (int i = 0; i < output.Length; i++)
+                    {
+                        byte[] subArray = numToByte(output[i], 4);
+                        Array.Copy(subArray, 0, outputVar, i * 4, 4);
+                    }
                 }
+                else
+                {
+                    outputVar = new byte[0];
+
+                    // these next 2 lines are used for debugging only
+                    selectedChannel = -1;
+                    currentTimePoint = -1;
+                }
+
+
+                //Debug.Log("messageToSend: " + messageToSend + ", Request: " + request.Length + ", Request Length: " + requestLength.Length + ", OutputVar: " + outputVar.Length);
+
+
+                //Set length of message
+                byte[] messageSize = numToByte(request.Length + requestLength.Length + outputVar.Length, 8);
+
+            
+                byte[] tosend = new byte[messageSize.Length + requestLength.Length + request.Length + outputVar.Length];
+
+                //Debug.Log("//////////////////////////////////////////////////////////////////");
+
+                Array.Copy(messageSize, 0, tosend, 0, messageSize.Length);
+                //Debug.Log("adding source (message size) to tosend: " + byteToString(messageSize) + ", final result: " + byteToString(tosend));
+
+                Array.Copy(requestLength, 0, tosend, messageSize.Length, requestLength.Length);
+                //Debug.Log("adding source (requestLength) to tosend: " + byteToString(requestLength) + ", final result: " + byteToString(tosend));
+
+                Array.Copy(request, 0, tosend, messageSize.Length + requestLength.Length, request.Length);
+                //Debug.Log("adding source (request) to tosend: " + byteToString(request) + ", final result: " + byteToString(tosend));
+
+                Array.Copy(outputVar, 0, tosend, messageSize.Length + requestLength.Length + request.Length, outputVar.Length);
+                //Debug.Log("adding source (outputVar) to tosend: " + byteToIntString(outputVar) + ", final result: " + byteToString(tosend));
+                //Debug.Log("outputVar selectedChannel: " + selectedChannel.ToString() + ", outputVar currentTimePoint: " + currentTimePoint.ToString());
+
+
+                //Debug.Log("tosend length: " + tosend.Length + ", tosend val: " + byteToString(tosend));
+                //Debug.Log("tosend length: " + tosend.Length);
+
+
+
+                //Start Sync Writing
+                m_NetStream.Write(tosend, 0, tosend.Length);
+                m_NetStream.Flush();
+
+                string s = "";
+                for (int i = 0; i < tosend.Length; i++)
+                {
+                    s += ((int)tosend[i]) + " ";
+                }
+
+                //ClientLog($"Msg sended to Server: <b>{messageToSend}</b>", Color.blue);
+                //ClientLog($"Bytes sended to Server: <b>{s}</b>", Color.blue);
+
+                //In case client informs the server that closes the connection
+                if (messageToSend == "Close")
+                {
+                    //It has to wait before closing, to ensure Close message is sent
+                    StartCoroutine(DelayedCloseClient(waitingMessagesFrequency + m_DelayedCloseTime));
+                }
+                return 1;
             }
-            else
+            catch(Exception e)
             {
-                outputVar = new byte[0];
+                Debug.Log("Message request went wrong, and it was detected: therefore, yippee! Error: " + e.ToString());
+                return 0;
             }
 
-            //Set length of message
-            byte[] messageSize = numToByte(request.Length + requestLength.Length + outputVar.Length, 8);
-
-            byte[] tosend = new byte[messageSize.Length + requestLength.Length + request.Length + outputVar.Length];
-            Array.Copy(messageSize, 0, tosend, 0, messageSize.Length);
-            Array.Copy(requestLength, 0, tosend, messageSize.Length, requestLength.Length);
-            Array.Copy(request, 0, tosend, messageSize.Length + requestLength.Length, request.Length);
-            Array.Copy(outputVar, 0, tosend, messageSize.Length + requestLength.Length + request.Length, outputVar.Length);
-
-            //Start Sync Writing
-            m_NetStream.Write(tosend, 0, tosend.Length);
-            m_NetStream.Flush();
-
-            string s = "";
-            for (int i = 0; i < tosend.Length; i++)
-            {
-                s += ((int)tosend[i]) + " ";
-            }
-
-            //ClientLog($"Msg sended to Server: <b>{messageToSend}</b>", Color.blue);
-            //ClientLog($"Bytes sended to Server: <b>{s}</b>", Color.blue);
-
-            //In case client informs the server that closes the connection
-            if (messageToSend == "Close")
-            {
-                //It has to wait before closing, to ensure Close message is sended
-                StartCoroutine(DelayedCloseClient(waitingMessagesFrequency + m_DelayedCloseTime));
-            }
+            
         }
 
         //AsyncCallback called when "BeginRead" is ended, waiting the message response from server
@@ -251,12 +283,16 @@ namespace TSI2Unity
             {
                 //build message received from server
                 m_BytesReceived = m_NetStream.EndRead(result);
-                // m_ReceivedMessage = "";
                 
                 // m_ReceivedMessage = Encoding.BigEndianUnicode.GetString(m_Buffer, 0, m_BytesReceived);
                 m_message = new byte[m_BytesReceived];
                 Array.Copy(m_Buffer, m_message, m_BytesReceived);
+
+
                 m_ReceivedMessage = tSIMessage.byteToIntString(m_message);
+
+
+                //Debug.Log(m_ReceivedMessage);
             }
         }
         #endregion
@@ -265,7 +301,7 @@ namespace TSI2Unity
         //Close client connection
         public void CloseClient()
         {
-      //      ClientLog("Client Closed", Color.red);
+            ClientLog("Client Closed", Color.red);
 
             //Reset everything to defaults
             if (m_Client.Connected)
@@ -284,14 +320,18 @@ namespace TSI2Unity
 
         public void query(string request, int[] output = null)
         {
-            SendMessageToServer(request, output);
-            GetMessage();
+            int success = SendMessageToServer(request, output);
+            if (success == 1) {
+                GetMessage();
+            }
         }
 
         public void query(string request)
         {
-            SendMessageToServer(request);
-            GetMessage();
+            int success = SendMessageToServer(request);
+            if (success == 1) {
+                GetMessage();
+            }
         }
 
         //What to do with the received message on client
@@ -325,20 +365,55 @@ namespace TSI2Unity
                 case "tGetDataOxy": 
                     // responseToInt considers the array start counting from 1
                     int ch = responseToInt(1, 4); //channel
-                    if (!DataOxy.ContainsKey(ch))
+                    if (ch < NrOfChannels)
                     {
-                        DataOxy.Add(ch,reponseReverseToFloat(tSIMessage.response,9, 4));
+                        if (!DataOxy.ContainsKey(ch))
+                        {
+                            DataOxy.Add(ch, reponseReverseToFloat(tSIMessage.response, 9, 4));
+                        }
+                        else DataOxy[ch] = reponseReverseToFloat(tSIMessage.response, 9, 4);
+
+                        // James: added debug logs within "if", also added ch details to "else"
+
+                        //Debug.Log("Oxy Channel: " + ch + ", # Bytes in message: " + m_BytesReceived_ + ", Msg2String: " + byteToString(tSIMessage.response));
+                        //Debug.Log("Message: " + m_ReceivedMessage);
+                        //Debug.Log("Value: " + reponseReverseToFloat(tSIMessage.response, 9, 4));
                     }
-                    else DataOxy[ch] = reponseReverseToFloat(tSIMessage.response,9, 4);
+                    else
+                    {
+                        //Debug.Log("///////////////////Oxy Channel id error: " + ch + ", # Bytes in message: " + m_BytesReceived_ + ", Msg2String: " + byteToString(tSIMessage.response));
+                        //Debug.Log("//NrOfChannels: " + NrOfChannels);
+                        //Debug.Log("//Message: " + m_ReceivedMessage);
+                        //Debug.Log("//Value: " + reponseReverseToFloat(tSIMessage.response, 9, 4));
+
+                    }
                     break;
+
                 case "tGetDataDeOxy":
                     // responseToInt considers the array start counting from 1
                     int chDe = responseToInt(1, 4); //channel
-                    if (!DataDeOxy.ContainsKey(chDe))
+                    if (chDe < NrOfChannels)
                     {
-                        DataDeOxy.Add(chDe, reponseReverseToFloat(tSIMessage.response, 9, 4));
+                        if (!DataDeOxy.ContainsKey(chDe))
+                        {
+                            DataDeOxy.Add(chDe, reponseReverseToFloat(tSIMessage.response, 9, 4));
+                        }
+                        else DataDeOxy[chDe] = reponseReverseToFloat(tSIMessage.response, 9, 4);
+
+                        //Debug.Log("DeOxy Channel: " + chDe + ", # Bytes in message: " + m_BytesReceived_ + ", Msg2String: " + byteToString(tSIMessage.response));
+                        //Debug.Log("Message: " + m_ReceivedMessage);
+                        //Debug.Log("Value: " + reponseReverseToFloat(tSIMessage.response, 9, 4));
+
+
                     }
-                    else DataDeOxy[chDe] = reponseReverseToFloat(tSIMessage.response, 9, 4);
+                    else
+                    {
+                        //Debug.Log("///////////////////DeOxy Channel id error: " + chDe + ", # Bytes in message: " + m_BytesReceived_ + ", Msg2String: " + byteToString(tSIMessage.response));
+                        //Debug.Log("//NrOfChannels: " + NrOfChannels);
+                        //Debug.Log("//Message: " + m_ReceivedMessage);
+                        //Debug.Log("//Value: " + reponseReverseToFloat(tSIMessage.response, 9, 4));
+
+                    }
                     break;
                 default:
                     break;
@@ -361,6 +436,20 @@ namespace TSI2Unity
         #endregion
 
         #region Decode Received Message
+
+        public string byteToString(byte[] bytes)
+        {
+            string result = "";
+            for (int i = 0; i < bytes.Length; i++)
+            {
+                if ((int)bytes[i] != 0)
+                    result += ((char)bytes[i]).ToString() + "";
+            }
+            // James: This outputs the numerous/annoying Oxy and Deoxy messages in console
+            //Debug.Log(result);
+            return result;
+        }
+
         // num = number to be converted; nbytes = number of byte available
         byte[] numToByte(int number, int nBytes)
         {
@@ -462,12 +551,16 @@ namespace TSI2Unity
             // Do not run this alone without these two: 
             int[] output = new int[2];
             // Validate selected channel before sending inquery
-            if (SelectedChannels.Length==NrOfSelectedChannels)
+            if (SelectedChannels.Length == NrOfSelectedChannels)
             {
-                for (int i = 0; i < SelectedChannels.Length; i++)
+                //old
+                //for (int i = 0; i < SelectedChannels.Length; i++)
+                //new
+                for (int i = 0; i < NrOfSelectedChannels; i++)
                 {
                     output[0] = SelectedChannels[i];
                     output[1] = CurrentTimePoint;
+                    Debug.Log("tGetDataOxy, i: " + i + ", SelectedChannels.Length: " + SelectedChannels.Length + ", NrOfSelectedChannels: " + NrOfSelectedChannels + " SelectedChannels[i]: " + SelectedChannels[i] + ", CurrentTimePoint: " + CurrentTimePoint);
                     query("tGetDataOxy", output);
                 }
             }
@@ -479,10 +572,14 @@ namespace TSI2Unity
             // Validate selected channel before sending inquery
             if (SelectedChannels.Length == NrOfSelectedChannels)
             {
-                for (int i = 0; i < SelectedChannels.Length; i++)
+                //old
+                //for (int i = 0; i < SelectedChannels.Length; i++)
+                //new
+                for (int i = 0; i < NrOfSelectedChannels; i++)
                 {
                     output[0] = SelectedChannels[i];
                     output[1] = CurrentTimePoint;
+                    Debug.Log("tGetDataDeOxy, i: " + i + ", SelectedChannels.Length: " + SelectedChannels.Length + ", NrOfSelectedChannels: " + NrOfSelectedChannels + " SelectedChannels[i]: " + SelectedChannels[i] + ", CurrentTimePoint: " + CurrentTimePoint);
                     query("tGetDataDeOxy", output);
                 }
             }
@@ -491,3 +588,5 @@ namespace TSI2Unity
     }
 
 }
+
+

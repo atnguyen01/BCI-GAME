@@ -53,7 +53,8 @@ namespace TSI2Unity
                 if ((int)bytes[i]!=0)
                     result += ((char)bytes[i]).ToString() + "";
             }
-          //  Debug.Log(result);
+            // James: This outputs the numerous/annoying Oxy and Deoxy messages in console
+            //Debug.Log(result);
             return result;
         }
 
